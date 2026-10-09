@@ -1,0 +1,5 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+LLM-size search — accuracy delta vs no-LLM (green = p<0.05),bars1,barh,-0.007055559251583,0.0,groq-openai-gpt-oss-120b / cifar10 b=100,"mean_diff = LLM-on(model) − LLM-off, best_acc (pp)",
+LLM-size search — accuracy delta vs no-LLM (green = p<0.05),bars1,barh,0.0784999988132,1.0,groq-openai-gpt-oss-20b / cifar10 b=100,"mean_diff = LLM-on(model) − LLM-off, best_acc (pp)",
+LLM-size search — accuracy delta vs no-LLM (green = p<0.05),line1,reference_line,0.0,0.0,,"mean_diff = LLM-on(model) − LLM-off, best_acc (pp)",
+LLM-size search — accuracy delta vs no-LLM (green = p<0.05),line1,reference_line,0.0,1.0,,"mean_diff = LLM-on(model) − LLM-off, best_acc (pp)",

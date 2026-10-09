@@ -1,0 +1,21 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Zero-cost proxies are cost detectors,natssss,bar,-0.16666666666666669,0.13266362192019934,E,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,natssss,bar,0.8333333333333334,0.2702556211316786,S,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,natssss,bar,1.8333333333333333,0.11954888666424703,T,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,natssss,bar,2.8333333333333335,0.2010726103171395,ensemble_unsup,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,natssss,bar,3.8333333333333335,0.7221106158571238,params,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,natssss,bar,4.833333333333333,0.4465471838001958,valid_acc (oracle),score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,0.0,0.1031212256849882,E,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,1.0,0.6283519075419917,S,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,2.0,0.8189066512266628,T,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,3.0,0.6325443006360751,ensemble_unsup,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,4.0,0.870466814789503,params,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb101,bar,5.0,0.3337368769038089,valid_acc (oracle),score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,0.16666666666666663,0.4389381573818307,E,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,1.1666666666666665,0.7470551359281501,S,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,2.1666666666666665,0.8222581528628347,T,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,3.1666666666666665,0.7788409663202204,ensemble_unsup,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,4.166666666666667,0.8288410683091274,params,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,nb201,bar,5.166666666666667,0.6151688386503241,valid_acc (oracle),score,Spearman rho with training time
+Zero-cost proxies are cost detectors,line1,reference_line,0.0,0.0,E,score,Spearman rho with training time
+Zero-cost proxies are cost detectors,line1,reference_line,1.0,0.0,S,score,Spearman rho with training time

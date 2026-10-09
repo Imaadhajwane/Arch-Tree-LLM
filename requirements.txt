@@ -1,0 +1,46 @@
+# archtree-llm/requirements.txt  (updated Oct 4, 2026 - matches what the code imports)
+# Tested with Python 3.10.9 on Windows 11, RTX 2050 (CUDA 12.4). Exact versions of the paper runs:
+#   outputs/final/repro/requirements.lock.txt  (written by pipeline step 19)
+#
+# Install (inside the venv / conda env):
+#   1) GPU torch FIRST, from the CUDA index (plain `pip install torch` = CPU-only build):
+#        pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu124
+#   2) the rest:
+#        pip install -r requirements.txt
+#   or simply run setup_env.ps1 (Windows) / setup_env.sh (Linux/macOS), which does both.
+#
+# NOT needed: TensorFlow / the `nasbench` package (NB101 is read by tools/build_nb101_cache.py without TF),
+# Ollama (optional local LLM fallback only), wandb, streamlit, seaborn.
+
+# ── Core ML (zero-cost proxies need a CUDA GPU) ───────────────────────────────
+torch>=2.1
+torchvision>=0.16
+
+# ── Data / statistics ─────────────────────────────────────────────────────────
+numpy>=1.24
+pandas>=2.0
+scipy>=1.11          # wilcoxon, friedmanchisquare, studentized_range (Nemenyi CD), kendalltau
+
+# ── Plotting ──────────────────────────────────────────────────────────────────
+matplotlib>=3.7
+
+# ── Config / logging / misc ───────────────────────────────────────────────────
+pyyaml>=6.0
+python-dotenv>=1.0   # reads GROQ_API_KEY / GROQ_API_KEYS from .env
+loguru>=0.7
+psutil>=5.9          # Phase 0 memory / timing records
+
+# ── NAS benchmarks (only needed to (re)build the caches in data/) ─────────────
+nas-bench-201>=2.1   # tools/build_nb201_cache.py -> data/nb201_cache_v2.json
+nats_bench>=1.8      # tools/build_natsbench_sss_cache.py -> data/natssss_cache.json (step 23)
+# HW-NAS-Bench: not on PyPI - git clone https://github.com/GATECH-EIC/HW-NAS-Bench third_party/HW-NAS-Bench
+#               (the pickle goes to data/HW-NAS-Bench-v1_0.pickle; preflight checks both)
+
+# ── LLM prior / LLM-NAS baseline (Groq cloud, free tier) ──────────────────────
+groq>=1.0            # json_schema structured output + failed_generation salvage (tested 1.5.0)
+
+# ── Optional ──────────────────────────────────────────────────────────────────
+ollama>=0.3          # optional local fallback LLM (llm.backend: ollama); Ollama server installed separately
+flask>=3.0           # dashboard: python frontend/backend.py -> http://localhost:5000
+flask-cors>=4.0
+# wandb              # only if logging.wandb: true (not used in the paper runs)

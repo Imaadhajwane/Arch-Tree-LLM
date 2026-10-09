@@ -1,0 +1,13 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Phase 3 — fraction of iterations that were real evals,cifar10,line,25.0,0.6566666666666667,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar10,line,50.0,0.5416666666666666,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar10,line,100.0,0.47833333333333333,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar10,line,200.0,0.40375,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar100,line,25.0,0.6566666666666667,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar100,line,50.0,0.545,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar100,line,100.0,0.4708333333333334,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,cifar100,line,200.0,0.4075,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,ImageNet16-120,line,25.0,0.66,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,ImageNet16-120,line,50.0,0.49666666666666665,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,ImageNet16-120,line,100.0,0.45416666666666666,,Budget,Real-eval fraction (proxy-gated)
+Phase 3 — fraction of iterations that were real evals,ImageNet16-120,line,200.0,0.41375,,Budget,Real-eval fraction (proxy-gated)

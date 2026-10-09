@@ -1,0 +1,49 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+cifar10,bars2,bar,0.0,15.5,llm_off,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,bars2,bar,1.0,5.0,llm_on,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,bars2,bar,2.0,16.416666666666668,size_prior,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,bars2,bar,3.0,7.75,llm_described,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line1,line,0.0,12.635642226511246,llm_off,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line1,line,1.0,5.0,llm_on,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line1,line,2.0,15.595928516516992,size_prior,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line1,line,3.0,5.47655314421898,llm_described,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line2,line,0.0,18.364357773488756,llm_off,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line2,line,1.0,5.0,llm_on,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line2,line,2.0,17.237404816816344,size_prior,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar10,line2,line,3.0,10.023446855781021,llm_described,,"real evaluations to reach (best - 1 pt)
+(lower = faster), mean +- s.e."
+cifar100,bars2,bar,0.0,30.75,llm_off,,
+cifar100,bars2,bar,1.0,15.583333333333334,llm_on,,
+cifar100,bars2,bar,2.0,19.666666666666668,size_prior,,
+cifar100,bars2,bar,3.0,25.416666666666668,llm_described,,
+cifar100,line1,line,0.0,26.740305308985295,llm_off,,
+cifar100,line1,line,1.0,14.84009784582013,llm_on,,
+cifar100,line1,line,2.0,17.565680847071157,size_prior,,
+cifar100,line1,line,3.0,23.175663328963672,llm_described,,
+cifar100,line2,line,0.0,34.75969469101471,llm_off,,
+cifar100,line2,line,1.0,16.32656882084654,llm_on,,
+cifar100,line2,line,2.0,21.76765248626218,size_prior,,
+cifar100,line2,line,3.0,27.657670004369663,llm_described,,
+ImageNet16-120,bars2,bar,0.0,17.75,llm_off,,
+ImageNet16-120,bars2,bar,1.0,23.166666666666668,llm_on,,
+ImageNet16-120,bars2,bar,2.0,31.25,size_prior,,
+ImageNet16-120,bars2,bar,3.0,19.416666666666668,llm_described,,
+ImageNet16-120,line1,line,0.0,14.849830203507931,llm_off,,
+ImageNet16-120,line1,line,1.0,20.968756732022374,llm_on,,
+ImageNet16-120,line1,line,2.0,28.197120087920954,size_prior,,
+ImageNet16-120,line1,line,3.0,16.956504275705658,llm_described,,
+ImageNet16-120,line2,line,0.0,20.65016979649207,llm_off,,
+ImageNet16-120,line2,line,1.0,25.36457660131096,llm_on,,
+ImageNet16-120,line2,line,2.0,34.30287991207904,size_prior,,
+ImageNet16-120,line2,line,3.0,21.876829057627678,llm_described,,

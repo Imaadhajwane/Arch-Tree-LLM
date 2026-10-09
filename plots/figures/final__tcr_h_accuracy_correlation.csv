@@ -1,0 +1,1875 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,-0.175,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,0.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,1.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,2.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,3.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,4.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,5.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,6.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,7.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,8.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,9.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,10.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,11.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,12.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,13.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,14.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,15.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,16.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,17.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,18.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,19.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,20.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,21.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,22.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,23.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,24.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,25.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,26.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,27.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,28.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,29.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,30.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,31.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,32.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,33.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,34.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,35.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,36.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,37.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,38.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,39.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,40.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,41.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,42.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,43.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,44.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,45.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,46.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,47.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,48.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,49.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,50.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,51.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,52.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,53.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,54.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,55.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,56.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,57.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,58.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,59.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,60.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,61.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,62.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,63.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,64.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,65.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,66.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,67.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,68.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,69.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,70.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,71.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,72.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,73.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,74.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,75.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,76.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,77.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,78.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,79.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,80.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,81.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,82.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,83.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,84.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,85.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,86.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,87.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,88.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,89.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,90.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,91.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,92.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,93.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,94.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,95.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,96.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,97.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,98.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,99.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,100.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,101.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,102.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,103.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,104.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,105.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,106.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,107.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,108.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,109.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,110.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,111.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,112.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,113.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,114.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,115.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,116.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,117.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,118.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,119.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,120.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,121.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,122.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,123.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,124.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,125.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,126.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,127.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,128.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,129.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,130.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,131.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,132.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,133.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,134.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,135.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,136.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,137.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,138.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,139.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,140.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,141.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,142.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,143.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,144.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,145.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,146.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,147.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,148.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,149.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,150.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,151.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,152.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,153.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,154.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,155.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,156.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,157.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,158.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,159.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,160.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,161.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,162.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,163.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,164.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,165.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,166.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,167.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,168.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,169.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,170.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,171.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,172.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,173.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,174.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,175.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,176.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,177.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,178.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,179.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,180.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,181.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,182.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,183.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,184.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,185.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,186.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,187.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,188.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,189.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,190.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,191.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,192.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,193.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,194.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,195.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,196.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,197.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,198.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,199.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,200.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,201.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,202.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,203.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,204.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,205.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,206.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,207.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,208.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,209.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,210.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,211.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,212.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,213.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,214.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,215.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,216.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,217.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,218.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,219.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,220.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,221.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,222.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,223.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,224.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,225.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,226.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,227.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,228.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,229.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,230.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,231.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,232.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,233.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,234.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,235.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,236.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,237.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,238.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,239.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,240.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,241.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,242.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,243.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,244.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,245.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,246.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,247.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,248.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,249.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,250.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,251.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,252.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,253.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,254.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,255.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,256.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,257.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,258.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,259.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,260.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,261.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,262.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,263.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,264.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,265.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,266.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,267.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,268.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,269.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,270.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,271.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,272.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,273.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,274.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,275.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,276.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,277.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,278.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,279.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,280.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,281.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,282.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,283.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,284.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,285.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,286.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,287.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,288.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,289.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,290.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,291.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,292.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,293.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,294.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,295.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,296.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,297.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,298.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,299.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,300.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,301.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,302.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,303.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,304.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,305.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,306.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,307.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,308.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,309.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,310.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,311.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,312.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,313.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,314.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,315.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,316.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,317.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,318.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,319.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,320.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,321.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,322.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,323.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,324.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,325.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,326.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,327.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,328.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,329.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,330.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,331.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,332.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,333.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,334.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,335.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,336.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,337.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,338.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,339.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,340.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,341.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,342.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,343.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,344.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,345.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,346.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,347.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,348.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,349.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,350.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,351.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,352.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,353.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,354.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,355.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,356.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,357.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,358.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,359.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,360.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,361.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,362.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,363.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,364.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,365.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,366.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,367.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,368.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,369.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,370.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,371.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,372.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,373.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,374.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,375.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,376.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,377.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,378.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,379.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,380.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,381.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,382.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,383.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,384.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,385.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,386.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,387.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,388.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,389.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,390.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,391.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,392.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,393.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,394.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,395.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,396.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,397.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,398.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,399.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,400.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,401.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,402.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,403.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,404.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,405.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,406.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,407.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,408.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,409.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,410.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,411.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,412.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,413.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,414.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,415.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,416.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,417.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,418.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,419.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,420.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,421.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,422.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,423.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,424.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,425.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,426.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,427.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,428.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,429.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,430.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,431.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,432.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,433.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,434.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,435.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,436.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,437.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,438.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,439.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,440.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,441.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,442.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,443.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,444.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,445.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,446.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,447.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,448.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,449.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,450.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,451.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,452.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,453.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,454.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,455.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,456.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,457.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,458.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,459.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,460.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,461.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,462.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,463.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,464.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,465.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,466.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,467.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,468.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,469.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,470.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,471.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,472.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,473.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,474.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,475.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,476.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,477.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,478.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,479.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,480.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,481.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,482.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,483.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,484.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,485.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,486.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,487.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,488.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,489.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,490.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,491.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,492.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,493.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,494.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,495.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,496.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,497.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,498.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,499.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,500.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,501.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,502.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,503.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,504.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,505.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,506.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,507.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,508.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,509.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,510.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,511.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,512.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,513.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,514.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,515.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,516.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,517.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,518.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,519.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,520.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,521.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,522.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,523.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,524.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,525.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,526.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,527.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,528.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,529.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,530.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,531.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,532.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,533.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,534.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,535.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,536.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,537.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,538.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,539.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,540.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,541.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,542.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,543.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,544.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,545.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,546.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,547.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,548.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,549.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,550.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,551.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,552.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,553.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,554.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,555.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,556.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,557.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,558.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,559.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,560.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,561.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,562.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,563.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,564.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,565.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,566.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,567.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,568.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,569.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,570.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,571.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,572.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,573.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,574.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,575.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,576.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,577.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,578.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,579.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,580.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,581.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,582.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,583.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,584.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,585.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,586.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,587.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,588.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,589.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,590.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,591.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,592.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,593.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,594.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,595.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,596.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,597.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,598.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,599.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,600.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,601.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,602.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,603.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,604.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,605.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,606.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,607.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,608.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,609.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,610.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,611.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,612.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,613.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,614.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,615.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,616.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,617.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,618.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,619.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,620.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,621.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,622.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,623.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,624.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,625.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,626.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,627.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,628.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,629.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,630.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,631.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,632.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,633.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,634.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,635.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,636.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,637.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,638.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,639.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,640.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,641.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,642.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,643.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,644.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,645.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,646.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,647.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,648.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,649.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,650.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,651.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,652.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,653.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,654.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,655.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,656.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,657.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,658.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,659.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,660.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,661.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,662.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,663.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,664.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,665.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,666.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,667.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,668.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,669.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,670.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,671.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,672.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,673.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,674.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,675.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,676.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,677.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,678.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,679.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,680.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,681.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,682.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,683.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,684.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,685.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,686.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,687.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,688.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,689.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,690.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,691.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,692.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,693.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,694.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,695.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,696.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,697.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,698.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,699.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,700.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,701.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,702.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,703.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,704.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,705.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,706.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,707.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,708.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,709.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,710.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,711.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,712.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,713.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,714.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,715.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,716.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,717.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,718.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,719.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,720.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,721.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,722.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,723.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,724.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,725.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,726.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,727.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,728.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,729.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,730.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,731.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,732.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,733.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,734.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,735.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,736.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,737.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,738.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,739.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,740.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,741.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,742.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,743.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,744.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,745.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,746.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,747.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,748.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,749.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,750.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,751.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,752.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,753.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,754.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,755.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,756.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,757.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,758.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,759.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,760.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,761.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,762.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,763.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,764.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,765.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,766.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,767.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,768.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,769.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,770.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,771.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,772.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,773.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,774.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,775.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,776.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,777.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,778.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,779.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,780.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,781.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,782.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,783.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,784.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,785.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,786.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,787.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,788.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,789.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,790.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,791.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,792.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,793.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,794.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,795.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,796.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,797.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,798.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,799.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,800.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,801.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,802.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,803.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,804.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,805.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,806.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,807.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,808.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,809.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,810.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,811.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,812.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,813.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,814.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,815.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,816.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,817.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,818.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,819.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,820.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,821.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,822.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,823.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,824.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,825.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,826.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,827.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,828.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,829.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,830.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,831.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,832.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,833.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,834.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,835.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,836.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,837.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,838.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,839.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,840.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,841.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,842.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,843.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,844.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,845.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,846.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,847.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,848.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,849.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,850.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,851.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,852.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,853.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,854.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,855.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,856.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,857.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,858.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,859.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,860.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,861.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,862.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,863.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,864.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,865.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,866.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,867.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,868.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,869.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,870.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,871.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,872.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,873.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,874.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,875.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,876.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,877.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,878.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,879.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,880.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,881.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,882.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,883.825,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,884.825,0.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,885.825,0.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,886.825,0.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,887.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,888.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,889.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,890.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,891.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,892.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,893.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,894.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,895.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,896.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,897.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,898.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,899.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,900.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,901.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,902.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,903.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,904.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,905.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,906.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,907.825,1.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,908.825,1.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,909.825,1.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,910.825,1.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,911.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,912.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,913.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,914.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,915.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,916.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,917.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,918.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,919.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,920.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,921.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,922.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,923.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,924.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,925.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,926.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,927.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,928.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,929.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,930.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,931.825,2.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,932.825,2.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,933.825,2.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,TCR-H vs acc,bar,934.825,2.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,0.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,1.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,2.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,3.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,4.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,5.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,6.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,7.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,8.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,9.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,10.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,11.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,12.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,13.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,14.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,15.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,16.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,17.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,18.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,19.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,20.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,21.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,22.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,23.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,24.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,25.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,26.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,27.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,28.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,29.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,30.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,31.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,32.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,33.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,34.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,35.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,36.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,37.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,38.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,39.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,40.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,41.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,42.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,43.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,44.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,45.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,46.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,47.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,48.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,49.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,50.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,51.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,52.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,53.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,54.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,55.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,56.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,57.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,58.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,59.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,60.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,61.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,62.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,63.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,64.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,65.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,66.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,67.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,68.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,69.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,70.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,71.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,72.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,73.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,74.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,75.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,76.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,77.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,78.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,79.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,80.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,81.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,82.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,83.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,84.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,85.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,86.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,87.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,88.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,89.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,90.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,91.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,92.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,93.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,94.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,95.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,96.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,97.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,98.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,99.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,100.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,101.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,102.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,103.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,104.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,105.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,106.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,107.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,108.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,109.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,110.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,111.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,112.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,113.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,114.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,115.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,116.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,117.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,118.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,119.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,120.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,121.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,122.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,123.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,124.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,125.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,126.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,127.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,128.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,129.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,130.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,131.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,132.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,133.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,134.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,135.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,136.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,137.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,138.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,139.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,140.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,141.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,142.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,143.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,144.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,145.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,146.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,147.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,148.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,149.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,150.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,151.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,152.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,153.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,154.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,155.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,156.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,157.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,158.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,159.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,160.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,161.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,162.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,163.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,164.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,165.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,166.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,167.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,168.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,169.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,170.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,171.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,172.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,173.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,174.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,175.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,176.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,177.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,178.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,179.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,180.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,181.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,182.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,183.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,184.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,185.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,186.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,187.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,188.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,189.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,190.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,191.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,192.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,193.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,194.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,195.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,196.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,197.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,198.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,199.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,200.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,201.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,202.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,203.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,204.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,205.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,206.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,207.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,208.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,209.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,210.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,211.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,212.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,213.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,214.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,215.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,216.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,217.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,218.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,219.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,220.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,221.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,222.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,223.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,224.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,225.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,226.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,227.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,228.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,229.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,230.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,231.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,232.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,233.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,234.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,235.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,236.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,237.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,238.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,239.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,240.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,241.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,242.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,243.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,244.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,245.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,246.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,247.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,248.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,249.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,250.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,251.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,252.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,253.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,254.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,255.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,256.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,257.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,258.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,259.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,260.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,261.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,262.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,263.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,264.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,265.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,266.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,267.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,268.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,269.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,270.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,271.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,272.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,273.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,274.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,275.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,276.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,277.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,278.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,279.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,280.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,281.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,282.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,283.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,284.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,285.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,286.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,287.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,288.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,289.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,290.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,291.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,292.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,293.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,294.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,295.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,296.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,297.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,298.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,299.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,300.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,301.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,302.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,303.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,304.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,305.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,306.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,307.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,308.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,309.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,310.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,311.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,312.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,313.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,314.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,315.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,316.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,317.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,318.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,319.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,320.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,321.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,322.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,323.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,324.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,325.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,326.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,327.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,328.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,329.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,330.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,331.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,332.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,333.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,334.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,335.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,336.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,337.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,338.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,339.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,340.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,341.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,342.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,343.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,344.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,345.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,346.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,347.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,348.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,349.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,350.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,351.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,352.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,353.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,354.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,355.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,356.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,357.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,358.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,359.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,360.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,361.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,362.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,363.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,364.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,365.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,366.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,367.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,368.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,369.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,370.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,371.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,372.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,373.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,374.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,375.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,376.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,377.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,378.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,379.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,380.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,381.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,382.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,383.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,384.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,385.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,386.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,387.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,388.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,389.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,390.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,391.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,392.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,393.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,394.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,395.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,396.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,397.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,398.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,399.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,400.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,401.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,402.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,403.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,404.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,405.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,406.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,407.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,408.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,409.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,410.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,411.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,412.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,413.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,414.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,415.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,416.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,417.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,418.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,419.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,420.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,421.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,422.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,423.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,424.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,425.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,426.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,427.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,428.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,429.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,430.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,431.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,432.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,433.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,434.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,435.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,436.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,437.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,438.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,439.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,440.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,441.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,442.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,443.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,444.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,445.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,446.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,447.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,448.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,449.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,450.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,451.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,452.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,453.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,454.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,455.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,456.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,457.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,458.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,459.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,460.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,461.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,462.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,463.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,464.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,465.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,466.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,467.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,468.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,469.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,470.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,471.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,472.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,473.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,474.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,475.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,476.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,477.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,478.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,479.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,480.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,481.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,482.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,483.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,484.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,485.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,486.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,487.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,488.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,489.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,490.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,491.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,492.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,493.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,494.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,495.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,496.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,497.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,498.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,499.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,500.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,501.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,502.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,503.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,504.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,505.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,506.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,507.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,508.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,509.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,510.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,511.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,512.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,513.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,514.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,515.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,516.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,517.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,518.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,519.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,520.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,521.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,522.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,523.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,524.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,525.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,526.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,527.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,528.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,529.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,530.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,531.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,532.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,533.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,534.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,535.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,536.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,537.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,538.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,539.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,540.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,541.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,542.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,543.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,544.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,545.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,546.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,547.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,548.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,549.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,550.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,551.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,552.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,553.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,554.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,555.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,556.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,557.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,558.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,559.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,560.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,561.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,562.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,563.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,564.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,565.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,566.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,567.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,568.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,569.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,570.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,571.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,572.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,573.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,574.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,575.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,576.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,577.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,578.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,579.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,580.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,581.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,582.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,583.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,584.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,585.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,586.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,587.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,588.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,589.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,590.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,591.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,592.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,593.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,594.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,595.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,596.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,597.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,598.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,599.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,600.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,601.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,602.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,603.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,604.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,605.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,606.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,607.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,608.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,609.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,610.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,611.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,612.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,613.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,614.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,615.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,616.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,617.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,618.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,619.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,620.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,621.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,622.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,623.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,624.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,625.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,626.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,627.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,628.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,629.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,630.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,631.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,632.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,633.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,634.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,635.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,636.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,637.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,638.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,639.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,640.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,641.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,642.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,643.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,644.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,645.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,646.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,647.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,648.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,649.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,650.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,651.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,652.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,653.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,654.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,655.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,656.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,657.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,658.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,659.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,660.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,661.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,662.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,663.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,664.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,665.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,666.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,667.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,668.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,669.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,670.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,671.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,672.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,673.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,674.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,675.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,676.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,677.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,678.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,679.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,680.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,681.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,682.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,683.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,684.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,685.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,686.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,687.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,688.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,689.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,690.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,691.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,692.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,693.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,694.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,695.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,696.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,697.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,698.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,699.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,700.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,701.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,702.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,703.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,704.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,705.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,706.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,707.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,708.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,709.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,710.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,711.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,712.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,713.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,714.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,715.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,716.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,717.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,718.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,719.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,720.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,721.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,722.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,723.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,724.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,725.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,726.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,727.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,728.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,729.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,730.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,731.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,732.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,733.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,734.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,735.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,736.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,737.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,738.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,739.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,740.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,741.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,742.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,743.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,744.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,745.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,746.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,747.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,748.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,749.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,750.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,751.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,752.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,753.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,754.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,755.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,756.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,757.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,758.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,759.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,760.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,761.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,762.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,763.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,764.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,765.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,766.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,767.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,768.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,769.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,770.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,771.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,772.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,773.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,774.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,775.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,776.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,777.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,778.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,779.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,780.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,781.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,782.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,783.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,784.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,785.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,786.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,787.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,788.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,789.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,790.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,791.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,792.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,793.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,794.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,795.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,796.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,797.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,798.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,799.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,800.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,801.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,802.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,803.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,804.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,805.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,806.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,807.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,808.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,809.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,810.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,811.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,812.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,813.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,814.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,815.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,816.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,817.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,818.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,819.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,820.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,821.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,822.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,823.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,824.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,825.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,826.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,827.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,828.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,829.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,830.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,831.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,832.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,833.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,834.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,835.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,836.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,837.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,838.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,839.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,840.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,841.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,842.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,843.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,844.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,845.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,846.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,847.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,848.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,849.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,850.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,851.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,852.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,853.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,854.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,855.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,856.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,857.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,858.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,859.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,860.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,861.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,862.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,863.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,864.175,3.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,865.175,3.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,866.175,3.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,867.175,3.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,868.175,4.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,869.175,4.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,870.175,4.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,871.175,4.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,872.175,5.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,873.175,5.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,874.175,5.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,875.175,5.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,876.175,6.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,877.175,6.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,878.175,6.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,879.175,6.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,880.175,7.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,881.175,7.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,882.175,7.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,883.175,7.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,884.175,8.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,885.175,8.0,ImageNet16-120/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,886.175,8.0,ImageNet16-120/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,887.175,8.0,ImageNet16-120/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,888.175,3.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,889.175,3.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,890.175,3.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,891.175,3.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,892.175,4.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,893.175,4.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,894.175,4.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,895.175,4.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,896.175,5.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,897.175,5.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,898.175,5.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,899.175,5.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,900.175,6.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,901.175,6.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,902.175,6.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,903.175,6.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,904.175,7.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,905.175,7.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,906.175,7.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,907.175,7.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,908.175,8.0,cifar10/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,909.175,8.0,cifar10/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,910.175,8.0,cifar10/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,911.175,8.0,cifar10/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,912.175,3.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,913.175,3.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,914.175,3.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,915.175,3.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,916.175,4.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,917.175,4.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,918.175,4.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,919.175,4.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,920.175,5.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,921.175,5.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,922.175,5.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,923.175,5.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,924.175,6.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,925.175,6.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,926.175,6.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,927.175,6.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,928.175,7.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,929.175,7.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,930.175,7.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,931.175,7.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,932.175,8.0,cifar100/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,933.175,8.0,cifar100/50,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,934.175,8.0,cifar100/100,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,plain TCR vs acc,bar,935.175,8.0,cifar100/200,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,line1,reference_line,0.0,0.0,ImageNet16-120/25,,Spearman r
+TCR-H vs plain-TCR correlation with best_acc,line1,reference_line,1.0,0.0,ImageNet16-120/50,,Spearman r

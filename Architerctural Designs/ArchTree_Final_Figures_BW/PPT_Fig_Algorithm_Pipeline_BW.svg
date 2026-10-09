@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120pt" height="640pt" viewBox="0 0 1120 640" font-family="'Times New Roman', Times, 'TeX Gyre Termes', 'Liberation Serif', serif">
+<defs>
+ <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker>
+</defs>
+<rect width="1120" height="640" fill="#ffffff"/>
+<text x="16.0" y="30.0" font-size="20" fill="#111111" text-anchor="start" font-weight="bold">ArchTree v2 — Search Pipeline, Explained</text>
+<text x="16.0" y="45.0" font-size="8.6" fill="#555555" text-anchor="start" font-style="italic">One search run per (dataset, seed, budget). Left: the loop as implemented in archtree/search.py. Middle: what supports and evaluates it. Right: each block in plain terms.</text>
+<line x1="16" y1="53" x2="1104" y2="53" stroke="#111111" stroke-width="1.4"/>
+<rect x="16" y="68" width="544" height="556" rx="4" fill="none" stroke="#111111" stroke-width="0.9" stroke-dasharray="4 2.5"/>
+<rect x="24" y="62" width="112.8" height="11" fill="#ffffff"/>
+<text x="29.0" y="71.0" font-size="8" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">CORE SEARCH LOOP</text>
+<rect x="190.0" y="84.0" width="200.0" height="47.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M190.0,93.0 V86.0 a2,2 0 0 1 2,-2 H388.0 a2,2 0 0 1 2,2 V93.0 z" fill="#111111"/>
+<text x="194.0" y="90.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 1 · EVERY ITERATION</text>
+<text x="290.0" y="104.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">UCB Descent of the Trie</text>
+<text x="290.0" y="114.0" font-size="6.7" fill="#333" text-anchor="middle">proposes candidate t: value + C·√(ln N / n)</text>
+<text x="290.0" y="122.8" font-size="6.7" fill="#333" text-anchor="middle">C = 0.3; value = percentile rank (v2)</text>
+<rect x="380.0" y="146.0" width="156.0" height="47.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M380.0,155.0 V148.0 a2,2 0 0 1 2,-2 H534.0 a2,2 0 0 1 2,2 V155.0 z" fill="#111111"/>
+<text x="384.0" y="152.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 2 · AFTER 10 REAL EVALS</text>
+<text x="458.0" y="166.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Mutation (v2)</text>
+<text x="458.0" y="176.0" font-size="6.7" fill="#333" text-anchor="middle">replaces the UCB proposal, p = 0.5:</text>
+<text x="458.0" y="184.8" font-size="6.7" fill="#333" text-anchor="middle">best of 5 evaluated → mutate</text>
+<path d="M390.0,120 H458.0 V145" fill="none" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="395.0" y="116.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">p = 0.5</text>
+<rect x="26.0" y="85.0" width="146.0" height="44.0" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2"/>
+<path d="M26.0,94.0 V87.0 a2,2 0 0 1 2,-2 H170.0 a2,2 0 0 1 2,2 V94.0 z" fill="#7A7A7A"/>
+<text x="30.0" y="91.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">OPTIONAL · OFF (α = 0)</text>
+<text x="99.0" y="105.0" font-size="8" fill="#333" text-anchor="middle" font-weight="bold">LLM Prior</text>
+<text x="99.0" y="115.0" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">scores unvisited branches</text>
+<text x="99.0" y="123.8" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">weight α/√t (Groq gpt-oss-20b)</text>
+<line x1="172.0" y1="107.0" x2="189.0" y2="107.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="174.0" y="103.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">prior</text>
+<rect x="190.0" y="218.0" width="200.0" height="40.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M190.0,227.0 V220.0 a2,2 0 0 1 2,-2 H388.0 a2,2 0 0 1 2,2 V227.0 z" fill="#111111"/>
+<text x="194.0" y="224.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 3</text>
+<text x="290.0" y="238.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Deduplication</text>
+<text x="290.0" y="248.0" font-size="6.7" fill="#333" text-anchor="middle">trie.is_visited(), O(L); duplicates replaced</text>
+<line x1="290.0" y1="131.0" x2="290.0" y2="217.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="285.0" y="178.0" font-size="6.4" fill="#555555" text-anchor="end" font-style="italic">otherwise</text>
+<path d="M458.0,193 V205 H330 V217" fill="none" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="290.0" y1="258.0" x2="290.0" y2="277.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<path d="M290,278 L394,318 L290,358 L186,318 z" fill="#ffffff" stroke="#111111" stroke-width="0.9"/>
+<text x="290.0" y="301.0" font-size="5.6" fill="#111111" text-anchor="middle" font-weight="bold" letter-spacing="0.6">STEP 4</text>
+<text x="290.0" y="312.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Label-free ZC Gate</text>
+<text x="290.0" y="322.5" font-size="6.6" fill="#333" text-anchor="middle">first 10 proposals always pass;</text>
+<text x="290.0" y="331.5" font-size="6.6" fill="#333" text-anchor="middle">then top 35% of scores seen</text>
+<rect x="26.0" y="288.0" width="150.0" height="56.0" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2"/>
+<path d="M26.0,297.0 V290.0 a2,2 0 0 1 2,-2 H174.0 a2,2 0 0 1 2,2 V297.0 z" fill="#7A7A7A"/>
+<text x="30.0" y="294.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">0 LABELS</text>
+<text x="101.0" y="308.0" font-size="8" fill="#333" text-anchor="middle" font-weight="bold">Proxy Ensemble</text>
+<text x="101.0" y="318.0" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">SynFlow + NASWOT + SVD entropy</text>
+<text x="101.0" y="326.8" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">z-scored on 1,500 unlabeled archs</text>
+<text x="101.0" y="335.6" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">equal weights (complexity = 0)</text>
+<line x1="176.0" y1="318.0" x2="185.0" y2="318.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<rect x="428.0" y="297.0" width="108.0" height="42.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M428.0,306.0 V299.0 a2,2 0 0 1 2,-2 H534.0 a2,2 0 0 1 2,2 V306.0 z" fill="#7A7A7A"/>
+<text x="432.0" y="303.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">REJECT</text>
+<text x="482.0" y="317.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Skip</text>
+<text x="482.0" y="327.0" font-size="6.7" fill="#333" text-anchor="middle">visit count only:</text>
+<text x="482.0" y="335.8" font-size="6.7" fill="#333" text-anchor="middle">no evaluation, no cost</text>
+<line x1="394.0" y1="318.0" x2="427.0" y2="318.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="399.0" y="314.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">reject</text>
+<line x1="290.0" y1="358.0" x2="290.0" y2="383.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="295.0" y="373.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">pass</text>
+<rect x="190.0" y="384.0" width="200.0" height="44.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M190.0,393.0 V386.0 a2,2 0 0 1 2,-2 H388.0 a2,2 0 0 1 2,2 V393.0 z" fill="#111111"/>
+<text x="194.0" y="390.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 5</text>
+<text x="290.0" y="404.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Real Evaluation</text>
+<text x="290.0" y="414.0" font-size="6.7" fill="#333" text-anchor="middle">benchmark lookup of validation accuracy</text>
+<text x="290.0" y="422.8" font-size="6.7" fill="#333" text-anchor="middle">cost += recorded training time (GPU-h)</text>
+<line x1="290.0" y1="428.0" x2="290.0" y2="447.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<rect x="190.0" y="448.0" width="200.0" height="44.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M190.0,457.0 V450.0 a2,2 0 0 1 2,-2 H388.0 a2,2 0 0 1 2,2 V457.0 z" fill="#111111"/>
+<text x="194.0" y="454.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 6</text>
+<text x="290.0" y="468.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Insert + Backpropagate</text>
+<text x="290.0" y="478.0" font-size="6.7" fill="#333" text-anchor="middle">store accuracy in the trie node</text>
+<text x="290.0" y="486.8" font-size="6.7" fill="#333" text-anchor="middle">update UCB statistics bottom-up (max)</text>
+<rect x="26.0" y="448.0" width="150.0" height="44.0" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2"/>
+<path d="M26.0,457.0 V450.0 a2,2 0 0 1 2,-2 H174.0 a2,2 0 0 1 2,2 V457.0 z" fill="#7A7A7A"/>
+<text x="30.0" y="454.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">SIMULATED</text>
+<text x="101.0" y="468.0" font-size="8" fill="#333" text-anchor="middle" font-weight="bold">Weight Bank</text>
+<text x="101.0" y="478.0" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">inherit closest ancestor's weights</text>
+<text x="101.0" y="486.8" font-size="6.7" fill="#555555" text-anchor="middle" font-style="italic">nothing trained on tabular benchmarks</text>
+<line x1="190.0" y1="470.0" x2="177.0" y2="470.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<line x1="290.0" y1="492.0" x2="290.0" y2="511.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<rect x="190.0" y="512.0" width="200.0" height="44.0" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M190.0,521.0 V514.0 a2,2 0 0 1 2,-2 H388.0 a2,2 0 0 1 2,2 V521.0 z" fill="#111111"/>
+<text x="194.0" y="518.6" font-size="5.4" fill="#ffffff" text-anchor="start" font-weight="bold" letter-spacing="0.6">STEP 7</text>
+<text x="290.0" y="532.0" font-size="8" fill="#111111" text-anchor="middle" font-weight="bold">Prune (every 50 iterations)</text>
+<text x="290.0" y="542.0" font-size="6.7" fill="#333" text-anchor="middle">bottom 15% of nodes by value</text>
+<text x="290.0" y="550.8" font-size="6.7" fill="#333" text-anchor="middle">≥ 2 visits; never the last sibling</text>
+<path d="M482.0,339 V502 H360 V511" fill="none" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<path d="M390.0,534 H548 V107.5 H391.0" fill="none" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text transform="translate(544,338.0) rotate(-90)" font-size="6.8" font-style="italic" fill="#111111" text-anchor="middle">next iteration t + 1, until the budget is spent</text>
+<line x1="290.0" y1="556.0" x2="290.0" y2="575.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="295.0" y="569.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">budget spent</text>
+<rect x="140" y="576" width="300" height="40" rx="2" fill="#111111"/>
+<text x="290.0" y="589.0" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">OUTPUT · Report</text>
+<text x="290.0" y="600.0" font-size="6.8" fill="#E6E6E6" text-anchor="middle">best-validation architecture → its test accuracy,</text>
+<text x="290.0" y="609.0" font-size="6.8" fill="#E6E6E6" text-anchor="middle">real evaluations, GPU-hours; TCR / TCR-H logged</text>
+<rect x="578" y="68" width="190" height="270" rx="4" fill="none" stroke="#111111" stroke-width="0.9" stroke-dasharray="4 2.5"/>
+<rect x="586" y="62" width="100.2" height="11" fill="#ffffff"/>
+<text x="591.0" y="71.0" font-size="8" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">INFRASTRUCTURE</text>
+<rect x="586" y="82.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="82.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="94.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Groq Key Pool + Rate Limiter</text>
+<text x="595.0" y="104.5" font-size="6.6" fill="#333" text-anchor="start">round-robin keys, RPM / TPM pacing</text>
+<rect x="586" y="132.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="132.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="144.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Shared Caches</text>
+<text x="595.0" y="154.5" font-size="6.6" fill="#333" text-anchor="start">LLM answers and proxy scores</text>
+<rect x="586" y="182.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="182.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="194.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Storage Layer</text>
+<text x="595.0" y="204.5" font-size="6.6" fill="#333" text-anchor="start">atomic JSON writes; CSV + logs</text>
+<rect x="586" y="232.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="232.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="244.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Checkpoint / Resume</text>
+<text x="595.0" y="254.5" font-size="6.6" fill="#333" text-anchor="start">finished runs skipped on rerun</text>
+<rect x="586" y="282.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="282.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="294.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Parallel Workers</text>
+<text x="595.0" y="304.5" font-size="6.6" fill="#333" text-anchor="start">proxy pre-compute, equal GPU-h</text>
+<line x1="578.0" y1="200.0" x2="561.0" y2="200.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="576.0" y="195.0" font-size="6.4" fill="#555555" text-anchor="end" font-style="italic">supports</text>
+<rect x="578" y="356" width="190" height="268" rx="4" fill="none" stroke="#111111" stroke-width="0.9" stroke-dasharray="4 2.5"/>
+<rect x="586" y="350" width="112.8" height="11" fill="#ffffff"/>
+<text x="591.0" y="359.0" font-size="8" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">EVALUATION LAYER</text>
+<rect x="586" y="370.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="370.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="382.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Baselines</text>
+<text x="595.0" y="392.5" font-size="6.6" fill="#333" text-anchor="start">9 external + internal arms</text>
+<rect x="586" y="421.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="421.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="433.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Equal GPU-Hours Study</text>
+<text x="595.0" y="443.5" font-size="6.6" fill="#333" text-anchor="start">fair compute, 13 methods, 3 benchmarks</text>
+<rect x="586" y="472.0" width="174" height="44.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="472.0" width="3" height="44.0" fill="#111111"/>
+<text x="595.0" y="484.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Ablation Suite</text>
+<text x="595.0" y="494.5" font-size="6.6" fill="#333" text-anchor="start">A1–A7, design, proxy, UCB C</text>
+<rect x="586" y="523.0" width="174" height="52.0" rx="2.5" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="586" y="523.0" width="3" height="52.0" fill="#111111"/>
+<text x="595.0" y="535.5" font-size="7.6" fill="#111111" text-anchor="start" font-weight="bold">Statistics</text>
+<text x="595.0" y="545.5" font-size="6.6" fill="#333" text-anchor="start">Wilcoxon + Holm, Friedman / Nemenyi,</text>
+<text x="595.0" y="554.1" font-size="6.6" fill="#333" text-anchor="start">TOST, P(improvement), Cohen's d</text>
+<line x1="440.0" y1="596.0" x2="577.0" y2="596.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="790.0" y="74.0" font-size="8.4" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">CORE LOOP — IN PLAIN TERMS</text>
+<circle cx="796" cy="85.4" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="88.0" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="807.0" y="88.0" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">UCB proposal</text>
+<text x="807.0" y="97.5" font-size="6.9" fill="#333" text-anchor="start">Each iteration, walks the tree of design choices to propose one new architecture.</text>
+<circle cx="796" cy="112.5" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="115.1" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="807.0" y="115.1" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Mutation</text>
+<text x="807.0" y="124.6" font-size="6.9" fill="#333" text-anchor="start">After 10 real tests, half the time swaps that proposal for a tweak of a top design.</text>
+<circle cx="796" cy="139.6" r="6" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="2 1.5"/>
+<text x="807.0" y="142.2" font-size="7.8" fill="#555555" text-anchor="start" font-weight="bold">LLM prior</text>
+<text x="807.0" y="151.7" font-size="6.9" fill="#333" text-anchor="start">An AI model guesses which branches look promising. Studied separately; off in the main</text>
+<text x="807.0" y="160.3" font-size="6.9" fill="#333" text-anchor="start">system.</text>
+<circle cx="796" cy="175.29999999999998" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="177.9" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="807.0" y="177.9" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Deduplication</text>
+<text x="807.0" y="187.4" font-size="6.9" fill="#333" text-anchor="start">The tree remembers every design, so no design is ever paid for twice.</text>
+<circle cx="796" cy="202.39999999999998" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="205.0" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="807.0" y="205.0" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Zero-cost gate</text>
+<text x="807.0" y="214.5" font-size="6.9" fill="#333" text-anchor="start">A one-pass check on an untrained network; only the top 35% go on to a real test.</text>
+<circle cx="796" cy="229.49999999999997" r="6" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="2 1.5"/>
+<text x="807.0" y="232.1" font-size="7.8" fill="#555555" text-anchor="start" font-weight="bold">Proxy ensemble</text>
+<text x="807.0" y="241.6" font-size="6.9" fill="#333" text-anchor="start">Three training-free scores averaged with equal weight. Needs no accuracy labels.</text>
+<circle cx="796" cy="256.59999999999997" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="259.2" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="807.0" y="259.2" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Real evaluation</text>
+<text x="807.0" y="268.7" font-size="6.9" fill="#333" text-anchor="start">Looks up the design's accuracy — the expensive step the pipeline tries to minimise.</text>
+<circle cx="796" cy="283.7" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="286.3" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+<text x="807.0" y="286.3" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Backpropagate</text>
+<text x="807.0" y="295.8" font-size="6.9" fill="#333" text-anchor="start">Feeds the result back up the tree so future choices get smarter.</text>
+<circle cx="796" cy="310.8" r="6" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="2 1.5"/>
+<text x="807.0" y="313.4" font-size="7.8" fill="#555555" text-anchor="start" font-weight="bold">Weight bank</text>
+<text x="807.0" y="322.9" font-size="6.9" fill="#333" text-anchor="start">Lets a child reuse its parent's weights. Simulated here, since nothing is trained.</text>
+<circle cx="796" cy="337.90000000000003" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="340.5" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<text x="807.0" y="340.5" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Prune</text>
+<text x="807.0" y="350.0" font-size="6.9" fill="#333" text-anchor="start">Every 50 steps, cuts the weakest 15% of branches so the search stays focused.</text>
+<circle cx="796" cy="365.00000000000006" r="6" fill="#111111" stroke="#111111" stroke-width="0.7"/>
+<text x="796.0" y="367.6" font-size="6.4" fill="#ffffff" text-anchor="middle" font-weight="bold">▸</text>
+<text x="807.0" y="367.6" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Report</text>
+<text x="807.0" y="377.1" font-size="6.9" fill="#333" text-anchor="start">Picks the best design on validation data and reports its test accuracy and cost.</text>
+<circle cx="796" cy="392.1000000000001" r="6" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="2 1.5"/>
+<text x="807.0" y="394.7" font-size="7.8" fill="#555555" text-anchor="start" font-weight="bold">TCR / TCR-H</text>
+<text x="807.0" y="404.2" font-size="6.9" fill="#333" text-anchor="start">How much of the space was covered; TCR-H also rewards good accuracy–latency trade-offs.</text>
+<line x1="790" y1="418.8000000000001" x2="1104" y2="418.8000000000001" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="790.0" y="431.8" font-size="8.4" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">INFRASTRUCTURE &amp; EVALUATION</text>
+<rect x="792" y="439.3000000000001" width="7" height="7" rx="1" fill="#F2F2F2" stroke="#111111" stroke-width="0.7"/>
+<text x="807.0" y="445.8" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Groq key pool</text>
+<text x="807.0" y="455.3" font-size="6.9" fill="#333" text-anchor="start">Rotates several API keys so rate limits never stall the LLM studies.</text>
+<rect x="792" y="466.40000000000015" width="7" height="7" rx="1" fill="#F2F2F2" stroke="#111111" stroke-width="0.7"/>
+<text x="807.0" y="472.9" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Caches &amp; storage</text>
+<text x="807.0" y="482.4" font-size="6.9" fill="#333" text-anchor="start">Every answer, score and result is saved safely, so nothing is recomputed or lost.</text>
+<rect x="792" y="493.50000000000017" width="7" height="7" rx="1" fill="#F2F2F2" stroke="#111111" stroke-width="0.7"/>
+<text x="807.0" y="500.0" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Checkpoint / resume</text>
+<text x="807.0" y="509.5" font-size="6.9" fill="#333" text-anchor="start">A stopped pipeline restarts where it left off.</text>
+<rect x="792" y="520.6000000000001" width="7" height="7" rx="1" fill="#F2F2F2" stroke="#111111" stroke-width="0.7"/>
+<text x="807.0" y="527.1" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Baselines &amp; ablations</text>
+<text x="807.0" y="536.6" font-size="6.9" fill="#333" text-anchor="start">Compare against other methods, and switch one part off at a time to prove it helps.</text>
+<rect x="792" y="547.7000000000002" width="7" height="7" rx="1" fill="#F2F2F2" stroke="#111111" stroke-width="0.7"/>
+<text x="807.0" y="554.2" font-size="7.8" fill="#111111" text-anchor="start" font-weight="bold">Statistics</text>
+<text x="807.0" y="563.7" font-size="6.9" fill="#333" text-anchor="start">Tests if differences are real (Wilcoxon, Holm), ranks methods (Friedman) and checks</text>
+<text x="807.0" y="572.3" font-size="6.9" fill="#333" text-anchor="start">equivalence (TOST).</text>
+</svg>

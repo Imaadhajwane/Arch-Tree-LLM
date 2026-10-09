@@ -1,0 +1,12 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Fig 5 — ablation summary (component removal impact),cifar10,bar,-0.2666666666666667,0.0,A1_no_llm,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),cifar10,bar,0.7333333333333334,-0.0589930555555326,A2_no_zc,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),cifar10,bar,1.7333333333333334,0.0,A3_no_weight_inherit,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),cifar100,bar,0.0,-2.8421709430404014e-14,A1_no_llm,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),cifar100,bar,1.0,-0.1105555599000922,A2_no_zc,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),cifar100,bar,2.0,-2.8421709430404014e-14,A3_no_weight_inherit,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),ImageNet16-120,bar,0.26666666666666666,-7.105427357601002e-15,A1_no_llm,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),ImageNet16-120,bar,1.2666666666666666,-0.1715277948379636,A2_no_zc,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),ImageNet16-120,bar,2.2666666666666666,-7.105427357601002e-15,A3_no_weight_inherit,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),line1,reference_line,0.0,0.0,A1_no_llm,,Δ best_acc vs full (pp)
+Fig 5 — ablation summary (component removal impact),line1,reference_line,1.0,0.0,A2_no_zc,,Δ best_acc vs full (pp)

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="516pt" height="262pt" viewBox="0 0 516 262" font-family="'Times New Roman', Times, 'TeX Gyre Termes', 'Liberation Serif', serif">
+<defs>
+ <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker>
+</defs>
+<rect width="516" height="262" fill="#ffffff"/>
+<rect x="4.0" y="40.0" width="117.0" height="160.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M4,60 V43 a3,3 0 0 1 3,-3 H118 a3,3 0 0 1 3,3 V60 z" fill="#111111"/>
+<text x="62.5" y="53.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Benchmarks &amp; Data</text>
+<rect x="10.0" y="66.0" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="62.5" y="78.6" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">NAS-Bench-201</text>
+<text x="62.5" y="88.1" font-size="6.6" fill="#3c3c3c" text-anchor="middle">15,625 archs · 3 datasets</text>
+<rect x="10.0" y="99.2" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="62.5" y="111.9" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">HW-NAS-Bench</text>
+<text x="62.5" y="121.4" font-size="6.6" fill="#3c3c3c" text-anchor="middle">latency on 6 devices</text>
+<rect x="10.0" y="132.5" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="62.5" y="145.1" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">NAS-Bench-101</text>
+<text x="62.5" y="154.6" font-size="6.6" fill="#3c3c3c" text-anchor="middle">CIFAR-10</text>
+<rect x="10.0" y="165.8" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="62.5" y="178.4" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">NATS-Bench SSS</text>
+<text x="62.5" y="187.9" font-size="6.6" fill="#3c3c3c" text-anchor="middle">32,768 width configs</text>
+<rect x="135.0" y="40.0" width="117.0" height="160.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M135,60 V43 a3,3 0 0 1 3,-3 H249 a3,3 0 0 1 3,3 V60 z" fill="#111111"/>
+<text x="193.5" y="53.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Search Loop — ArchTree v2</text>
+<rect x="141.0" y="66.0" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="193.5" y="78.6" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Trie + Deduplication</text>
+<text x="193.5" y="88.1" font-size="6.6" fill="#3c3c3c" text-anchor="middle">never re-evaluate, O(L)</text>
+<rect x="141.0" y="99.2" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="193.5" y="111.9" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Rank-UCB + Mutation</text>
+<text x="193.5" y="121.4" font-size="6.6" fill="#3c3c3c" text-anchor="middle">C = 0.3 · p = 0.5 after 10</text>
+<rect x="141.0" y="132.5" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="193.5" y="145.1" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Label-free ZC Gate</text>
+<text x="193.5" y="154.6" font-size="6.6" fill="#3c3c3c" text-anchor="middle">top 35% → real evaluation</text>
+<rect x="141.0" y="165.8" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="193.5" y="178.4" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Prune + Max Backup</text>
+<text x="193.5" y="187.9" font-size="6.6" fill="#3c3c3c" text-anchor="middle">15% every 50 iterations</text>
+<rect x="266.0" y="40.0" width="117.0" height="160.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M266,60 V43 a3,3 0 0 1 3,-3 H380 a3,3 0 0 1 3,3 V60 z" fill="#111111"/>
+<text x="324.5" y="53.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Evaluation</text>
+<rect x="272.0" y="66.0" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="324.5" y="78.6" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Validation Accuracy</text>
+<text x="324.5" y="88.1" font-size="6.6" fill="#3c3c3c" text-anchor="middle">drives the search</text>
+<rect x="272.0" y="99.2" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="324.5" y="111.9" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Test Accuracy</text>
+<text x="324.5" y="121.4" font-size="6.6" fill="#3c3c3c" text-anchor="middle">reported only</text>
+<rect x="272.0" y="132.5" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="324.5" y="145.1" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">GPU-hour Cost</text>
+<text x="324.5" y="154.6" font-size="6.6" fill="#3c3c3c" text-anchor="middle">recorded training time</text>
+<rect x="272.0" y="165.8" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="324.5" y="178.4" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">HW Latency → TCR-H</text>
+<text x="324.5" y="187.9" font-size="6.6" fill="#3c3c3c" text-anchor="middle">Pareto-weighted coverage</text>
+<rect x="397.0" y="40.0" width="117.0" height="160.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M397,60 V43 a3,3 0 0 1 3,-3 H511 a3,3 0 0 1 3,3 V60 z" fill="#111111"/>
+<text x="455.5" y="53.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Comparison &amp; Statistics</text>
+<rect x="403.0" y="66.0" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="455.5" y="78.6" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Equal GPU-hours</text>
+<text x="455.5" y="88.1" font-size="6.6" fill="#3c3c3c" text-anchor="middle">13 methods, 12 seeds</text>
+<rect x="403.0" y="99.2" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="455.5" y="111.9" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Wilcoxon + Holm</text>
+<text x="455.5" y="121.4" font-size="6.6" fill="#3c3c3c" text-anchor="middle">paired, per family</text>
+<rect x="403.0" y="132.5" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="455.5" y="145.1" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Friedman + Nemenyi</text>
+<text x="455.5" y="154.6" font-size="6.6" fill="#3c3c3c" text-anchor="middle">average ranks, CD</text>
+<rect x="403.0" y="165.8" width="105.0" height="28.2" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="455.5" y="178.4" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">TOST · Cohen's d</text>
+<text x="455.5" y="187.9" font-size="6.6" fill="#3c3c3c" text-anchor="middle">equivalence, effect size</text>
+<line x1="121.0" y1="132.0" x2="134.0" y2="132.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="252.0" y1="132.0" x2="265.0" y2="132.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="383.0" y1="132.0" x2="396.0" y2="132.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<rect x="141" y="3" width="105" height="24" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="193.5" y="13.5" font-size="7" fill="#333" text-anchor="middle" font-weight="bold">LLM Warm-Start Prior</text>
+<text x="193.5" y="22.5" font-size="6.2" fill="#555555" text-anchor="middle" font-style="italic">optional; off in headline (α = 0)</text>
+<line x1="193.5" y1="27.0" x2="193.5" y2="39.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="268.0" y="13.0" font-size="6.2" fill="#555555" text-anchor="start" font-style="italic">LLM controls: zero-info prompt,</text>
+<text x="268.0" y="21.5" font-size="6.2" fill="#555555" text-anchor="start" font-style="italic">contamination check, model size</text>
+<path d="M324.5,200 V212 H193.5 V201" fill="none" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="259.0" y="209.0" font-size="6.2" fill="#111111" text-anchor="middle" font-style="italic">rank reward backed up</text>
+<rect x="135" y="224" width="248" height="34" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<rect x="135" y="224" width="3" height="34" fill="#111111"/>
+<text x="144.0" y="235.0" font-size="7.4" fill="#111111" text-anchor="start" font-weight="bold">Experiment Suite</text>
+<text x="144.0" y="245.0" font-size="6.3" fill="#333" text-anchor="start">Phases 0–4 · ablations (A1–A7, UCB C) · LLM studies · 9 external baselines</text>
+<path d="M383,241.0 H455.5 V201" fill="none" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="387.0" y="238.0" font-size="6.2" fill="#555555" text-anchor="start" font-style="italic">results</text>
+<line x1="6.0" y1="211.8" x2="22.0" y2="211.8" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="27.0" y="214.0" font-size="6.3" fill="#333" text-anchor="start">data / candidate flow</text>
+<line x1="6.0" y1="221.3" x2="22.0" y2="221.3" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="27.0" y="223.5" font-size="6.3" fill="#333" text-anchor="start">search feedback</text>
+<line x1="6.0" y1="230.8" x2="22.0" y2="230.8" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="27.0" y="233.0" font-size="6.3" fill="#333" text-anchor="start">optional, off in headline</text>
+</svg>

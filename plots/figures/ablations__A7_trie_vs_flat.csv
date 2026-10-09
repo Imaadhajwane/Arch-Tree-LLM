@@ -1,0 +1,109 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+cifar10,line1,line,25.0,93.27166666666666,,Budget,Best accuracy (%)
+cifar10,line1,line,50.0,93.83347222222221,,Budget,Best accuracy (%)
+cifar10,line1,line,100.0,94.13805555555557,,Budget,Best accuracy (%)
+cifar10,line1,line,200.0,94.21958333333333,,Budget,Best accuracy (%)
+cifar10,line2,line,25.0,92.68607709067068,,Budget,Best accuracy (%)
+cifar10,line2,line,50.0,93.35851424516918,,Budget,Best accuracy (%)
+cifar10,line2,line,100.0,93.78934593327163,,Budget,Best accuracy (%)
+cifar10,line2,line,200.0,93.86767646075239,,Budget,Best accuracy (%)
+cifar10,line3,line,25.0,93.85725624266264,,Budget,Best accuracy (%)
+cifar10,line3,line,50.0,94.30843019927525,,Budget,Best accuracy (%)
+cifar10,line3,line,100.0,94.4867651778395,,Budget,Best accuracy (%)
+cifar10,line3,line,200.0,94.57149020591427,,Budget,Best accuracy (%)
+cifar10,line4,line,25.0,93.75527777777778,,Budget,Best accuracy (%)
+cifar10,line4,line,50.0,94.1372222222222,,Budget,Best accuracy (%)
+cifar10,line4,line,100.0,94.21666666666665,,Budget,Best accuracy (%)
+cifar10,line4,line,200.0,94.32277777777777,,Budget,Best accuracy (%)
+cifar10,line5,line,25.0,93.35535617350727,,Budget,Best accuracy (%)
+cifar10,line5,line,50.0,93.8401733253415,,Budget,Best accuracy (%)
+cifar10,line5,line,100.0,94.00282376199412,,Budget,Best accuracy (%)
+cifar10,line5,line,200.0,94.197604497209,,Budget,Best accuracy (%)
+cifar10,line6,line,25.0,94.15519938204828,,Budget,Best accuracy (%)
+cifar10,line6,line,50.0,94.43427111910292,,Budget,Best accuracy (%)
+cifar10,line6,line,100.0,94.43050957133919,,Budget,Best accuracy (%)
+cifar10,line6,line,200.0,94.44795105834655,,Budget,Best accuracy (%)
+cifar10,line7,line,25.0,93.59750000000001,,Budget,Best accuracy (%)
+cifar10,line7,line,50.0,94.03652777777778,,Budget,Best accuracy (%)
+cifar10,line7,line,100.0,94.18527777777778,,Budget,Best accuracy (%)
+cifar10,line7,line,200.0,94.28402777777778,,Budget,Best accuracy (%)
+cifar10,line8,line,25.0,93.28570534146509,,Budget,Best accuracy (%)
+cifar10,line8,line,50.0,93.77126684436577,,Budget,Best accuracy (%)
+cifar10,line8,line,100.0,93.92862701741535,,Budget,Best accuracy (%)
+cifar10,line8,line,200.0,94.154013290758,,Budget,Best accuracy (%)
+cifar10,line9,line,25.0,93.90929465853493,,Budget,Best accuracy (%)
+cifar10,line9,line,50.0,94.30178871118979,,Budget,Best accuracy (%)
+cifar10,line9,line,100.0,94.44192853814022,,Budget,Best accuracy (%)
+cifar10,line9,line,200.0,94.41404226479756,,Budget,Best accuracy (%)
+cifar100,line1,line,25.0,70.5288888414171,,Budget,
+cifar100,line1,line,50.0,71.48055551893447,,Budget,
+cifar100,line1,line,100.0,72.22583328433568,,Budget,
+cifar100,line1,line,200.0,72.75833330366346,,Budget,
+cifar100,line2,line,25.0,69.25167491302888,,Budget,
+cifar100,line2,line,50.0,69.94856346255467,,Budget,
+cifar100,line2,line,100.0,71.09048558251088,,Budget,
+cifar100,line2,line,200.0,71.6105039979649,,Budget,
+cifar100,line3,line,25.0,71.80610276980532,,Budget,
+cifar100,line3,line,50.0,73.01254757531426,,Budget,
+cifar100,line3,line,100.0,73.36118098616048,,Budget,
+cifar100,line3,line,200.0,73.90616260936203,,Budget,
+cifar100,line4,line,25.0,71.10111107101442,,Budget,
+cifar100,line4,line,50.0,72.38111108279757,,Budget,
+cifar100,line4,line,100.0,72.7583332941691,,Budget,
+cifar100,line4,line,200.0,73.14111106245254,,Budget,
+cifar100,line5,line,25.0,69.92742109051082,,Budget,
+cifar100,line5,line,50.0,71.28512822167535,,Budget,
+cifar100,line5,line,100.0,71.85564090150798,,Budget,
+cifar100,line5,line,200.0,72.76707671358537,,Budget,
+cifar100,line6,line,25.0,72.27480105151801,,Budget,
+cifar100,line6,line,50.0,73.4770939439198,,Budget,
+cifar100,line6,line,100.0,73.66102568683023,,Budget,
+cifar100,line6,line,200.0,73.51514541131971,,Budget,
+cifar100,line7,line,25.0,71.50972219696045,,Budget,
+cifar100,line7,line,50.0,72.18833329264324,,Budget,
+cifar100,line7,line,100.0,73.01999996083578,,Budget,
+cifar100,line7,line,200.0,73.40388885921902,,Budget,
+cifar100,line8,line,25.0,70.25085829830977,,Budget,
+cifar100,line8,line,50.0,71.27825001561102,,Budget,
+cifar100,line8,line,100.0,72.26700726775054,,Budget,
+cifar100,line8,line,200.0,73.2054615102932,,Budget,
+cifar100,line9,line,25.0,72.76858609561114,,Budget,
+cifar100,line9,line,50.0,73.09841656967545,,Budget,
+cifar100,line9,line,100.0,73.77299265392101,,Budget,
+cifar100,line9,line,200.0,73.60231620814484,,Budget,
+ImageNet16-120,line1,line,25.0,44.35046289288556,,Budget,
+ImageNet16-120,line1,line,50.0,45.15833327879729,,Budget,
+ImageNet16-120,line1,line,100.0,45.82731477144029,,Budget,
+ImageNet16-120,line1,line,200.0,46.123148117771855,,Budget,
+ImageNet16-120,line2,line,25.0,42.683078430684056,,Budget,
+ImageNet16-120,line2,line,50.0,44.380744914714775,,Budget,
+ImageNet16-120,line2,line,100.0,45.20062868422357,,Budget,
+ImageNet16-120,line2,line,200.0,45.471650510093866,,Budget,
+ImageNet16-120,line3,line,25.0,46.01784735508706,,Budget,
+ImageNet16-120,line3,line,50.0,45.93592164287981,,Budget,
+ImageNet16-120,line3,line,100.0,46.45400085865702,,Budget,
+ImageNet16-120,line3,line,200.0,46.774645725449844,,Budget,
+ImageNet16-120,line4,line,25.0,45.1314814064591,,Budget,
+ImageNet16-120,line4,line,50.0,45.79675923481694,,Budget,
+ImageNet16-120,line4,line,100.0,46.32685180324978,,Budget,
+ImageNet16-120,line4,line,200.0,46.450925893289075,,Budget,
+ImageNet16-120,line5,line,25.0,43.946222324678615,,Budget,
+ImageNet16-120,line5,line,50.0,44.65608570522902,,Budget,
+ImageNet16-120,line5,line,100.0,45.55891320090185,,Budget,
+ImageNet16-120,line5,line,200.0,46.02962284178923,,Budget,
+ImageNet16-120,line6,line,25.0,46.31674048823959,,Budget,
+ImageNet16-120,line6,line,50.0,46.93743276440486,,Budget,
+ImageNet16-120,line6,line,100.0,47.09479040559771,,Budget,
+ImageNet16-120,line6,line,200.0,46.87222894478892,,Budget,
+ImageNet16-120,line7,line,25.0,45.279166604077375,,Budget,
+ImageNet16-120,line7,line,50.0,45.91342589456064,,Budget,
+ImageNet16-120,line7,line,100.0,46.4532407164397,,Budget,
+ImageNet16-120,line7,line,200.0,46.41111110009087,,Budget,
+ImageNet16-120,line8,line,25.0,44.20658166504184,,Budget,
+ImageNet16-120,line8,line,50.0,45.400279613528326,,Budget,
+ImageNet16-120,line8,line,100.0,46.059380290482714,,Budget,
+ImageNet16-120,line8,line,200.0,46.23194976957543,,Budget,
+ImageNet16-120,line9,line,25.0,46.35175154311291,,Budget,
+ImageNet16-120,line9,line,50.0,46.42657217559295,,Budget,
+ImageNet16-120,line9,line,100.0,46.84710114239669,,Budget,
+ImageNet16-120,line9,line,200.0,46.59027243060631,,Budget,

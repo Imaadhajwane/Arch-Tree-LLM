@@ -1,0 +1,37 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+prefix locality,ImageNet16-120,line,1.0,0.14187811861077554,,prefix length k,variance explained (eta²)
+prefix locality,ImageNet16-120,line,2.0,0.21925211370253272,,prefix length k,variance explained (eta²)
+prefix locality,ImageNet16-120,line,3.0,0.24170304464263528,,prefix length k,variance explained (eta²)
+prefix locality,ImageNet16-120,line,4.0,0.5873670493084643,,prefix length k,variance explained (eta²)
+prefix locality,ImageNet16-120,line,5.0,0.704934537772006,,prefix length k,variance explained (eta²)
+prefix locality,ImageNet16-120,line,6.0,1.0,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,1.0,0.06270171488635198,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,2.0,0.11823041987184946,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,3.0,0.1314169308555024,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,4.0,0.47098970350664315,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,5.0,0.5768061126960363,,prefix length k,variance explained (eta²)
+prefix locality,cifar10,line,6.0,1.0,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,1.0,0.09719382974848934,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,2.0,0.1648327949292688,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,3.0,0.18750857495143322,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,4.0,0.4947367242310471,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,5.0,0.6122353543411664,,prefix length k,variance explained (eta²)
+prefix locality,cifar100,line,6.0,1.0,,prefix length k,variance explained (eta²)
+near-optimal cells,ImageNet16-120,line,1.0,3.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,ImageNet16-120,line,2.0,9.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,ImageNet16-120,line,3.0,17.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,ImageNet16-120,line,4.0,22.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,ImageNet16-120,line,5.0,36.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,ImageNet16-120,line,6.0,46.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,1.0,5.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,2.0,13.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,3.0,46.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,4.0,76.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,5.0,212.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar10,line,6.0,376.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,1.0,2.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,2.0,4.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,3.0,12.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,4.0,12.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,5.0,19.0,,prefix length k,# depth-k cells within 1pp of optimum
+near-optimal cells,cifar100,line,6.0,22.0,,prefix length k,# depth-k cells within 1pp of optimum

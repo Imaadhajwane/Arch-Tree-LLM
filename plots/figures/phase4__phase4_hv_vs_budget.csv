@@ -1,0 +1,25 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+"Phase 4 — hypervolume vs budget, by hardware target",edgegpu,line,25.0,90462.14481565017,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgegpu,line,50.0,90970.05407524786,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgegpu,line,100.0,91273.2419524538,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgegpu,line,200.0,91350.6342403816,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgetpu,line,25.0,90496.32110448497,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgetpu,line,50.0,91052.3945435848,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgetpu,line,100.0,91249.25168192992,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",edgetpu,line,200.0,91378.7482807216,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",eyeriss,line,25.0,90570.96151301694,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",eyeriss,line,50.0,90931.87616372312,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",eyeriss,line,100.0,91187.0419085374,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",eyeriss,line,200.0,91331.0146203442,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",fpga,line,25.0,90682.69369186602,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",fpga,line,50.0,90981.44973775385,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",fpga,line,100.0,91261.15437346156,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",fpga,line,200.0,91404.8200523749,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",pixel3,line,25.0,90464.91336483468,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",pixel3,line,50.0,90767.2162959645,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",pixel3,line,100.0,91149.45673822997,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",pixel3,line,200.0,91243.93222380975,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",raspi4,line,25.0,89960.83922355039,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",raspi4,line,50.0,90543.18531238115,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",raspi4,line,100.0,90718.83058773058,,Budget,Hypervolume
+"Phase 4 — hypervolume vs budget, by hardware target",raspi4,line,200.0,91003.42267896836,,Budget,Hypervolume

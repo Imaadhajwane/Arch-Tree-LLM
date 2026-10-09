@@ -1,0 +1,100 @@
+# archtree-llm/.gitignore  (updated Oct 9, 2026)
+#
+# Committed on purpose (never ignore these): source code, config.yaml, requirements.txt, setup scripts,
+# run_full_pipeline.ps1, README.md, ReadMe/ (docs + README figures), paper/ (manuscript + figure sources),
+# "Architerctural Designs/" (final diagrams), plots/figures/ (figure gallery + data CSVs),
+# data/README.md, third_party/README.md and the vendored HW-NAS-Bench code.
+
+# ── Environment / secrets ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+.env.*
+!.env.example
+*keys*.txt
+# Groq rate-limiter state: per-key usage files named by a hash of each API key
+data/groq_usage*.json
+data/groq_key_marker.json
+# (API keys: NEVER commit or zip .env)
+
+# ── Benchmark data (too large / licensed; see data/README.md) ────────────────
+data/*.pth
+data/*.tfrecord
+data/*.pickle
+data/*.pbz2
+data/*.tar
+data/NATS-sss-*
+data/cifar10/
+third_party/HW-NAS-Bench/*.pickle
+
+# ── Derived benchmark caches (rebuild with the tools/ scripts) ───────────────
+# tools/build_nb201_cache.py
+data/nb201_cache_v2.json
+# v1 cache (12-epoch, cifar10 train acc) - superseded
+data/nb201_cifar10_cache.json
+# tools/build_nb101_cache.py (from data/nasbench_only108.tfrecord)
+data/nb101_cache.npz
+# tools/build_natsbench_sss_cache.py (from the NATS-Bench SSS download)
+data/natssss_cache.json
+# tools/build_igd_reference_front.py
+data/true_pareto_front__*.json
+# tools/analyze_cross_device_pareto.py lookup cache
+data/hw_table__*.npz
+
+# ── Generated outputs (reproducible with run_full_pipeline.ps1) ──────────────
+outputs/
+# outputs_archive/ (-ArchivePhases) and outputs_pre_oct2026_<ts>/ (step 1)
+outputs_*/
+pipeline_logs/
+_archive_pre_oct2026/
+# tools/build_repro_appendix.py --bundle
+release/
+demo_output/
+# atomic-write temp files and stale locks (storage.py, zc_proxy.py, rate_limiter.py)
+*.tmp
+*.lock
+*.bak_*.csv
+
+# ── Dashboard backups ─────────────────────────────────────────────────────────
+frontend/old/
+
+# ── LaTeX build files (paper/main.pdf itself is committed) ───────────────────
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.xdv
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+
+# ── OS / editors / office ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.~lock.*
+.vscode/
+.idea/
+.claude/
+
+third_party/HW-NAS-Bench/dev/

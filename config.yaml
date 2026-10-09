@@ -1,0 +1,190 @@
+# archtree-llm/config.yaml
+# Single source of truth for all paths, seeds, and hyperparameters.
+# NO hardcoded paths anywhere else — always load from here.
+#
+# State (Oct 4, 2026): every experiment of the paper ran with EXACTLY these values (ArchTree v2,
+# label-free gate, 12 + 12 held-out seeds, NB201 + NB101 + NATS-SSS). Changing a value changes results:
+# archive the affected phases first (run_full_pipeline.ps1 -ArchivePhases ...). Keys marked
+# "informational" are not read by any script (listed by tools/build_repro_appendix.py).
+# Secrets (Groq keys) live in .env only - never here.
+
+# ── Data paths (READ-ONLY benchmark files) ─────────────────────────────────────
+paths:
+  nb201:   "data/NAS-Bench-201-v1_1-096897.pth"
+  nb101:   "data/nasbench_only108.tfrecord"   # NB101 108-epoch file (522 MB); read ONCE by
+                                             # tools/build_nb101_cache.py (no TensorFlow needed)
+  nb101_cache: "data/nb101_cache.npz"        # what the code actually reads (~30 MB)
+  natssss: "data/NATS-sss-v1_0-50262.pickle.pbz2"   # NATS-Bench size space: this 874 MB file OR (preferred,
+                                             # low RAM) the extracted folder data/NATS-sss-v1_0-50262-simple/; read ONCE by
+                                             # tools/build_natsbench_sss_cache.py (pip install nats_bench)
+  natssss_cache: "data/natssss_cache.json"   # what the code actually reads (Oct 3, 2026)
+  nb201_cache: "data/nb201_cache_v2.json"   # v2 = 200-epoch valid+test (tools/build_nb201_cache.py).
+                                             # Old v1 data/nb201_cifar10_cache.json = 12-epoch, cifar10 TRAIN acc: do not use
+  outputs: "outputs/"
+  hwnb: "data/HW-NAS-Bench-v1_0.pickle"
+  hwnb_repo: "third_party/HW-NAS-Bench"
+  # Derived caches written by the pipeline (not configurable): outputs/_zc_raw_cache.json (zero-cost
+  # proxy scores of all NB201 + NATS-SSS archs and the NB101 sample, step 25) and
+  # outputs/_llm_shared_cache.json (LLM answers, shared across seeds).
+
+# ── Trie hyperparameters ───────────────────────────────────────────────────────
+# All keys below are READ by archtree/settings.py (Oct 2026 fix: they used to be ignored).
+trie:
+  max_depth:        6        # informational, not read (NB201 = 6 edges, NB101 26 tokens, NATS-SSS 5);
+                             # depth comes from the benchmark
+  prune_percentile: 15       # bottom-% of eligible internal nodes pruned per pass (0 = no pruning)
+  prune_every_n:    50       # prune pass every N iterations
+  prune_rule:       value    # "value" (new: prune lowest backed-up accuracy among nodes with
+                             #  >= prune_min_visits real visits) | "visits" (legacy Sep-2026 rule:
+                             #  prune LEAST-VISITED nodes, which can cut unexplored optima)
+  prune_min_visits: 2
+
+# ── UCB parameters ─────────────────────────────────────────────────────────────
+ucb:
+  C:          0.3             # exploration constant. ArchTree v2 (Oct 3): 0.3 on the rank-normalised reward.
+                              # v1 used 1.414 on accuracy/100, where the bonus (~1-2.5) dwarfed accuracy
+                              # differences (~0.01-0.05), so UCB only balanced visit counts (= random search).
+  reward:     rank            # "rank": a node's value = percentile rank of its backed-up accuracy among the
+                              #  accuracies evaluated so far in the run (v2) | "raw": accuracy/100 (v1)
+  lambda_lat: 0.1             # informational, not read (latency penalty lives under hw:)
+  backup_mode: mean           # phases 1/2
+  backup_mode_phase3: max     # phase 3/4 and every study built on search_phase3
+  # One reward scale for every traversal (rank, or accuracy/100 with reward: raw).
+
+# ── LLM warm-start (C7) ────────────────────────────────────────────────────────
+llm:
+  backend: "groq"             # doc-accuracy only — run_phase3/4.py + run_ablations.py override
+                               # this via ARCHTREE_LLM_BACKEND env var or interactive picker,
+                               # this key is not read directly for backend selection
+  model:       "llama3.1:8b"  # ollama model tag, used only when backend=ollama
+  base_url:    "http://localhost:11434"
+  alpha_init:  0.0            # LLM prior OFF for the headline system (fixed before the LLM studies, so not
+                               # selected on test). The LLM studies set their own alpha: convergence study
+                               # 0.3, alpha sweep 0-0.5 (C7 re-tested Oct 3-4, 2026 after the prior-bias fix;
+                               # README §5.6d: faster early search on cifar10/cifar100, no final gain).
+  alpha_decay: "inv_sqrt"      # informational: alpha(t) = alpha_init / sqrt(t) is the default in archtree/ucb.py
+  cache:       true            # informational: the per-run cache is always persisted
+  shared_cache: true          # reuse an answer for the same (model, prompt) across seeds / runs / alphas
+                              # (outputs/_llm_shared_cache.json). The question does not depend on the
+                              # seed, so asking it once per seed only burned tokens. false = old behaviour.
+  timeout_sec: 30              # informational: the request timeout is set in utils/groq_client.py
+
+  # ── Groq backend (gpt-oss-20b — llama-3.1-8b-instant decommissioned Aug 2026) ──
+  groq:
+    model: "openai/gpt-oss-20b"
+    api_key_env: "GROQ_API_KEY"          # informational: the code reads these two variable names directly
+    api_keys_env: "GROQ_API_KEYS"        # from .env - GROQ_API_KEYS = comma-separated multi-account pool
+                                          # (each key has its OWN daily budget, utils/groq_key_pool.py),
+                                          # GROQ_API_KEY = single-key fallback. The pool is used by
+                                          # llm_nas and by every LLM study (alpha sweep, convergence,
+                                          # LLM size, contamination); preflight shows the key count.
+    # Models probed Oct 3 (tools/list_groq_models.py): gpt-oss-20b (default, all studies),
+    # gpt-oss-120b (LLM-size study); allam-2-7b dropped (wrong op names in half its calls);
+    # llama-3.1-8b-instant retired (404). json_schema output is enforced; failed_generation is salvaged.
+    daily_token_budget: 190000     # PER KEY. free tier hard cap 200k TPD, headroom left
+    daily_request_budget: 950      # PER KEY. free tier hard cap 1000 RPD, headroom left
+    reasoning_effort: "low"        # keeps hidden reasoning-trace tokens short/cheap
+    rpm_per_key: 25                # per-minute pacing per key (free tier hard cap 30 RPM)
+    tpm_per_key: 7000              # per-minute TOKEN pacing per key (free tier hard cap 8K TPM for
+                                   # gpt-oss-20b) - avoids 429s instead of retrying after them
+
+  max_calls: 60    # hard cap on LLM calls per run — single definition, no duplicate.
+                     # Budget grid = 4 points x 12 seeds x 3 datasets; with the shared cache most
+                     # calls are cache hits (the whole Groq plan used ~0.3-0.5M tokens on Oct 3-4).
+                     # (Phase 3's LLMPrior caches by trie-path prefix — high cache-hit rate —
+                     # so it does NOT need the key-pool treatment llm_nas.py gets below;
+                     # this max_calls cap alone already keeps Phase 3 well inside one key's
+                     # daily budget. Only llm_nas.py burns a fresh call every single iteration.)
+
+  # ── llm_nas baseline (Phase 0) — NO cache reuse possible (every prompt's
+  # history differs), so this is the call-hungry one. Batching + the
+  # multi-account key pool below are what make it finish in a single
+  # sitting instead of needing days. See baselines/llm_nas.py. ──────────────
+  nas:
+    batch_size: 8                # architectures requested per Groq call.
+                                  # 8 vs 5 shaves total calls further (4500 real
+                                  # evals / 8 ≈ 560 calls) at the cost of slightly
+                                  # longer completions per call — raise toward
+                                  # 12-15 if parse_failures stays low in the logs,
+                                  # drop back toward 5 if it climbs.
+    top_k_context: 8              # best-so-far archs (by accuracy) shown as context,
+                                  # not the last-N chronological ones.
+    use_key_pool: true             # round-robin across GROQ_API_KEYS (see above).
+                                  # Set false to force the old single-key behavior.
+    rpm_per_key: 25               # stay under Groq's 30 RPM/key hard cap.
+    ollama_fallback_model: "llama3.1:8b"   # used only once EVERY pooled key is
+                                  # exhausted for the day — keeps the baseline
+                                  # genuinely LLM-guided instead of degrading
+                                  # straight to random mutation. Set to null/omit
+                                  # to skip this tier if Ollama isn't set up.
+    ollama_fallback_host: "http://localhost:11434"
+
+# ── Zero-cost proxy ensemble (C8) ──────────────────────────────────────────────
+zc_proxy:
+  calibration_archs: 1500          # architectures used to calibrate (labels if supervised)
+  calibration_mode: unsupervised   # (Oct 2 decision: zc vs zc_unsup tied in step 12, so zero labels) # "supervised": least-squares weights fit on calibration_archs TRUE
+                                   #   accuracies (these labels must be counted as cost, see
+                                   #   tools/analyze_proxy_cost.py) | "unsupervised": z-score stats from
+                                   #   unlabeled archs, fixed weights E=S=T=1/3, C=0 (zero labels)
+  proxy_threshold_percentile: 35   # top-% of proposals (by proxy) that get a real eval
+  warmup_real_evals: 10            # first N proposals always get a real eval
+  mini_batch_size:   64            # informational, not read (NASWOT batch size is set in zc_proxy.py)
+
+# ── Search budget + seeds ───────────────────────────────────────────────────────
+search:
+  budget: 100                              # single default (used where a scalar is expected)
+  mutation_prob: 0.5                       # ArchTree v2: share of proposals (after 10 real evals) made by
+                                           # mutating the best of 5 random evaluated archs (tournament, as in
+                                           # regularized evolution) instead of UCB descent. 0 = v1. Phase-3
+                                           # search only (headline + every study built on it).
+  heldout_seeds: [7, 13, 77, 101, 202, 303, 404, 505, 606, 707, 808, 909]
+                                           # never used to choose the design; experiments/run_design_ablation.py
+                                           # re-tests the v1 -> v2 changes on these
+  budgets: [25, 50, 100, 200]               # 4-point grid — 25/50/100/200 already spans full
+                                            # ETA curve shape (early/mid/late); NB201 saturates
+                                            # by ~budget=200 (see Phase1 log 10.4), so wider max
+                                            # or denser mid-points add little signal for the cost.
+  seeds:  [42, 111, 123, 222, 333, 456, 789, 999, 1001, 2024, 31415, 27182]
+          # 12 seeds — meets roadmap §1.1's 10-20 floor. Wilcoxon test power depends
+          # on seed count (n_paired_seeds), not budget count, so this is the lever
+          # that actually matters for significance — keep budgets trimmed, seeds high.
+
+# ── Benchmarks ─────────────────────────────────────────────────────────────────
+benchmarks:
+  datasets:    ["cifar10", "cifar100", "ImageNet16-120"]
+  hw_targets:  ["edgegpu", "raspi4", "edgetpu", "pixel3", "eyeriss", "fpga"]
+  nb201_search_split: valid        # search reward = 200-epoch VALIDATION accuracy (cifar10 -> cifar10-valid
+                                   # x-valid). Needs the v2 cache from tools/build_nb201_cache.py.
+  report_metric: best_test_acc     # number reported in tables/tests = 200-epoch TEST accuracy of the
+                                   # architecture with the best validation accuracy
+  nb101:                           # experiments/run_nb101.py (cifar10 only; mean of the 3 repeats,
+    budgets: [50, 100, 200, 400]   # search on validation, report test). Larger space than NB201, so
+                                   # the grid goes one step further.
+
+# ── Architecture encoder ───────────────────────────────────────────────────────
+encoder:                # informational, not read (kept for the record of the token layout)
+  ops_nb201: ["none", "skip", "conv1x1", "conv3x3", "avgpool"]
+  seq_len_nb201: 6
+  seq_len_nb101: 26   # 5 interior-vertex ops + 21 adjacency bits (benchmarks/nb101.py); NATS-SSS = 5 widths
+
+# ── Weight bank ────────────────────────────────────────────────────────────────
+weight_bank:
+  compress_state_dict: true   # informational, not read
+
+# ── Logging ────────────────────────────────────────────────────────────────────
+logging:                      # informational, not read (loguru logs go to outputs/<phase>/logs/)
+  wandb:       false
+  log_every_n: 10
+
+hw:
+  latency_penalty: 0.05      # READ now (archtree/settings.py)
+  latency_norm_ms: 50.0
+
+# ── Runtime / speed (Oct 4, 2026) ──────────────────────────────────────────────
+# Results do not depend on these (every run seeds its own RNGs); only wall-clock time does.
+runtime:
+  workers: 3          # parallel search processes in step 22 (equal GPU-hours); 1 = sequential
+                      # (Oct 4 device run: 1128 runs in 25 min with 3 workers, identical to 1 worker)
+  proxy_workers: 3    # parallel GPU processes for the zero-cost proxy pre-computation (step 25)
+                      # 4 GB GPU: 3 is safe (each process ~0.4-0.8 GB); lower to 2 if CUDA runs out of memory
+                      # (Oct 4 RTX 2050: all 32,768 NATS-SSS archs + 3,495 NB101 archs in ~5 h, ~1.3 s/arch/worker)

@@ -1,0 +1,13 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Mean HV @ budget=200,bars1,barh,91003.42267896836,0.0,raspi4,Hypervolume,
+Mean HV @ budget=200,bars1,barh,91243.93222380975,1.0,pixel3,Hypervolume,
+Mean HV @ budget=200,bars1,barh,91331.0146203442,2.0,eyeriss,Hypervolume,
+Mean HV @ budget=200,bars1,barh,91350.6342403816,3.0,edgegpu,Hypervolume,
+Mean HV @ budget=200,bars1,barh,91378.7482807216,4.0,edgetpu,Hypervolume,
+Mean HV @ budget=200,bars1,barh,91404.8200523749,5.0,fpga,Hypervolume,
+Mean Pareto front size,bars1,barh,18.416666666666668,0.0,raspi4,Pareto front size,
+Mean Pareto front size,bars1,barh,18.0,1.0,pixel3,Pareto front size,
+Mean Pareto front size,bars1,barh,11.0,2.0,eyeriss,Pareto front size,
+Mean Pareto front size,bars1,barh,12.583333333333334,3.0,edgegpu,Pareto front size,
+Mean Pareto front size,bars1,barh,13.333333333333334,4.0,edgetpu,Pareto front size,
+Mean Pareto front size,bars1,barh,11.083333333333334,5.0,fpga,Pareto front size,

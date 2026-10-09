@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960pt" height="540pt" viewBox="0 0 960 540" font-family="'Times New Roman', Times, 'TeX Gyre Termes', 'Liberation Serif', serif">
+<defs>
+ <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+ <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker>
+</defs>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="16.0" y="31.0" font-size="20" fill="#111111" text-anchor="start" font-weight="bold">ArchTree-LLM — Overall Project Workflow</text>
+<text x="16.0" y="45.0" font-size="9" fill="#555555" text-anchor="start" font-style="italic">Trie-based deduplication + zero-cost proxies + hardware-aware coverage, with LLM-guided warm-start evaluated as a controlled study</text>
+<line x1="16" y1="53" x2="944" y2="53" stroke="#111111" stroke-width="1.4"/>
+<text x="16.0" y="72.0" font-size="9" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">TECHNOLOGY USED</text>
+<rect x="16" y="80.0" width="172" height="58.1" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="80.0" width="3.2" height="58.1" fill="#111111"/>
+<text x="25.0" y="92.0" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Benchmarks &amp; Data</text>
+<text x="25.0" y="102.5" font-size="6.7" fill="#222" text-anchor="start">– NAS-Bench-201 (15,625 archs)</text>
+<text x="25.0" y="111.1" font-size="6.7" fill="#222" text-anchor="start">– HW-NAS-Bench (6 devices)</text>
+<text x="25.0" y="119.7" font-size="6.7" fill="#222" text-anchor="start">– NAS-Bench-101 · NATS-Bench SSS</text>
+<rect x="16" y="143.1" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="143.1" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="155.1" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Language &amp; Config</text>
+<text x="25.0" y="165.6" font-size="6.7" fill="#222" text-anchor="start">– Python</text>
+<text x="25.0" y="174.2" font-size="6.7" fill="#222" text-anchor="start">– config.yaml (single source of truth)</text>
+<rect x="16" y="197.5" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="197.5" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="209.5" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Search Engine</text>
+<text x="25.0" y="220.0" font-size="6.7" fill="#222" text-anchor="start">– Compressed trie (O(L) dedup)</text>
+<text x="25.0" y="228.6" font-size="6.7" fill="#222" text-anchor="start">– Rank-UCB (C = 0.3) + mutation</text>
+<rect x="16" y="252.0" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="252.0" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="264.0" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Zero-Cost Proxies</text>
+<text x="25.0" y="274.5" font-size="6.7" fill="#222" text-anchor="start">– SynFlow + NASWOT + SVD entropy</text>
+<text x="25.0" y="283.1" font-size="6.7" fill="#222" text-anchor="start">– label-free (0 labels); top-35% pass</text>
+<rect x="16" y="306.5" width="172" height="58.1" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="306.5" width="3.2" height="58.1" fill="#111111"/>
+<text x="25.0" y="318.5" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Baselines</text>
+<text x="25.0" y="329.0" font-size="6.7" fill="#222" text-anchor="start">– Random · RE · Local search</text>
+<text x="25.0" y="337.6" font-size="6.7" fill="#222" text-anchor="start">– ENAS / MCTS / ZiCo / RZ-style</text>
+<text x="25.0" y="346.2" font-size="6.7" fill="#222" text-anchor="start">– LLM-NAS</text>
+<rect x="16" y="369.6" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="369.6" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="381.6" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Statistics</text>
+<text x="25.0" y="392.1" font-size="6.7" fill="#222" text-anchor="start">– Friedman + Nemenyi CD · Holm</text>
+<text x="25.0" y="400.7" font-size="6.7" fill="#222" text-anchor="start">– TOST · Cohen's d · P(improvement)</text>
+<rect x="16" y="424.1" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="424.1" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="436.1" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Storage</text>
+<text x="25.0" y="446.6" font-size="6.7" fill="#222" text-anchor="start">– JSON benchmark caches</text>
+<text x="25.0" y="455.2" font-size="6.7" fill="#222" text-anchor="start">– CSV result logs</text>
+<rect x="16" y="478.5" width="172" height="49.5" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.7"/>
+<rect x="16" y="478.5" width="3.2" height="49.5" fill="#111111"/>
+<text x="25.0" y="490.5" font-size="8" fill="#111111" text-anchor="start" font-weight="bold">Visualisation &amp; UI</text>
+<text x="25.0" y="501.0" font-size="6.7" fill="#222" text-anchor="start">– Python backend + Plotly dashboard</text>
+<text x="25.0" y="509.6" font-size="6.7" fill="#222" text-anchor="start">– plot_results.py (paper figures)</text>
+<rect x="200" y="62" width="744" height="466" rx="4" fill="none" stroke="#111111" stroke-width="0.9"/>
+<rect x="208" y="56" width="128" height="11" fill="#ffffff"/>
+<text x="213.0" y="65.0" font-size="8.5" fill="#111111" text-anchor="start" font-weight="bold" letter-spacing="0.8">WORK FLOW DIAGRAM</text>
+<rect x="212" y="216" width="60" height="52" rx="3" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<rect x="212" y="216" width="60" height="3.2" fill="#111111"/>
+<text x="242.0" y="234.0" font-size="7.6" fill="#111111" text-anchor="middle" font-weight="bold">Researcher</text>
+<text x="242.0" y="245.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">config.yaml</text>
+<text x="242.0" y="254.5" font-size="6.6" fill="#3c3c3c" text-anchor="middle">run_demo.bat</text>
+<rect x="286.0" y="116.0" width="118.0" height="234.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M286,136 V119 a3,3 0 0 1 3,-3 H401 a3,3 0 0 1 3,3 V136 z" fill="#111111"/>
+<text x="345.0" y="129.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Data Preparation</text>
+<rect x="292.0" y="142.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="345.0" y="160.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">NB201 cache v2</text>
+<text x="345.0" y="170.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">200-epoch valid + test</text>
+<rect x="292.0" y="187.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="345.0" y="205.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">HW-NAS-Bench alignment</text>
+<text x="345.0" y="215.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">latency on 6 devices</text>
+<rect x="292.0" y="232.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="345.0" y="250.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">NB101 · NATS-SSS caches</text>
+<text x="345.0" y="260.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">no TensorFlow needed</text>
+<rect x="292.0" y="277.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="345.0" y="295.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Table lookup only</text>
+<text x="345.0" y="305.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">no network is trained</text>
+<rect x="418.0" y="116.0" width="128.0" height="234.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M418,136 V119 a3,3 0 0 1 3,-3 H543 a3,3 0 0 1 3,3 V136 z" fill="#111111"/>
+<text x="482.0" y="129.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Search Loop — ArchTree v2</text>
+<rect x="424.0" y="142.0" width="116.0" height="36.4" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="482.0" y="158.7" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Arch Encoder</text>
+<text x="482.0" y="168.2" font-size="6.6" fill="#3c3c3c" text-anchor="middle">cell → token sequence</text>
+<rect x="424.0" y="183.4" width="116.0" height="36.4" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="482.0" y="200.1" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Compressed Trie</text>
+<text x="482.0" y="209.6" font-size="6.6" fill="#3c3c3c" text-anchor="middle">dedup: never re-evaluate</text>
+<rect x="424.0" y="224.8" width="116.0" height="36.4" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="482.0" y="241.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Rank-UCB + Mutation</text>
+<text x="482.0" y="251.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">C = 0.3 · p = 0.5 after 10 evals</text>
+<rect x="424.0" y="266.2" width="116.0" height="36.4" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="482.0" y="282.9" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Label-free ZC Gate</text>
+<text x="482.0" y="292.4" font-size="6.6" fill="#3c3c3c" text-anchor="middle">top-35% after 10 warm-up</text>
+<rect x="424.0" y="307.6" width="116.0" height="36.4" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="482.0" y="324.3" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Prune + Max Backup</text>
+<text x="482.0" y="333.8" font-size="6.6" fill="#3c3c3c" text-anchor="middle">15% value pruning / 50 evals</text>
+<rect x="560.0" y="116.0" width="118.0" height="234.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M560,136 V119 a3,3 0 0 1 3,-3 H675 a3,3 0 0 1 3,3 V136 z" fill="#111111"/>
+<text x="619.0" y="129.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Evaluation</text>
+<rect x="566.0" y="142.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="619.0" y="160.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Validation Accuracy</text>
+<text x="619.0" y="170.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">drives the search</text>
+<rect x="566.0" y="187.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="619.0" y="205.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Test Accuracy</text>
+<text x="619.0" y="215.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">reported only</text>
+<rect x="566.0" y="232.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="619.0" y="250.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">GPU-hour Accounting</text>
+<text x="619.0" y="260.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">recorded training time</text>
+<rect x="566.0" y="277.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="619.0" y="295.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Hardware Latency</text>
+<text x="619.0" y="305.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">6 devices → TCR-H</text>
+<rect x="692.0" y="116.0" width="118.0" height="234.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M692,136 V119 a3,3 0 0 1 3,-3 H807 a3,3 0 0 1 3,3 V136 z" fill="#111111"/>
+<text x="751.0" y="129.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Comparison &amp; Statistics</text>
+<rect x="698.0" y="142.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="751.0" y="160.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Equal GPU-hour Arms</text>
+<text x="751.0" y="170.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">v2 · v1 · RE · random</text>
+<rect x="698.0" y="187.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="751.0" y="205.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Friedman + Nemenyi</text>
+<text x="751.0" y="215.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">average ranks, CD</text>
+<rect x="698.0" y="232.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="751.0" y="250.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Holm Correction</text>
+<text x="751.0" y="260.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">per comparison family</text>
+<rect x="698.0" y="277.0" width="106.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="751.0" y="295.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">TOST · Cohen's d</text>
+<text x="751.0" y="305.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">equivalence, effect size</text>
+<rect x="824.0" y="116.0" width="112.0" height="234.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M824,136 V119 a3,3 0 0 1 3,-3 H933 a3,3 0 0 1 3,3 V136 z" fill="#111111"/>
+<text x="880.0" y="129.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Outputs</text>
+<rect x="830.0" y="142.0" width="100.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="880.0" y="160.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Paper Figures/Tables</text>
+<text x="880.0" y="170.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">plot_results.py</text>
+<rect x="830.0" y="187.0" width="100.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="880.0" y="205.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Interactive Dashboard</text>
+<text x="880.0" y="215.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">localhost:5000</text>
+<rect x="830.0" y="232.0" width="100.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="880.0" y="250.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Reproducibility Bundle</text>
+<text x="880.0" y="260.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">configs + CSV results</text>
+<rect x="830.0" y="277.0" width="100.0" height="40.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="880.0" y="295.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Leaderboard</text>
+<text x="880.0" y="305.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">full-budget ranking</text>
+<line x1="272.0" y1="242.0" x2="285.0" y2="242.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="404.0" y1="242.0" x2="417.0" y2="242.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="546.0" y1="242.0" x2="559.0" y2="242.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="678.0" y1="242.0" x2="691.0" y2="242.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="810.0" y1="242.0" x2="823.0" y2="242.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<rect x="422" y="76" width="120" height="30" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="482.0" y="88.5" font-size="7.4" fill="#333" text-anchor="middle" font-weight="bold">LLM Warm-Start Prior</text>
+<text x="482.0" y="99.0" font-size="6.6" fill="#555555" text-anchor="middle" font-style="italic">optional; off in headline (α = 0)</text>
+<line x1="482.0" y1="106.0" x2="482.0" y2="115.0" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="486.0" y="113.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">prior</text>
+<text x="564.0" y="86.0" font-size="6.6" fill="#555555" text-anchor="start" font-style="italic">LLM controls: zero-info prompt,</text>
+<text x="564.0" y="95.0" font-size="6.6" fill="#555555" text-anchor="start" font-style="italic">contamination check, model size</text>
+<path d="M619.0,350 V364 H482.0 V351" fill="none" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="550.5" y="374.0" font-size="6.8" fill="#111111" text-anchor="middle" font-style="italic">rank reward backed up each iteration</text>
+<rect x="418.0" y="384.0" width="260.0" height="136.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M418,404 V387 a3,3 0 0 1 3,-3 H675 a3,3 0 0 1 3,3 V404 z" fill="#111111"/>
+<text x="548.0" y="397.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Experiment Suite</text>
+<rect x="424.0" y="410.0" width="121.5" height="46.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="484.8" y="431.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Phases 0–4</text>
+<text x="484.8" y="441.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">warm-start → full system</text>
+<rect x="550.5" y="410.0" width="121.5" height="46.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="611.2" y="431.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Ablations</text>
+<text x="611.2" y="441.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">design · UCB sensitivity</text>
+<rect x="424.0" y="461.0" width="121.5" height="46.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="484.8" y="482.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">LLM Studies</text>
+<text x="484.8" y="492.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">contamination · model size</text>
+<rect x="550.5" y="461.0" width="121.5" height="46.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="611.2" y="482.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Extra Benchmarks</text>
+<text x="611.2" y="492.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">NB101 · NATS-SSS · Phase 6</text>
+<rect x="692.0" y="384.0" width="244.0" height="136.0" rx="3" fill="#F2F2F2" stroke="#7A7A7A" stroke-width="0.8"/>
+<path d="M692,404 V387 a3,3 0 0 1 3,-3 H933 a3,3 0 0 1 3,3 V404 z" fill="#111111"/>
+<text x="814.0" y="397.5" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">Dashboard (Presentation Layer)</text>
+<rect x="698.0" y="410.0" width="232.0" height="30.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="814.0" y="423.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Overview · Method</text>
+<text x="814.0" y="433.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">claims, loop, gate-cost model</text>
+<rect x="698.0" y="444.0" width="232.0" height="30.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="814.0" y="457.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Live Lab</text>
+<text x="814.0" y="467.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">real v2 loop, 5 arms, equal GPU-hours</text>
+<rect x="698.0" y="478.0" width="232.0" height="30.0" rx="2" fill="#ffffff" stroke="#7A7A7A" stroke-width="0.6"/>
+<text x="814.0" y="491.5" font-size="7.2" fill="#111111" text-anchor="middle" font-weight="bold">Evidence · Paper &amp; Scope</text>
+<text x="814.0" y="501.0" font-size="6.6" fill="#3c3c3c" text-anchor="middle">8 chapters, limitations, figures</text>
+<path d="M678,424 H685 V366 H722 V351" fill="none" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="726.0" y="369.0" font-size="6.4" fill="#555555" text-anchor="start" font-style="italic">CSV results</text>
+<line x1="880.0" y1="350.0" x2="880.0" y2="383.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<line x1="442.0" y1="350.0" x2="442.0" y2="383.0" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="438.0" y="378.0" font-size="6.4" fill="#555555" text-anchor="end" font-style="italic">runs</text>
+<rect x="212" y="384" width="192" height="76" rx="3" fill="#111111"/>
+<text x="222.0" y="399.0" font-size="7.4" fill="#BDBDBD" text-anchor="start" font-weight="bold" letter-spacing="0.8">KEY OUTCOME</text>
+<text x="222.0" y="413.0" font-size="7.4" fill="#ffffff" text-anchor="start">0 losses vs 13 methods at equal GPU-hours;</text>
+<text x="222.0" y="423.5" font-size="7.4" fill="#ffffff" text-anchor="start">1st on NB201. Matches RE with ~40% of its</text>
+<text x="222.0" y="434.0" font-size="7.4" fill="#ffffff" text-anchor="start">real evaluations. LLM prior speeds early</text>
+<text x="222.0" y="444.5" font-size="7.4" fill="#ffffff" text-anchor="start">search 2–3×, no final-accuracy gain.</text>
+<line x1="212.0" y1="477.6" x2="232.0" y2="477.6" stroke="#111111" stroke-width="0.9" marker-end="url(#ar)"/>
+<text x="238.0" y="480.0" font-size="6.8" fill="#333" text-anchor="start">data / candidate flow</text>
+<line x1="212.0" y1="488.6" x2="232.0" y2="488.6" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="238.0" y="491.0" font-size="6.8" fill="#333" text-anchor="start">search feedback</text>
+<line x1="212.0" y1="499.6" x2="232.0" y2="499.6" stroke="#555555" stroke-width="0.9" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="238.0" y="502.0" font-size="6.8" fill="#333" text-anchor="start">optional, off in headline</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="516pt" height="146pt" viewBox="0 0 516 146" font-family="'Times New Roman', Times, 'TeX Gyre Termes', 'Liberation Serif', serif">
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+  <marker id="arn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+  <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker>
+</defs>
+<rect width="516" height="146" fill="#ffffff"/>
+
+<rect x="5" y="52" width="90" height="46" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M5,61 V54 a2,2 0 0 1 2,-2 H93 a2,2 0 0 1 2,2 V61 z" fill="#111111"/>
+<text x="9" y="58.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">STEP 1</text>
+<text x="50.0" y="72" text-anchor="middle" font-size="8" font-weight="bold" fill="#111111">Structured Search</text>
+<text x="50.0" y="82.0" text-anchor="middle" font-size="7" fill="#333333">Compressed trie stores</text>
+<text x="50.0" y="90.8" text-anchor="middle" font-size="7" fill="#333333">each design exactly once</text>
+<rect x="109" y="52" width="90" height="46" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M109,61 V54 a2,2 0 0 1 2,-2 H197 a2,2 0 0 1 2,2 V61 z" fill="#111111"/>
+<text x="113" y="58.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">STEP 2</text>
+<text x="154.0" y="72" text-anchor="middle" font-size="8" font-weight="bold" fill="#111111">Smart Traversal</text>
+<text x="154.0" y="82.0" text-anchor="middle" font-size="7" fill="#333333">Rank-UCB + mutation</text>
+<text x="154.0" y="90.8" text-anchor="middle" font-size="7" fill="#333333">propose new designs</text>
+<rect x="213" y="52" width="90" height="46" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M213,61 V54 a2,2 0 0 1 2,-2 H301 a2,2 0 0 1 2,2 V61 z" fill="#111111"/>
+<text x="217" y="58.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">STEP 3</text>
+<text x="258.0" y="72" text-anchor="middle" font-size="8" font-weight="bold" fill="#111111">Cheap Filtering</text>
+<text x="258.0" y="82.0" text-anchor="middle" font-size="7" fill="#333333">Label-free proxies send</text>
+<text x="258.0" y="90.8" text-anchor="middle" font-size="7" fill="#333333">only the top 35% on</text>
+<rect x="317" y="52" width="90" height="46" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M317,61 V54 a2,2 0 0 1 2,-2 H405 a2,2 0 0 1 2,2 V61 z" fill="#111111"/>
+<text x="321" y="58.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">STEP 4</text>
+<text x="362.0" y="72" text-anchor="middle" font-size="8" font-weight="bold" fill="#111111">Benchmark Evaluation</text>
+<text x="362.0" y="82.0" text-anchor="middle" font-size="7" fill="#333333">Validation-accuracy</text>
+<text x="362.0" y="90.8" text-anchor="middle" font-size="7" fill="#333333">lookup + GPU-h cost</text>
+<rect x="421" y="52" width="90" height="46" rx="2" fill="#ffffff" stroke="#111111" stroke-width="0.8"/>
+<path d="M421,61 V54 a2,2 0 0 1 2,-2 H509 a2,2 0 0 1 2,2 V61 z" fill="#111111"/>
+<text x="425" y="58.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">STEP 5</text>
+<text x="466.0" y="72" text-anchor="middle" font-size="8" font-weight="bold" fill="#111111">Hardware-Aware Result</text>
+<text x="466.0" y="82.0" text-anchor="middle" font-size="7" fill="#333333">Accuracy + latency on</text>
+<text x="466.0" y="90.8" text-anchor="middle" font-size="7" fill="#333333">6 hardware targets</text>
+<line x1="95" y1="75.0" x2="108" y2="75.0" stroke="#111111" stroke-width="0.8" marker-end="url(#ar)"/>
+<line x1="199" y1="75.0" x2="212" y2="75.0" stroke="#111111" stroke-width="0.8" marker-end="url(#ar)"/>
+<line x1="303" y1="75.0" x2="316" y2="75.0" stroke="#111111" stroke-width="0.8" marker-end="url(#ar)"/>
+<line x1="407" y1="75.0" x2="420" y2="75.0" stroke="#111111" stroke-width="0.8" marker-end="url(#ar)"/>
+<rect x="92.0" y="3" width="124" height="32" rx="2" fill="#ffffff" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2"/>
+<path d="M92.0,12 V5 a2,2 0 0 1 2,-2 H214.0 a2,2 0 0 1 2,2 V12 z" fill="#7A7A7A"/>
+<text x="96.0" y="9.6" font-size="5.4" font-weight="bold" letter-spacing="0.6" fill="#ffffff">OPTIONAL · DISABLED</text>
+<text x="154.0" y="23" text-anchor="middle" font-size="7.4" font-weight="bold" fill="#111111">LLM Semantic Guidance</text>
+<text x="154.0" y="33.0" text-anchor="middle" font-size="6.6" fill="#555555" font-style="italic">optional; off in headline (α = 0)</text>
+<line x1="154.0" y1="35" x2="154.0" y2="51" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="158.0" y="46" text-anchor="start" font-size="6.8" fill="#555555" font-style="italic">prior</text>
+<path d="M362.0,98 V114 H154.0 V99" fill="none" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="258.0" y="124" text-anchor="middle" font-size="6.8" fill="#111111" font-style="italic">feedback: node statistics updated each iteration until the evaluation budget is spent</text>
+<line x1="266" y1="135.7" x2="284" y2="135.7" stroke="#111111" stroke-width="0.8" marker-end="url(#ar)"/>
+<text x="287" y="138" text-anchor="start" font-size="6.4" fill="#555555">candidate flow</text>
+<line x1="341" y1="135.7" x2="359" y2="135.7" stroke="#111111" stroke-width="1.8" marker-end="url(#arn)"/>
+<text x="362" y="138" text-anchor="start" font-size="6.4" fill="#555555">feedback</text>
+<line x1="398" y1="135.7" x2="416" y2="135.7" stroke="#555555" stroke-width="0.8" stroke-dasharray="3 2" marker-end="url(#arg)"/>
+<text x="419" y="138" text-anchor="start" font-size="6.4" fill="#555555">optional, off</text>
+</svg>

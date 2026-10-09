@@ -1,0 +1,179 @@
+\documentclass{sadhana}
+
+%%
+%%download sadhana.cls and save it in the folder of  your source file
+%%
+
+%%suggested packages to be included
+\usepackage{graphicx,amsmath,bm}
+
+%%The following packages are included with the class file.
+%%Please download if these packages are not included
+%%in your local TeX distribution 
+%%txfonts,balance,textcase,float
+%%
+
+\begin{document}
+
+%%paper title
+%%For line breaks, \\ can be used within title 
+\title{Title of the paper goes here\\ second line}
+
+
+%%author names are separated by comma (,) 
+%%use \and before the last author name 
+%%\textsuperscript{number} is used for affiliation
+%%use a * along with the number separated by comma
+%% for the  author for correspondence
+
+\author{Author1\textsuperscript{1}, Author2\textsuperscript{1}\and Author3\textsuperscript{2,*}}
+\affilOne{\textsuperscript{1} Department of P, University X\\}
+\affilTwo{\textsuperscript{2} Department of Q, University Z}
+
+%%escape two column mode for title, affiliation and abstract
+%%by giving \twocolumn command as shown
+
+\twocolumn[{
+
+\maketitle
+
+%%abstract
+\begin{abstract}
+Abstract text goes here.  Abstract text goes here. 
+Abstract text goes here.  Abstract text goes here. 
+ Abstract text goes here. 
+Abstract text goes here.  Abstract text goes here. 
+ Abstract text goes here. 
+ Abstract text goes here. 
+\end{abstract}
+
+%%manuscript information
+%%received, revised and accepted dates
+%%
+\msinfo{1 January 2016}{1 January 2016}{1 January 2016}
+
+%%insert keywords separated by comma
+\keywords{keyword1, keyword2, keyword3 etc.}
+
+}]
+%%close the twocolumn escape here
+
+%%include \corres to print the footnote for correspondence
+%%include \volnum{number} for the volume number in the header
+%%include \monthyear{month year} for month and year of publication in the header
+%%include \pagefirst{num} first page number of article in header
+%%include \pagelast{num} last page number of article in header
+%%include \doi{number} for the DOI number in the header
+
+\setcounter{page}{2333}
+\corres
+\volnum{123}
+\issuenum{4}
+\monthyear{January 2016}
+\pgfirst{2333}
+\pglast{2335}
+\doinum{12.3456/s78910-011-012-3}
+\articleType{}%%use \articleType{L} for Sadhana Letters, empty/null otherwise
+
+
+%%The running head information
+
+\markboth{author name for running head}{short title for running head}
+
+\section{Introduction}
+Section text here.  
+\subsection{Subsection heading}
+Subsection text here. 
+
+
+\section{A new Section}
+Some more  text here.  
+
+%%Use table environment for a table in one column
+
+\begin{table}[htb]
+\caption{Table fitting in a single column}\label{tableExample}
+\begin{tabular}{|l|c|r|}
+\hline
+one& two &three\\
+1&2&3\\
+aaa&jhkhkjkjk& bjbnmnb\\
+\hline
+\end{tabular}
+%%use \tablenotes{footnote} to get the table foot note
+\tablenotes{Sample table footnote}
+\end{table}
+
+
+%%Use table* environment to get the table spanning both the columns
+
+%\begin{table*}[htb]
+%\caption{Caption text here}\label{secondTable}
+%\begin{tabular}{|l|cccccccc|r|}
+%\hline
+%\textbf{head1}&\multicolumn{8}{|c|}{\textbf{head2}}&\textbf{head3}\\
+%\hline
+%one& two &three&four&five&six&seven&eight&nine&ten\\
+%1&2&3&4&5&6&7&8&9&10\\
+%aaa&bbbb&cccc&ddddd&eee&ffff&ggggg&hhhhhhhh&iiii&jjjjjj\\
+%\hline
+%\end{tabular}
+%\tablenotes{table footnote here}
+%*table spanning both the columns
+%\end{table*}
+
+
+%%An example of a figure
+
+%\begin{figure}[!t]
+%\centering{
+%\includegraphics[width=.8\columnwidth]{fig1.eps}
+%}
+%\caption{caption goes here}\label{figOne}
+%\end{figure}
+
+%%An example of a double column figure (spanning 2 columns)
+%%Use figure* environment
+
+%\begin{figure*}
+%\centering\includegraphics[height=.15\textheight]{fig2.eps}
+%\caption{caption spanning two columns}
+%\centering\includegraphics[height=.25\textheight]{fig3.eps}
+%\caption{caption here}
+%\end{figure*}
+
+%%Nomenclature
+
+\begin{nomenclature}
+A& Alphabet a\\
+$B_1$& Alphabet b\\
+C& Alphabet c
+\end{nomenclature}
+
+
+\section{Conclusion}
+Conclusion here.
+
+
+%%Appendix
+
+\appendix
+
+\section{An appendix section}
+Text goes here.
+
+%%Use section* for acknowledgements
+\section*{Acknowledgement}
+Acknowledgements
+
+%%use \balance somewhere in the last page to balance the 2 columns.
+
+%%References section
+\begin{thebibliography}{99} 
+\bibitem{latexcompanion} 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+\newblock {\em The \LaTeX\ Companion}. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+\end{thebibliography}
+
+\end{document}

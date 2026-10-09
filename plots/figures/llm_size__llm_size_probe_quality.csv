@@ -1,0 +1,11 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Ranking quality (rho),cifar10,bar,0.0,0.4062702604763092,groq:allam-2-7b,,Spearman rho
+Ranking quality (rho),cifar10,bar,1.0,0.6099650932011462,groq:openai/gpt-oss-120b,,Spearman rho
+Ranking quality (rho),cifar10,bar,2.0,0.5987263818790519,groq:openai/gpt-oss-20b,,Spearman rho
+Ranking quality (rho),line1,reference_line,0.0,0.0,groq:allam-2-7b,,Spearman rho
+Ranking quality (rho),line1,reference_line,1.0,0.0,groq:openai/gpt-oss-120b,,Spearman rho
+Top-1 hit rate,cifar10,bar,0.0,0.5,groq:allam-2-7b,,Top-1 hit rate
+Top-1 hit rate,cifar10,bar,1.0,0.6538461538461539,groq:openai/gpt-oss-120b,,Top-1 hit rate
+Top-1 hit rate,cifar10,bar,2.0,0.4615384615384615,groq:openai/gpt-oss-20b,,Top-1 hit rate
+Top-1 hit rate,chance (0.20),reference_line,0.0,0.2,groq:allam-2-7b,,Top-1 hit rate
+Top-1 hit rate,chance (0.20),reference_line,1.0,0.2,groq:openai/gpt-oss-120b,,Top-1 hit rate

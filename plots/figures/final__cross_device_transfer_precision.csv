@@ -1,0 +1,21 @@
+panel,series,kind,x,y,x_label,x_axis,y_axis
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.010714285714285713,1067.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.03214285714285714,4.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.05357142857142856,41.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.07499999999999998,81.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.09642857142857142,87.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.11785714285714284,69.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.13928571428571426,22.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.1607142857142857,19.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.1821428571428571,14.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.20357142857142854,16.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.22499999999999998,7.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.24642857142857139,7.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.2678571428571428,0.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.28928571428571426,2.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.31071428571428567,0.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.3321428571428571,1.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.35357142857142854,0.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.37499999999999994,0.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.39642857142857135,2.0,,Transfer precision A→B,Count
+Cross-device transfer precision (own-front on other device's true front),bars1,bar,0.4178571428571428,1.0,,Transfer precision A→B,Count
