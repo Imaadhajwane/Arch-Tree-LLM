@@ -698,7 +698,7 @@ archtree-llm/
 ├── frontend/                     optional dashboard
 │
 ├── data/                         benchmark files + derived caches   (see data/README.md)
-├── third_party/                  HW-NAS-Bench                       (see third_party/README.md)
+├── third_party/                  README.md (clone HW-NAS-Bench here; not committed)
 │
 ├── outputs/                      generated results    (not committed)
 └── release/                      reproducibility bundle (created by step 19, not committed)
@@ -720,5 +720,5 @@ ImageNet16-120 (Chrabaszcz et al., 2017).
 **Statistics:** Wilcoxon (1945) · Holm (1979) · Demšar (JMLR 2006) · Schuirmann (1987) · Agarwal et al.
 (NeurIPS 2021).
 
-Benchmark licences: see [`data/README.md`](data/README.md). HW-NAS-Bench (MIT) is vendored unmodified in
-`third_party/`.
+Benchmark licences: see [`data/README.md`](data/README.md). HW-NAS-Bench (MIT) is not included; clone it into
+`third_party/` (see [`third_party/README.md`](third_party/README.md)).

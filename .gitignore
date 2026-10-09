@@ -3,7 +3,7 @@
 # Committed on purpose (never ignore these): source code, config.yaml, requirements.txt, setup scripts,
 # run_full_pipeline.ps1, README.md, ReadMe/goalREADME.md + ReadMe/assets/figures/ (README figures), paper/ (manuscript + figure sources),
 # "Architerctural Designs/" (final diagrams), plots/figures/ (figure gallery + data CSVs),
-# data/README.md, third_party/README.md and the vendored HW-NAS-Bench code.
+# data/README.md and third_party/README.md (HW-NAS-Bench itself is cloned, not committed).
 
 # ── Environment / secrets ─────────────────────────────────────────────────────
 venv/
@@ -26,7 +26,6 @@ data/*.pbz2
 data/*.tar
 data/NATS-sss-*
 data/cifar10/
-third_party/HW-NAS-Bench/*.pickle
 
 # ── Derived benchmark caches (rebuild with the tools/ scripts) ───────────────
 # tools/build_nb201_cache.py
@@ -97,7 +96,8 @@ desktop.ini
 .idea/
 .claude/
 
-third_party/HW-NAS-Bench/dev/
+# ── third_party/: only the README is published; clone HW-NAS-Bench yourself ───────
+third_party/HW-NAS-Bench/
 
 # ── ReadMe/: only the goals file and the README figures are published ───────────
 ReadMe/*

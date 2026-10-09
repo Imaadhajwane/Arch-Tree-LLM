@@ -1,14 +1,14 @@
 # `third_party/` — external code used as-is
 
-* This folder holds **unmodified** copies of external projects that are not on PyPI.
-Nothing in here was changed, and the project's own code never edits these files. They're used only through
-the wrappers in `benchmarks/`.
+*Updated Oct 9, 2026.* External projects that are not on PyPI go here. **They are not included in this
+repository**: only this README is committed, and you clone each project into this folder yourself (commands
+below). The project's own code never edits these files; they're used only through the wrappers in `benchmarks/`.
 
 | Folder | What | Used by | Needed for |
 |---|---|---|---|
 | `HW-NAS-Bench/` | HW-NAS-Bench API + dataset (Li et al., ICLR 2021) | `benchmarks/hwnb.py` | Phase 4 (hardware-aware search, step 9), HW true Pareto fronts (step 3), cross-device analysis (step 18), TCR-H replay |
 
-If this folder is missing, every experiment that doesn't touch hardware still runs: NB201, NB101, NATS-SSS,
+If `HW-NAS-Bench/` hasn't been cloned, every experiment that doesn't touch hardware still runs: NB201, NB101, NATS-SSS,
 the LLM studies and equal GPU-hours. Only the steps above need it, and `tools/preflight.py` reports it
 as "HW-NAS-Bench repo + pickle".
 
@@ -35,7 +35,8 @@ Accuracy always comes from our own NB201 cache (`data/nb201_cache_v2.json`), not
 
 ### Install
 
-It ships with its data (the 10.8 MB pickle is inside the repository), so a clone is all you need:
+Clone it from the project root. It ships with its data (the 10.8 MB pickle is inside the authors' repository),
+so a clone is all you need:
 
 ```powershell
 git clone https://github.com/GATECH-EIC/HW-NAS-Bench.git third_party/HW-NAS-Bench
@@ -91,18 +92,17 @@ python -c "import sys; sys.path.insert(0,'third_party/HW-NAS-Bench'); from hw_na
 
 ### Licence and citation
 
-MIT licence (`HW-NAS-Bench/LICENSE`, Copyright (c) 2022 GaTech-EIC). The folder is kept unmodified, with its
-licence. `.gitignore` excludes the pickle (`third_party/HW-NAS-Bench/*.pickle`), so re-clone rather than
-commit it.
+MIT licence (`HW-NAS-Bench/LICENSE`, Copyright (c) 2022 GaTech-EIC). Use the clone unmodified.
+`.gitignore` excludes the whole `third_party/HW-NAS-Bench/` folder, so it is never committed here.
 
 > Li, C., Yu, Z., Fu, Y., Zhang, Y., Zhao, Y., You, H., Yu, Q., Wang, Y., Lin, Y.
 > *HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark.* ICLR 2021 (spotlight).
 
 ---
 
-## Not in this folder (installed from PyPI instead)
+## Installed from PyPI instead
 
-| Package | Why it isn't vendored |
+| Package | Notes |
 |---|---|
 | `nas-bench-201` (NB201 API) | `pip install nas-bench-201`; only needed to rebuild `data/nb201_cache_v2.json` |
 | `nats_bench` (NATS-Bench API) | `pip install nats_bench`; only needed to rebuild `data/natssss_cache.json` |
