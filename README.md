@@ -66,7 +66,7 @@ whether an LLM prior and the tree structure add anything on top.
 | ID | Objective | Outcome | Status |
 |---|---|---|---|
 | C1 | Compressed trie with O(L) deduplication | 0 repeated real evaluations in every ArchTree run (LLM-NAS 30% and a memory-less bandit 67% on average over budgets; 55% and 74% at budget 200) | ✅ met |
-| C2 | UCB traversal of the trie | Rank-normalised reward fixes a reward-scale flaw; robust to C (0 of 78 tests significant). Regret: informal argument only ([`ReadMe/REGRET_ARGUMENT.md`](ReadMe/REGRET_ARGUMENT.md)) | ✅ met (empirical) |
+| C2 | UCB traversal of the trie | Rank-normalised reward fixes a reward-scale flaw; robust to C (0 of 78 tests significant). Regret: informal argument only | ✅ met (empirical) |
 | C3 | Hierarchical weight inheritance | Implemented, but nothing is trained on tabular benchmarks, so it is simulated | ⚪ not claimed |
 | C4 | Formal statements | T1 (O(L) insert) and T2 (no re-evaluation) hold. T4 (pruning keeps the optimum) is false as first stated, so pruning is presented as a heuristic | 🟡 partly met |
 | C5 | Evaluation on standard benchmarks | NAS-Bench-201 (3 datasets), NAS-Bench-101 (TensorFlow-free reader), NATS-Bench SSS and HW-NAS-Bench | ✅ exceeded |
@@ -671,7 +671,6 @@ on the first error and **skips finished runs on a rerun**. `tools/preflight.py` 
 * SHA-256 checksums of every data file.
 * An exact package lock, written to `outputs/final/repro/` by step 19.
 * A release bundle (`-Plan report` → `release/archtree_repro_bundle.zip`) that never contains `.env`.
-* Every fix and its effect is logged in [`ReadMe/FIXES_OCT2026.md`](ReadMe/FIXES_OCT2026.md).
 
 **Paper figures:** `python paper/make_figures.py` re-plots every manuscript figure from the result CSVs.
 The pipeline's own gallery (50 figures, each with a CSV of the plotted points) is in `plots/figures/`.
