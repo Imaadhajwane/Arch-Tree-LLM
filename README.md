@@ -14,7 +14,7 @@
 ![Tests](https://img.shields.io/badge/paired%20tests-1%2C404%20(Holm)-555555)
 ![Status](https://img.shields.io/badge/experiments-complete-brightgreen)
 
-**[Highlights](#-highlights)** · **[Objectives](#-objectives-and-outcomes)** · **[Method](#-method)** · **[Data](#-benchmarks-and-data)** · **[Results](#-results)** · **[Statistics](#-statistical-evidence)** · **[Quick start](#-quick-start)** · **[Reproduce](#-reproducing-the-study)**
+**[Paper](#-paper-and-supplementary-material)** · **[Highlights](#-highlights)** · **[Objectives](#-objectives-and-outcomes)** · **[Method](#-method)** · **[Data](#-benchmarks-and-data)** · **[Results](#-results)** · **[Statistics](#-statistical-evidence)** · **[Quick start](#-quick-start)** · **[Reproduce](#-reproducing-the-study)**
 
 </div>
 
@@ -43,6 +43,27 @@ which parts actually matter. It covers 3 benchmarks, 9 external baselines, 12 se
 
 ---
 
+## 📄 Paper and supplementary material
+
+The study is written up as a journal manuscript (submitted to *Sādhanā – Academy Proceedings in Engineering
+Sciences*, Springer / Indian Academy of Sciences; under review).
+
+| File | Contents |
+|---|---|
+| [`paper/main.pdf`](paper/main.pdf) | manuscript: 20 pages, 17 figures, 8 tables, 1 algorithm |
+| [`paper/supplementary/supp.pdf`](paper/supplementary/supp.pdf) | supplementary material: 26 pages, 42 tables (S1–S42), 16 figures (S1–S16) |
+| [`paper/main.tex`](paper/main.tex), [`paper/supplementary/supp.tex`](paper/supplementary/supp.tex) | LaTeX sources (journal class `sadhana.cls` included) |
+| [`paper/make_figures.py`](paper/make_figures.py) | draws every manuscript figure from the result CSVs |
+| [`paper/supplementary/make_supp_tables.py`](paper/supplementary/make_supp_tables.py), [`make_supp_figures.py`](paper/supplementary/make_supp_figures.py) | write every supplementary table and figure from the result CSVs |
+
+The supplement holds what the page limit left out: the detailed search loop, the status of the formal
+statements, every per-cell result and paired test (fixed budget, equal GPU-hours, gate grid, ablations,
+NAS-Bench-101, LLM studies, hardware), the seeds, the reproducibility checks and the data checksums. No number
+in either document is typed by hand. The rebuild commands are under
+[Reproducing the study](#-reproducing-the-study).
+
+---
+
 ## ✨ Highlights
 
 | | Finding | Evidence |
@@ -52,7 +73,7 @@ which parts actually matter. It covers 3 benchmarks, 9 external baselines, 12 se
 | 🔌 | **The gate is portable.** It raises the accuracy of 25 of 27 proposer–benchmark cells: ArchTree +0.38, RE +0.26, random +0.22, local search +0.19 points | [Transfer](#7-transfer-to-nas-bench-101-and-portability-of-the-gate) |
 | 🔍 | **Zero-cost proxies are training-cost detectors in cell spaces** (Spearman ρ with training time 0.78 NB201, 0.63 NB101) **but not in a width space** (0.20 NATS-SSS) | [Why the gate works](#6-why-the-gate-works-proxies-as-cost-detectors) |
 | 📐 | **A closed-form gate-cost criterion,** `r_PA·r_PD − r_DA`, predicted *before any search* that a cost penalty would hurt, on 7 of 7 benchmark–dataset pairs. Measured: 16 losses / 0 wins in 21 cells | [Gate-cost criterion](#5-the-gate-cost-criterion) |
-| 🤖 | **An LLM prior speeds up only the start of the search.** It gets within 1 point of the final accuracy after 5.0 vs 15.5 evaluations (C10) and 15.6 vs 30.8 (C100). This comes from general architectural knowledge, not memorised benchmark tables, and final accuracy never changes | [LLM prior](#9-what-does-the-llm-prior-add) |
+| 🤖 | **An LLM prior speeds up only the start of the search.** It gets within 1 point of the best accuracy in the space after 5.0 vs 15.5 evaluations (C10) and 15.6 vs 30.8 (C100). Prompt controls point to general knowledge about operations rather than memorised benchmark tables; final accuracy never changes | [LLM prior](#9-what-does-the-llm-prior-add) |
 | 🌳 | **The tree structure adds nothing beyond deduplication.** Trie vs flat bandit with a hash set: 0 of 12 cells differ | [Ablations](#8-ablations-what-the-parts-contribute) |
 
 ---
@@ -71,7 +92,7 @@ whether an LLM prior and the tree structure add anything on top.
 | C4 | Formal statements | T1 (O(L) insert) and T2 (no re-evaluation) hold. T4 (pruning keeps the optimum) is false as first stated, so pruning is presented as a heuristic | 🟡 partly met |
 | C5 | Evaluation on standard benchmarks | NAS-Bench-201 (3 datasets), NAS-Bench-101 (TensorFlow-free reader), NATS-Bench SSS and HW-NAS-Bench | ✅ exceeded |
 | C6 | TCR coverage metric | Implemented and reported; hardware coverage defined as HV/HV\* | ✅ minor |
-| **C7** | **LLM warm-start prior** | 2–3× faster early convergence on CIFAR-10/100 (Holm-significant), none on ImageNet16-120, same final accuracy. Knowledge controls rule out memorisation and a pure size heuristic | 🟡 partly met |
+| **C7** | **LLM warm-start prior** | 2–3× faster early convergence on CIFAR-10/100 (Holm-significant), none on ImageNet16-120, same final accuracy. Knowledge controls argue against memorisation and against a pure size heuristic | 🟡 partly met |
 | **C8** | **Zero-cost proxy ensemble as a gate** | Label-free gate (τ 0.63–0.68) as good as a supervised one that costs 1,500 labels; 53% of GPU-hours saved; helps every proposer | ✅ **main contribution** |
 | **C9** | **Hardware-aware search + TCR-H** | Device Pareto fronts barely overlap (Jaccard ≈ 0.13), yet a transferred front keeps ≈ 98% of the hypervolume; search ties NSGA-II-style and random (96/96) | 🟡 analysis only |
 | new | Fair compute: equal GPU-hours | 1,128 runs, 14 arms, 3 benchmarks: 0 losses; tied-best / 2nd / 4th, inside the CD everywhere | ✅ met |
@@ -87,18 +108,18 @@ Full goal history (original plan → final outcome): [`ReadMe/goalREADME.md`](Re
 ### Overall workflow
 
 <p align="center">
-  <img src="Architerctural%20Designs/ArchTree_Final_Figures_BW/Paper_Fig_Overall_Workflow_BW_600dpi.png" width="100%" alt="ArchTree overall workflow"/>
+  <img src="ReadMe/assets/figures/fig1_overview.png" width="100%" alt="ArchTree overall workflow"/>
 </p>
 
-Benchmarks supply tabulated accuracy, training time and device latency. The search loop proposes,
-deduplicates and gates candidates. Validation accuracy drives the search and test accuracy is only reported.
-All methods are compared at equal GPU-hours with paired and rank-based statistics. The LLM prior (dashed) is
-switched off in the headline system. *ArchTree v2* in the diagram is the final system, ArchTree-RMG.
+The four benchmarks provide look-up tables of accuracy, training time and latency. ArchTree-RMG generates
+candidates, drops repeats and screens the rest with the gate. Only validation accuracy steers the search; test
+accuracy is reported at the end. Every method gets the same GPU-hour budget and is compared with paired and
+rank-based tests. The optional LLM prior (dashed box) is off in the headline system.
 
 ### The search loop
 
 <p align="center">
-  <img src="Architerctural%20Designs/ArchTree_Final_Figures_BW/Paper_Fig_Algorithm_Loop_BW_600dpi.png" width="78%" alt="ArchTree-RMG search loop"/>
+  <img src="ReadMe/assets/figures/fig_search_loop.png" width="78%" alt="ArchTree-RMG search loop"/>
 </p>
 
 | Step | Block | What it does |
@@ -309,16 +330,18 @@ candidates (ZiCo-style, RE + ZC warm-up) get there sooner, which again points to
   <sub>Test accuracy within an equal GPU-hour budget H = k·τ̄ (mean ± s.e., 12 seeds). Solid: label-free gate (or ZC warm-up); dotted / dashed: ungated or cost-penalised. The gate lifts every proposer; penalising cost lowers accuracy on all seven benchmark–dataset pairs.</sub>
 </p>
 
-**ArchTree-RMG vs every arm** (Wilcoxon, Holm within arm, up to 21 cells = 7 benchmark–dataset pairs × 3 budgets):
+**ArchTree-RMG vs every arm** (Wilcoxon, Holm within each arm over its cells; up to 21 cells = 7 benchmark–dataset pairs × 3 budgets, 18 for arms not run on NB101):
 
 | vs | Mean Δ (points) | Wins / ties / losses |
 |---|---:|---|
 | random + cost penalty (λ = 1) | +1.36 | 15 / 3 / 0 |
 | ArchTree-RM + cost penalty (λ = 1) | +1.01 | 16 / 5 / 0 |
 | random, no gate | +0.67 | 10 / 11 / 0 |
-| random + same gate | +0.50 | 6 / 12 / 0 |
+| random + cost penalty (λ = 0.25) | +0.51 | 6 / 12 / 0 |
+| random + same gate | +0.49 | 6 / 12 / 0 |
 | ArchTree-RM, no gate | +0.38 | 2 / 19 / 0 |
 | RE, no gate | +0.36 | 1 / 20 / 0 |
+| ArchTree-RM + cost penalty (λ = 0.25) | +0.16 | 0 / 18 / 0 |
 | LS, no gate | +0.16 | 0 / 21 / 0 |
 | ArchTree-RM + #params gate | +0.08 | 1 / 20 / 0 |
 | RE + same gate · LS + same gate · RE + ZC warm-up | +0.10 · −0.03 · −0.07 | 0 / 21 / 0 each |
@@ -436,14 +459,14 @@ but **under-predicts the size of the losses several-fold, so only the sign and t
 
 <p align="center">
   <img src="ReadMe/assets/figures/fig12_llm.png" width="88%" alt="LLM prior"/><br/>
-  <sub>(a) Evaluations to within 1 point of the final accuracy (budget 100). (b) Cohen's d of four comparisons on four metrics. (c) α sweep. (d) Operation-ranking quality under four prompts / priors.</sub>
+  <sub>(a) Evaluations to within 1 point of the best accuracy in the space (budget 100). (b) Cohen's d of four comparisons on four metrics. (c) α sweep. (d) Operation-ranking quality under four prompts / priors.</sub>
 </p>
 
-**Speed (budget 100, evaluations needed to get within 1 point of the final accuracy):**
+**Speed (budget 100, real evaluations needed to get within 1 point of the best validation accuracy in the space; a seed that never gets there counts at the end of its run):**
 
 | | CIFAR-10 | CIFAR-100 | ImageNet16-120 |
 |---|---|---|---|
-| LLM prior / size prior / described prompt / off | **5.0** / 16.4 / 7.8 / 15.5 | **15.6** / 19.7 / 25.4 / 30.8 | 23.2 / 31.3 / 19.4 / **17.8** |
+| LLM prior / size prior / described prompt / off | **5.0** / 16.4 / 7.8 / 15.5 | **15.6** / 19.7 / 25.4 / 30.8 | 23.2 / 31.2 / 19.4 / **17.8** |
 | LLM vs off | p_Holm = 0.047, d ≈ 1.0 | p_Holm = 0.047 | n.s. |
 | Final accuracy | tie | tie | tie |
 
@@ -462,7 +485,7 @@ but **under-predicts the size of the losses several-fold, so only the sign and t
   (p_Holm = 0.003, d = 4.0). The LLM contributes more than "bigger is better", but only at the start.
 * At 10 min per evaluation the speed-up is 0.8 h instead of 2.6 h on C10. The model's own response time is at
   most 23 s per run.
-* **α sweep:** 17 of 24 settings favour the prior, but 0 of 48 tests are significant after Holm.
+* **α sweep:** 17 of 24 settings favour the prior, but none is significant after Holm (48 tests, of which 24 are distinct because all runs with α ≥ 0.2 coincide).
   `gpt-oss-120b` ranks slightly better (ρ 0.61 vs 0.60) but does not search better.
 
 ### 10. Hardware-aware search (HW-NAS-Bench)
@@ -517,10 +540,10 @@ but **under-predicts the size of the losses several-fold, so only the sign and t
 | Family | Tests | p < 0.05 (raw) | Holm-significant | Direction |
 |---|---:|---:|---:|---|
 | Fixed budget vs 9 baselines | 108 | 38 | 20 | 20 RMG wins |
-| Same gate, 6 proposers | 240 | 100 | 47 | 47 RMG wins |
+| Same gate, 5 other proposers | 240 | 100 | 47 | 47 ArchTree wins |
 | Equal GPU-hours, 3 benchmarks | 261 | 96 | 57 | 57 RMG wins |
 | NB101, same gate | 32 | 16 | 15 | 14 wins, 1 loss (RE) |
-| NB101, equal evaluations | 36 | 13 | 11 | 11 RMG wins |
+| NB101, equal evaluations | 36 | 13 | 11 | 11 ArchTree wins |
 | Held-out design ablation | 48 | 10 | 4 | all favour RMG |
 | Trie vs flat bandit | 24 | 3 | 1 | trie better |
 | Proxy subsets | 48 | 6 | 2 | SVD entropy alone worse |
@@ -580,7 +603,7 @@ accuracy. Friedman rejects equal performance in every comparison (p < 10⁻⁷).
 needed only for the zero-cost proxies.
 
 ```powershell
-git clone <repository-url> archtree-llm
+git clone https://github.com/Imaadhajwane/Arch-Tree-LLM.git archtree-llm
 cd archtree-llm
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 
@@ -668,11 +691,23 @@ on the first error and **skips finished runs on a rerun**. `tools/preflight.py` 
 * One `config.yaml`, with values unchanged since the paper runs.
 * Fixed seeds, and every run seeds its own RNGs: 1 vs 3 workers give identical results.
 * Deterministic benchmark lookups and fixed proxy batches.
-* SHA-256 checksums of every data file.
+* SHA-256 checksums of the benchmark files and derived caches (supplementary Table S41).
 * An exact package lock, written to `outputs/final/repro/` by step 19.
 * A release bundle (`-Plan report` → `release/archtree_repro_bundle.zip`) that never contains `.env`.
 
-**Paper figures:** `python paper/make_figures.py` re-plots every manuscript figure from the result CSVs.
+**Paper and supplement.** After `-Plan report`, rebuild the documents from the result CSVs:
+
+```powershell
+cd paper
+python make_figures.py ..\outputs figs analysis\out ..\data      # 15 data figures of the manuscript
+pdflatex main.tex; pdflatex main.tex                                 # paper/main.pdf
+cd supplementary
+python make_supp_tables.py ..\..\outputs tables                   # tables S2-S42 as LaTeX
+python make_supp_figures.py ..\..\outputs figs                    # figures S2-S16
+pdflatex supp.tex; pdflatex supp.tex; pdflatex supp.tex              # paper/supplementary/supp.pdf
+```
+
+`paper/analysis/derive.py` writes the whole-space statistics in `paper/analysis/out/` from the benchmark caches.
 The pipeline's own gallery (50 figures, each with a CSV of the plotted points) is in `plots/figures/`.
 Optional dashboard: `python frontend/backend.py` → http://localhost:5000.
 
@@ -696,6 +731,8 @@ archtree-llm/
 ├── plots/                        plot_results.py, figure_export.py, figures/ (gallery + data CSVs)
 ├── utils/                        Groq client, key pool, rate limiter, checkpointing
 ├── frontend/                     optional dashboard
+├── paper/                        manuscript (main.tex / main.pdf), figure scripts, figs/
+│   └── supplementary/            supplementary material (supp.tex / supp.pdf), table + figure scripts
 │
 ├── data/                         benchmark files + derived caches   (see data/README.md)
 ├── third_party/                  README.md (clone HW-NAS-Bench here; not committed)
