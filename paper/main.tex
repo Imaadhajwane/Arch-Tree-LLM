@@ -442,7 +442,7 @@ Comparisons at an equal number of proposals favour any method that evaluates few
 
 Friedman ranks (Figure~\ref{fig:ranks}) give the same picture. On NAS-Bench-201 \algname{} has the lowest average rank (4.75), essentially tied with RE plus zero-cost warm-up (4.84; CD = 1.91). On NAS-Bench-101 it is second (4.38, behind LS with the gate at 3.11; CD = 2.26) and on NATS-Bench SSS fourth (5.99, behind LS with the gate at 4.19), in both cases within the CD; section~\ref{sec:stats} gives the per-run probabilities and equivalence tests.
 
-Under the same label-free gate at a fixed proposal budget, \algname{} matches RE in all 12 NAS-Bench-201 cells while using 19--24\% fewer GPU-hours (55, 115 and 351 GPU-h against 72, 146 and 434 at budget 200) and has no loss in 240 same-gate comparisons against five proposers under four gates; section~\ref{sec:transfer} examines how well the gate itself transfers.
+Under the same label-free gate at a fixed proposal budget, \algname{} matches RE in all 12 NAS-Bench-201 cells while using 19--23\% fewer GPU-hours (55, 115 and 351 GPU-h against 72, 146 and 434 at budget 200) and has no loss in 240 same-gate comparisons against five proposers under four gates; section~\ref{sec:transfer} examines how well the gate itself transfers.
 
 \begin{table}[t]
 \caption{Gate-cost criterion (Eq.~\ref{eq:slope}) with normal-score correlations, and the measured effect of a $\lambda=1$ cost penalty on \algname{} at equal GPU-hours.}\label{tab:gatecost}

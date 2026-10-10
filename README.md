@@ -299,7 +299,7 @@ NAS-Bench-201, budget 200 proposals (mean ± s.d. over 12 seeds):
 
 <p align="center">
   <img src="ReadMe/assets/figures/fig17_scorecard.png" width="100%" alt="Method scorecard"/><br/>
-  <sub><b>Method scorecard</b> (NB201, budget 200, 12 seeds). Shading ranks methods within each column (darker = better). ArchTree-RMG leads on cost: <b>82 real evaluations and 520 GPU-hours</b> over the three datasets, 41% of the evaluations and 38–56% of the GPU-hours of the baselines. LS and RE + ZC warm-up lead on accuracy and rank.</sub>
+  <sub><b>Method scorecard</b> (NB201, budget 200, 12 seeds). Shading ranks methods within each column (darker = better). ArchTree-RMG leads on cost: <b>82 real evaluations and 520 GPU-hours</b> over the three datasets, 41% of the evaluations and 37–57% of the GPU-hours of the baselines (per dataset). LS and RE + ZC warm-up lead on accuracy and rank.</sub>
 </p>
 
 * **Paired tests vs the 9 baselines** (3 datasets × 4 budgets = 108; Holm within each baseline):
@@ -311,6 +311,25 @@ NAS-Bench-201, budget 200 proposals (mean ± s.d. over 12 seeds):
     ArchTree's number of real evaluations.
 * **Friedman ranking** (10 methods, 144 blocks, CD = 1.13): RE + warm-up 3.67, LS 3.90,
   **ArchTree-RMG 4.41**, within the CD of both while using about 40% of their evaluations.
+
+**Published NAS-Bench-201 results** (as reported in each paper; protocols differ, so this is context, not a
+paired comparison; manuscript Table 5):
+
+| Method | Type | Budget | CIFAR-10 | CIFAR-100 | ImageNet16-120 |
+|---|---|---|---|---|---|
+| Random search (Dong & Yang 2020) | sample-based | 12,000 s simulated | 93.70 ± 0.36 | 71.04 ± 1.07 | 44.57 ± 1.25 |
+| REA (Dong & Yang 2020) | sample-based | 12,000 s simulated | 93.92 ± 0.30 | 71.84 ± 0.99 | 45.54 ± 1.03 |
+| BOHB (Dong & Yang 2020) | sample-based | 12,000 s simulated | 93.61 ± 0.52 | 70.85 ± 1.28 | 44.42 ± 1.49 |
+| DARTS-V2 (Dong & Yang 2020) | weight-sharing | 35,782 s | 54.30 ± 0.00 | 15.61 ± 0.00 | 16.32 ± 0.00 |
+| GDAS (Dong & Yang 2020) | weight-sharing | 31,610 s | 93.61 ± 0.09 | 70.70 ± 0.30 | 41.71 ± 0.98 |
+| DrNAS* (Chen et al. 2021) | weight-sharing | – | 94.36 ± 0.00 | 73.51 ± 0.00 | 46.34 ± 0.00 |
+| NASWOT, N = 1000 (Mellor et al. 2021) | training-free | 306 s | 92.96 ± 0.81 | 69.98 ± 1.22 | 44.44 ± 2.10 |
+| TE-NAS (Chen et al. 2021) | training-free | 1,558 s | 93.9 ± 0.47 | 71.24 ± 0.56 | 42.38 ± 0.46 |
+| GENIUS, GPT-4* (Zheng et al. 2023) | LLM-based | 10 architectures | 93.79 ± 0.09 | 70.91 ± 0.72 | 44.96 ± 1.02 |
+| **ArchTree-RMG*** (this work) | sample-based + training-free | 81–83 architectures | **94.28 ± 0.13** | **73.40 ± 0.20** | **46.41 ± 0.18** |
+| Optimal (best test accuracy) | – | – | 94.37 | 73.51 | 47.31 |
+
+\* searched separately on each dataset; the other methods search on CIFAR-10 and transfer the architecture.
 
 ### 3. Convergence
 
@@ -483,8 +502,8 @@ but **under-predicts the size of the losses several-fold, so only the sign and t
 * The size prior ranks single ops best but **searches worse**: no faster than no prior on C10 and
   significantly *slower* on IN16 (+13.5 evaluations, p_Holm = 0.018). The LLM prior beats it on C10
   (p_Holm = 0.003, d = 4.0). The LLM contributes more than "bigger is better", but only at the start.
-* At 10 min per evaluation the speed-up is 0.8 h instead of 2.6 h on C10. The model's own response time is at
-  most 23 s per run.
+* At 10 min per evaluation the speed-up is 0.8 h instead of 2.6 h on C10. The model's own response time
+  (under a minute per run) is negligible next to one evaluation.
 * **α sweep:** 17 of 24 settings favour the prior, but none is significant after Holm (48 tests, of which 24 are distinct because all runs with α ≥ 0.2 coincide).
   `gpt-oss-120b` ranks slightly better (ρ 0.61 vs 0.60) but does not search better.
 
@@ -556,8 +575,8 @@ but **under-predicts the size of the losses several-fold, so only the sign and t
 | **Total** | **1,404** | **495** | **287** | |
 
 **Of the 677 tests comparing ArchTree-RMG with another search method, 149 are significant wins after Holm
-and 1 is a loss.** The four sensitivity families (270 tests) give only two significant results, which
-supports the robustness claims. The LLM families are significant only on early-search metrics, never on final
+and 1 is a loss.** The three sensitivity families (UCB setting, α, proxy subsets; 174 tests) give only two significant
+results, and all 96 hardware tests are ties, which supports the robustness claims. The LLM families are significant only on early-search metrics, never on final
 accuracy. Friedman rejects equal performance in every comparison (p < 10⁻⁷).
 
 <p align="center">
