@@ -1,0 +1,601 @@
+\documentclass{sadhana}
+
+%% packages suggested by the Sadhana sample file
+\usepackage{graphicx,amsmath,bm}
+%% additional standard packages
+\usepackage{booktabs,multirow,array,amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\algname}{ArchTree}
+\newcommand{\rmg}{ArchTree-RMG}
+%% S-numbering of every object in the supplement
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\setcounter{topnumber}{3}\setcounter{dbltopnumber}{3}\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.92}\renewcommand{\dbltopfraction}{0.92}\renewcommand{\textfraction}{0.06}\renewcommand{\floatpagefraction}{0.8}\renewcommand{\dblfloatpagefraction}{0.8}
+\setlength{\emergencystretch}{1.5em}
+\newcommand{\tn}[1]{\par\vspace{2pt}{\scriptsize #1\par}}
+\newcommand{\main}[1]{main paper, #1}
+
+\begin{document}
+
+\title{Supplementary material for: Neural architecture search via trie-based deduplication and zero-cost proxies, with hardware-aware coverage: An empirical study of LLM-guided warm-start}
+
+\author{Imaad Hajwane\textsuperscript{1,*}\and Jayshree Ghorpade-Aher\textsuperscript{1}}
+\affilOne{\textsuperscript{1}Department of Computer Engineering and Technology, School of Computer Science and Engineering, Dr. Vishwanath Karad MIT World Peace University, Pune 411038, India\\ e-mail: iamimaad2kk3@gmail.com; jayshree.aher@mitwpu.edu.in}
+
+\twocolumn[{
+\maketitle
+\vspace*{-4pt}
+\noindent\textbf{Contents.} This document gives the material that supports the main paper but did not fit within its page limit: the detailed search loop and its settings (section~\ref{s:loop}); the status of the formal statements and the landscape measurements behind them (section~\ref{s:theory}); full proxy and cost tables (section~\ref{s:proxy}); every per-cell result at a fixed proposal budget (section~\ref{s:fixed}) and at equal GPU-hours (section~\ref{s:egh}); all rank-based statistics (section~\ref{s:stats}); the proposer $\times$ gate grid (section~\ref{s:grid}); the ablations and sensitivity studies (section~\ref{s:abl}); NAS-Bench-101 (section~\ref{s:nb101}); the LLM studies (section~\ref{s:llm}); hardware-aware search (section~\ref{s:hw}); and the seeds, reproducibility checks and data checksums (section~\ref{s:repro}). Supplementary objects are numbered S1, S2, \dots\ and always named (Table S5, Figure S3); numbers without the prefix refer to the main paper, and S1--S4 written alone denote the development stages of the main paper. Every value in the tables and figures is computed by two scripts (\texttt{make\_supp\_tables.py}, \texttt{make\_supp\_figures.py}) directly from the result files in the public repository (https://github.com/Imaadhajwane/Arch-Tree-LLM); nothing is typed by hand. Test accuracies are in \%, differences in percentage points (pt), and all results use 12 seeds unless stated otherwise. A difference is called a win or a loss only if it is significant after Holm correction within its family (paired two-sided Wilcoxon test, $p_{\mathrm{Holm}}<0.05$); W/T/L denotes wins/ties/losses of \rmg{} (or of \algname{} where the gate is held fixed).
+\vspace{10pt}
+}]
+
+\corres
+\volnum{}
+\issuenum{}
+\monthyear{}
+\pgfirst{}
+\pglast{}
+\doinum{}
+\articleType{}
+
+\markboth{Imaad Hajwane and Jayshree Ghorpade-Aher}{Supplementary material: trie deduplication and zero-cost gating}
+\onecolumn
+
+%% =====================================================================
+\section{Naming, search loop and settings}\label{s:loop}
+
+Table~\ref{t:names} maps the identifiers used in the result files to the names used in the paper, so that every number can be traced back to its source. Figure~\ref{f:loop} expands the five-step summary of the search loop (Figure~2) into its seven operations, and Table~\ref{t:settings} lists every setting that the code actually reads; keys present in the configuration file but not read by any script are not reported.
+
+\begin{table}[tbp]
+\caption{Identifiers in the result files and the corresponding names in the paper.}\label{t:names}
+\centering\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.45\textwidth}@{}}
+\toprule
+Identifier(s) in the CSV files & Name in the paper & Description\\
+\midrule
+\texttt{archtree\_v1}, \texttt{archtree\_trie\_only} & S1, \algname-base & trie, raw-reward UCB ($C=\sqrt2$, mean backup), no gate\\
+\texttt{archtree\_zc}, \texttt{archtree\_phase2} & S2 & S1 with the supervised gate (1,500 labelled architectures)\\
+\texttt{archtree} + gate \texttt{none} & S3, \algname-RM & rank-normalised UCB ($C=0.3$, max backup) with mutation, no gate\\
+\texttt{archtree\_llm}, \texttt{archtree\_headline}, \texttt{archtree\_v2}, \texttt{archtree\_zc\_unsup}, \texttt{v2} & S4, \rmg & \algname-RM with the label-free gate; LLM prior off ($\alpha=0$)\\
+\texttt{archtree\_llm\_hw} & \algname-HW & rank UCB with max backup, no gate, no mutation, latency-penalised reward\\
+\texttt{costpen}, \texttt{costpen025} & cost penalty $\lambda=1$, $0.25$ & gate score $S_\lambda=z(P)-\lambda z(D)$, $D=\log(1+\#\text{params})$\\
+\texttt{zc}, \texttt{zc\_unsup}, \texttt{params} & supervised, label-free, \#params gate & gate applied to any proposer\\
+\texttt{flat\_ucb\_none}, \texttt{flat\_ucb\_set} & flat UCB (A7) & per-position UCB without / with a set-based deduplication\\
+\texttt{v1}, \texttt{rank}, \texttt{mut\_only}, \texttt{re} (design) & design-ablation arms & base + gate; rank reward only; mutation only; RE with the same gate\\
+\texttt{llm\_off}, \texttt{llm\_on}, \texttt{llm\_described}, \texttt{size\_prior} & LLM-study arms & $\alpha=0$; LLM prior; operations described without names; FLOP-size prior without an LLM\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.74\textwidth]{figs/figS1_loop.pdf}
+\caption{The search loop of \rmg{} in detail. Each iteration descends the trie by rank-normalised UCB (step 1) or, with probability 0.5 after ten real evaluations, replaces the proposal by a tournament mutation (step 2); the trie rejects architectures already seen (step 3); the label-free gate admits every proposal until ten real evaluations have been made and then only those in the top 35\% of the scores observed so far (step 4); admitted architectures receive a real evaluation (step 5), are inserted with their accuracy, which is backed up along the path (step 6), and every 50 iterations the lowest 15\% of nodes by backed-up value are pruned (step 7). Dashed boxes are optional or zero-cost components: the LLM prior (off in the headline system), the proxy ensemble and the weight bank, which has no effect on tabular benchmarks.}
+\label{f:loop}
+\end{figure}
+
+\begin{table}[tbp]
+\caption{Settings of the search as read by the code (identical in every reported run unless an experiment varies them).}\label{t:settings}
+\centering\footnotesize
+\begin{tabular}{@{}llll@{}}
+\toprule
+Component & Setting & Value & Varied in\\
+\midrule
+UCB & exploration constant $C$ & 0.3 (S1: $\sqrt2$) & Table~\ref{t:ucb}\\
+ & reward / backup & percentile rank / max (S1--S2: raw / mean) & Table~\ref{t:design}\\
+Mutation & share of proposals, start & 0.5, after 10 real evaluations & Table~\ref{t:design}\\
+ & tournament size & 5 evaluated architectures & --\\
+Gate & warm-up / pass rate & first 10 real evaluations / top 35\% of scores seen & Figure~4\\
+ & proxies, calibration & $E$, $S$, $T$; z-scores from 1,500 unlabelled architectures & Table~\ref{t:subsets}\\
+ & proxy network & 32 channels, fixed initialisation seed 1234 & --\\
+ & NASWOT batches & 3 batches of 256 CIFAR-10 images & --\\
+Pruning & period / share / eligibility & every 50 iterations / 15\% / $\geq 2$ visits, by value & Table~\ref{t:a5}\\
+LLM prior & $\alpha$, decay, floor & 0 (headline), $\alpha/\sqrt{t'}$, stop below 0.02 & Table~\ref{t:alpha}\\
+ & model, temperature, max tokens & \texttt{openai/gpt-oss-20b}, 0.1, 300 & Table~\ref{t:llmsize}\\
+ & calls per run & at most 60 & --\\
+Hardware & latency penalty & $0.05\cdot\min(\mathrm{lat}/50\,\mathrm{ms},1)$ on the 0--1 reward & --\\
+Protocol & search / report metric & 200-epoch validation / test accuracy & --\\
+ & budgets & NB201: 25--200 proposals; NB101: 50--400 & --\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% =====================================================================
+\section{Formal statements and the landscape behind them}\label{s:theory}
+
+The early design documents of the project made seven formal claims (T1--T7). Table~\ref{t:theory} records what can and cannot be said for each, so that no statement in the main paper rests on an unproven result. The main paper uses T1, T2 and T5 only as properties of the design and makes no regret claim.
+
+\begin{table}[tbp]
+\caption{Status of the formal statements.}\label{t:theory}
+\centering\footnotesize
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.30\textwidth}l>{\raggedright\arraybackslash}p{0.43\textwidth}@{}}
+\toprule
+Id & Statement & Status & Comment\\
+\midrule
+T1 & trie insertion and look-up cost $O(L)$ & holds & one step per token; $L=6$ on NB201\\
+T2 & no architecture is evaluated twice & holds by construction & visited leaves are redirected to an unvisited one; confirmed empirically (0 repeats in every \algname{} run, Table~\ref{t:dups})\\
+T3 & sub-linear regret of UCB over the trie & informal only & relies on prefix locality (Table~\ref{t:landscape}); the max backup and rank reward depart from the settings of the UCT and HOO analyses \cite{kocsis2006,coquelin2007,bubeck2011}; treated as motivation, not as a guarantee\\
+T4 & pruning never removes the optimum & false as stated & value-based pruning is a heuristic without confidence bounds; its effect is measured instead (Table~\ref{t:a5})\\
+T5 & weight inheritance is consistent & holds & no measurable effect on tabular benchmarks, where nothing is trained (A3: identical runs, Table~\ref{t:toggles})\\
+T6 & the LLM prior preserves the regret behaviour & near-trivial & the prior only reorders never-visited siblings; a zero-information prior reproduces $\alpha=0$ exactly (24/24 seeds)\\
+T7 & hypervolume ratio equals 1 iff the whole Pareto front is found & definitional & used only as a descriptive metric\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textit{Prefix locality.} Statement T3 needs architectures that share a prefix to have similar accuracy. Table~\ref{t:landscape} and Figure~\ref{f:landscape} measure this on the whole NAS-Bench-201 space. The first three edges explain little of the variance ($\eta^2\le 0.13$, 0.19 and 0.24 on the three datasets), and the spread within a three-token prefix (7.8--10.8\,pt) is almost that of the whole space. Locality appears only at depth four ($\eta^2$ = 0.47--0.59). Statistics collected near the root of the trie therefore carry little information about unvisited leaves, which is consistent with the finding that the tree adds nothing beyond deduplication (Table~\ref{t:a7}). The number of depth-$k$ cells that contain a leaf within 1\,pt of the optimum grows as $5^{\gamma k}$ with $\gamma$ = 0.54, 0.30 and 0.32; CIFAR-10 has many near-optimal architectures (376 leaves within 1\,pt), which explains why all good methods saturate on it.
+
+\begin{table}[tbp]
+\caption{Prefix locality of NAS-Bench-201 (all 15,625 architectures, validation accuracy): variance explained by the first $k$ tokens ($\eta^2$), mean within-prefix standard deviation, and number of prefixes $N_k(\varepsilon)$ that contain an architecture within $\varepsilon$\,pt of the best; $\gamma$ is the fitted growth exponent $N_k\propto5^{\gamma k}$.}\label{t:landscape}
+\centering\footnotesize
+\input{tables/landscape}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS3_landscape.pdf}
+\caption{Landscape of NAS-Bench-201 seen through the trie. (a) Variance of validation accuracy explained by the first $k$ tokens. (b) Mean standard deviation of the architectures that share a prefix of length $k$. (c) Number of prefixes that still contain an architecture within $\varepsilon$ of the optimum (log scale). The first three tokens carry little information; locality appears from depth four.}
+\label{f:landscape}
+\end{figure}
+
+\textit{Regret.} Figure~\ref{f:regret} shows the simple regret of every method against real evaluations at the largest budget, and Table~\ref{t:regretfit} the fitted power law $r_t\approx a\,t^{-b}$. Uniform sampling without replacement has $b$ = 0.29--0.46, and random, MCTS-style, ENAS-style, ZiCo-style search and LLM-NAS stay below 0.7. \rmg{} decays with $b$ = 1.74, 1.71 and 1.29 and reaches a final regret of 0.04, 0.08 and 0.15\,pt after 88--102 real evaluations; only local search decays clearly faster on CIFAR-10 and CIFAR-100 ($b$ = 2.68 and 3.24), where it reaches the optimum. The A7 trie arm reproduces \rmg{} exactly. The flat bandit with set deduplication has a similar exponent on CIFAR-10 (1.78) and a smaller one on CIFAR-100 and ImageNet16-120 (1.08, 0.90), although its final accuracy does not differ (Table~\ref{t:a7}); the flat bandit without deduplication is slower still (1.12, 0.66, 0.74). The exponents are descriptive summaries over 25--200 evaluations, not asymptotic rates.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS2_regret.pdf}
+\caption{Gap between the optimum of the space and the best validation accuracy found so far (simple regret), NAS-Bench-201, 200 proposals. (a)--(c) Mean of 12 seeds against real evaluations (log--log; band: $\pm$1 standard error for \rmg). Gated methods stop earlier because they spend fewer real evaluations. (d) Fitted exponent $b$ with 95\% bootstrap interval per method and dataset; dotted lines mark uniform sampling without replacement.}
+\label{f:regret}
+\end{figure}
+
+\begin{table}[tbp]
+\caption{Power-law fit of the regret curve at a budget of 200 proposals: real evaluations $T$ (maximum over seeds), exponent $b$ with 95\% bootstrap interval, and simple regret $r_T$ (pt) at $T$.}\label{t:regretfit}
+\centering\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\input{tables/regret_fit}
+\end{table}
+
+%% =====================================================================
+\section{Proxies, training cost and the gate-cost criterion}\label{s:proxy}
+
+Table~\ref{t:calib} gives the rank correlation of each proxy with validation accuracy on the 1,500 calibration architectures. On NAS-Bench-201 the label-free ensemble $P$ is within 0.04 of the supervised ensemble in Kendall $\tau$ (0.63--0.68 against 0.63--0.72), and NASWOT is the best single proxy. On NAS-Bench-101 all proxies are weaker (best single $\tau$ = 0.39).
+
+\begin{table}[tbp]
+\caption{Rank correlation of each zero-cost proxy with validation accuracy (Kendall $\tau$, Spearman $\rho$; 1,500 architectures, calibration seed 0). $C$ is a cost proxy and enters only the cost-penalised gates.}\label{t:calib}
+\centering\footnotesize
+\input{tables/proxy_calib}
+\end{table}
+
+Table~\ref{t:costcorr} extends Figure~6(b) to every score and space. Two observations matter for the gate. First, in the cell spaces the label-free score, SynFlow and NASWOT are also cost proxies: the label-free score correlates with training time with $\rho$ = 0.78 (NB201) and 0.63 (NB101), so the admitted 35\% train 1.22 and 1.35 times longer than an average architecture. Measured against an oracle that admits the truly best 35\%, this over-payment is small on NAS-Bench-201 (3.4--5.1\%) but reaches 18.0\% on NAS-Bench-101. Second, in the width space of NATS-Bench SSS the correlation with cost is weak ($\rho$ = 0.20--0.21) and the admitted set is cheaper than the oracle set ($-$1.7 to $-$6.4\%). The parameter count, often used as a free gate, is tied to cost as strongly as or more strongly than any accuracy proxy ($\rho$ = 0.68--0.87).
+
+\begin{table}[tbp]
+\caption{Correlation of every gate score with training time $\tau$ (Spearman $\rho$) and with validation accuracy $A$ (Kendall $\tau_K$) over the space (NB201: all 15,625 architectures; NB101 and NATS-SSS: 2,000 random architectures), mean training time of the top 35\% relative to the space average, excess of that cost over the oracle top 35\%, and mean validation accuracy of the admitted architectures.}\label{t:costcorr}
+\centering\footnotesize
+\input{tables/cost_corr}
+\end{table}
+
+\textit{Gate-cost criterion.} Table~\ref{t:gatecost} gives all six normal-score correlations behind Eq.~7 together with the predicted and measured effect of a cost penalty $\lambda=1$, and Figure~\ref{f:gatecost} compares prediction and measurement for each of the 75 measured cells. The criterion is negative in all seven spaces and the measured effect is negative in all seven; across cells the predicted and measured changes are rank-correlated ($\rho$ = 0.81 over both $\lambda$ values, 0.71 for $\lambda=1$ alone) and agree in sign in 53 of 75 cells, including all 39 cells with $\lambda=1$; all 22 disagreements are $\lambda=0.25$ cells in which the predicted change lies within $\pm$0.02\,pt although the measured loss reaches up to 0.99\,pt. The Gaussian-copula model underestimates the size of the loss by a factor of about 4 to 10, because the gate acts on the upper tail of the score distribution, where the dependence between proxy and accuracy is stronger than a single correlation describes. The criterion should therefore be read as a test of direction, not as a forecast of magnitude.
+
+\begin{table}[tbp]
+\caption{Gate-cost model per space: normal-score correlations between gate score $P$, accuracy $A$, predicted cost $D=\log(1+\#\text{params})$ and recorded training time $C$; criterion slope $r_{PA}r_{PD}-r_{DA}$ at $\lambda=0$; predicted and measured change (pt) of test accuracy at equal GPU-hours for $\lambda=1$ (mean over $k$ and proposers).}\label{t:gatecost}
+\centering\footnotesize
+\input{tables/gatecost_full}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS9_gatecost_validation.pdf}
+\caption{Validation of the gate-cost criterion. (a) Predicted against measured change in test accuracy when a cost penalty is added to the gate, for every benchmark, dataset, budget $k$, proposer and $\lambda$ (large markers: $\lambda=1$; small: $\lambda=0.25$); the dotted line is $y=x$. (b) Mean measured change per space (bars) and the corresponding prediction (black ticks). Every space predicts and shows a loss.}
+\label{f:gatecost}
+\end{figure}
+
+%% =====================================================================
+\section{Fixed proposal budget: all cells}\label{s:fixed}
+
+Table~\ref{t:mainfull} gives every method on every dataset and budget; Table~5 of the main paper is its last column. Table~\ref{t:fixedtests} and Figure~\ref{f:fixedtests} summarise the 132 paired comparisons of \rmg{} with each baseline. Two definitions of equal effort are used: the same number of proposals, which favours ungated methods since they evaluate every proposal, and a budget at which the baseline receives at least as many real evaluations as \rmg{} used. The second definition changes the counts only slightly (21 wins and no loss against the external baselines). Against the nine external baselines \rmg{} has 20 wins and no loss in 108 comparisons: 7 against random search, 6 against MCTS-style search, 3 each against ENAS-style search and LLM-NAS, and 1 against ZiCo-style search. Against RE with a ZC warm-up and local search the mean difference is slightly negative ($-$0.22 and $-$0.08\,pt) but never significant.
+
+\begin{table}[tbp]
+\caption{NAS-Bench-201: test accuracy (mean $\pm$ standard deviation over 12 seeds) of the best-validation architecture at each proposal budget $B$. Best value per column in bold.}\label{t:mainfull}
+\centering\footnotesize
+\setlength{\tabcolsep}{5pt}
+\input{tables/main_full}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Paired comparison of \rmg{} with each baseline over the 12 dataset--budget cells: Holm-corrected W/T/L (Holm within baseline), range and mean of the paired difference $\Delta$ (pt, \rmg{} minus baseline) and median Cohen's $d$; on the right, the same comparison when each baseline is given at least as many real evaluations as \rmg{} used.}\label{t:fixedtests}
+\centering\footnotesize
+\input{tables/fixed_tests}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS4_fixed_tests.pdf}
+\caption{Mean paired difference in test accuracy between \rmg{} and each baseline on NAS-Bench-201 (blue: \rmg{} better). Filled dots: significant after Holm correction within the baseline; open dots: $p<0.05$ before correction only. (a) Same number of proposals. (b) Baseline budget raised until it receives at least as many real evaluations as \rmg.}
+\label{f:fixedtests}
+\end{figure}
+
+\textit{Repeated evaluations.} Table~\ref{t:dups} and Figure~\ref{f:dups} count real evaluations of architectures that the same run had already trained. All \algname{} variants have none (statement T2), as do the population and sampling baselines that keep a history. The LLM generator repeats itself increasingly as the budget grows (6.4\% at 25 proposals, 55.4\% at 200, up to 133 repeats in one run), and a flat bandit that keeps no memory wastes 60--75\% of its evaluations on architectures it has already trained, which is the waste that deduplication removes.
+
+\begin{table}[tbp]
+\caption{Repeated real evaluations: mean share over runs (\%) and maximum number in a single run, per proposal budget $B$ (NAS-Bench-201, mean over the three datasets).}\label{t:dups}
+\centering\footnotesize
+\input{tables/dups}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.6\textwidth]{figs/figS16_duplicates.pdf}
+\caption{Share of real evaluations spent on architectures already evaluated in the same run (NAS-Bench-201, mean over datasets and seeds). Methods not shown, and all \algname{} stages, stay at or below 0.3\%.}
+\label{f:dups}
+\end{figure}
+
+%% =====================================================================
+\section{Equal GPU-hours: all cells}\label{s:egh}
+
+Tables~\ref{t:egh201}--\ref{t:egh101} list the mean test accuracy of every arm in every cell of the equal-GPU-hour protocol (Eq.~8), with a marker where \rmg{} is significantly better. Table~\ref{t:eghwtl} counts the outcomes per comparator and benchmark, and Figure~\ref{f:egh} shows every paired difference. \rmg{} has 57 wins and no loss in 261 comparisons (38/79/0 on NAS-Bench-201, 4/23/0 on NAS-Bench-101 and 15/102/0 on NATS-Bench SSS). Most wins are against ungated random search (10) and the two $\lambda=1$ cost penalties (31); on NAS-Bench-201 they also include random search with the label-free gate or with $\lambda=0.25$ (6 each), the ungated \algname-RM (2), ungated RE (1) and the parameter-count gate (1). Against the other gated arms, RE with the ZC warm-up and local search, the mean differences lie between $-$0.24 and $+$0.41\,pt, with a single significant cell (the parameter-count gate on NAS-Bench-201). Five of the 1,128 runs ran out of proposals before their GPU-hour budget was spent (all \algname-RM with $\lambda=1$ on NAS-Bench-101 at $k=100$, seeds 111, 789, 999, 1001 and 2024); they are kept with the accuracy they reached.
+
+\begin{table}[tbp]
+\caption{NAS-Bench-201 at equal GPU-hours: mean test accuracy for budget $H_k=k\bar\tau$. Bold: best arm in the column; $^{\triangledown}$: \rmg{} significantly better ($p_{\mathrm{Holm}}<0.05$). No arm is significantly better than \rmg{} in any cell.}\label{t:egh201}
+\centering\footnotesize
+\input{tables/egh_nb201}
+\end{table}
+
+\begin{table}[tbp]
+\caption{NATS-Bench SSS at equal GPU-hours (same layout as Table~\ref{t:egh201}).}\label{t:eghnats}
+\centering\footnotesize
+\input{tables/egh_natssss}
+\end{table}
+
+\begin{table}[tbp]
+\caption{NAS-Bench-101 (CIFAR-10) at equal GPU-hours: mean $\pm$ standard deviation of test accuracy and mean number of real evaluations that fit into each budget. Markers as in Table~\ref{t:egh201}.}\label{t:egh101}
+\centering\footnotesize
+\input{tables/egh_nb101}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Equal GPU-hours: W/T/L of \rmg{} against each arm (Holm correction within each comparator over all 21 cells of the three benchmarks) and mean paired difference (pt) per benchmark (12 seeds per cell; ``--'': arm not run on that benchmark).}\label{t:eghwtl}
+\centering\footnotesize
+\input{tables/egh_wtl}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS5_egh_tests.pdf}
+\caption{Mean paired difference in test accuracy between \rmg{} and every other arm at equal GPU-hours (blue: \rmg{} better), per dataset and budget multiple $k$. Filled dots: significant after Holm correction; open dots: $p<0.05$ before correction only.}
+\label{f:egh}
+\end{figure}
+
+%% =====================================================================
+\section{Rank-based statistics}\label{s:stats}
+
+Table~\ref{t:friedman} reports the Friedman test for each of the five comparison sets, Tables~\ref{t:ranksfixed} and~\ref{t:ranksegh} all average ranks, Tables~\ref{t:pifixed} and~\ref{t:piegh} the probability that \rmg{} finds a better architecture on a paired run, and Table~\ref{t:tost} the equivalence tests. Equal performance of all methods is rejected everywhere ($p\le2.2\times10^{-8}$). \rmg{} has the best average rank on NAS-Bench-201 at equal GPU-hours and lies inside the critical difference of the top method in the other four sets. The per-run probabilities separate the field more finely than the ranks: in paired runs \rmg{} comes out ahead 75--85\% of the time against MCTS-style, random and ENAS-style search and LLM-NAS, 0.50--0.57 against RE, ZiCo-style and RZ-style search, and 41--43\% against RE with ZC warm-up and local search; at equal GPU-hours local search with the gate wins more paired runs on NAS-Bench-101 (0.22) and NATS-Bench SSS (0.38), as is RE with ZC warm-up on NATS-Bench SSS (0.40). Equivalence within $\pm$0.5\,pt is shown in at most 5 of 12 NAS-Bench-201 cells for any baseline and within $\pm$0.25\,pt in at most 3, so the ties in the Wilcoxon tests should be read as ``no detectable difference'', not as equality.
+
+\begin{table}[tbp]
+\caption{Friedman test per comparison set (blocks = dataset $\times$ budget $\times$ seed) with the Nemenyi critical difference (CD), the average rank of \rmg{} and the best method.}\label{t:friedman}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\input{tables/friedman}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Average Friedman rank at a fixed proposal budget (1 = best). $^{*}$: outside the CD of \rmg.}\label{t:ranksfixed}
+\centering\footnotesize
+\input{tables/ranks_fixed}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Average Friedman rank at equal GPU-hours (1 = best). $^{*}$: outside the CD of \rmg.}\label{t:ranksegh}
+\centering\footnotesize
+\input{tables/ranks_egh}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Probability that \rmg{} finds a better architecture than the comparator on a paired (cell, seed) run at a fixed proposal budget, with stratified-bootstrap 95\% interval. Bold: interval above 0.5; italic: interval below 0.5.}\label{t:pifixed}
+\centering\footnotesize
+\input{tables/pi_fixed}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Probability that \rmg{} finds a better architecture at equal GPU-hours (layout as Table~\ref{t:pifixed}).}\label{t:piegh}
+\centering\footnotesize
+\input{tables/pi_egh}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Two one-sided tests (TOST, Holm-corrected): number of cells in which \rmg{} and the comparator are shown to be equivalent within $\pm$0.5 and $\pm$0.25\,pt, and the largest absolute mean difference over the cells.}\label{t:tost}
+\centering\footnotesize
+\input{tables/tost}
+\end{table}
+
+Figure~\ref{f:volcano} places the 749 accuracy comparisons of the main comparison families (listed in its panel b) on one plot; the sensitivity studies are excluded. The significant results lie almost entirely on the side favourable to \algname{} (154 of 155); the single loss is \algname-RM against RE, both with the parameter-count gate, on NAS-Bench-101 at a budget of 100 proposals.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS15_volcano.pdf}
+\caption{The 749 paired accuracy comparisons of \algname{} with another method or design variant in the five families of panel (b). (a) Mean paired difference against $-\log_{10}$ of the raw $p$-value; filled markers are significant after Holm correction (within baseline, arm or comparison, as in Table~8 of the main paper). The cap near $p\approx5\times10^{-4}$ is the smallest $p$-value an exact Wilcoxon test can give with 12 pairs. (b) Holm-corrected W/T/L per family.}
+\label{f:volcano}
+\end{figure}
+
+%% =====================================================================
+\section{The gate on every proposer}\label{s:grid}
+
+Table~\ref{t:grid} gives all 24 proposer--gate combinations at a budget of 200 proposals, Figure~\ref{f:grid} the change in accuracy and the GPU-hours saved by each gate in every cell, and Table~\ref{t:gridtests} the comparison of \algname-RM with each other proposer under the same gate. At a fixed number of proposals, the label-free gate saves 25--72\% of GPU-hours across proposers, datasets and budgets. Its effect on accuracy depends on the proposer: it helps \algname-RM slightly (mean $+$0.11\,pt) and leaves random search unchanged, but costs MCTS-style search 0.36\,pt on average, because a proposer that generates few good candidates loses more when most of them are discarded. With the same gate, \algname-RM is never worse than any other proposer (W/T/L 7/5/0 against random, 9/3/0 against MCTS-style, 3/9/0 against ENAS-style search and 0/12/0 against RE and local search).
+
+\begin{table}[tbp]
+\caption{Proposer $\times$ gate grid on NAS-Bench-201 at a budget of 200 proposals: test accuracy (mean $\pm$ standard deviation), mean real evaluations, and GPU-hours summed over the three datasets.}\label{t:grid}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\input{tables/grid}
+\end{table}
+
+\begin{table}[tbp]
+\caption{\algname-RM against each other proposer when both use the same gate: Holm-corrected W/T/L over 12 dataset--budget cells and mean paired difference (pt).}\label{t:gridtests}
+\centering\footnotesize
+\input{tables/grid_tests}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS6_gate_grid.pdf}
+\caption{Effect of each gate on each proposer at a fixed number of proposals (NAS-Bench-201, 12 seeds). (a) Mean test accuracy with the gate minus without it. (b) Share of GPU-hours saved by the gate.}
+\label{f:grid}
+\end{figure}
+
+%% =====================================================================
+\section{Ablations and sensitivity}\label{s:abl}
+
+\textit{Held-out design ablation.} Table~\ref{t:design} repeats the base$\to$RMG design changes on 12 seeds that were not consulted for any design choice. Only four of 48 comparisons are significant, all in favour of \rmg: the base system with the gate on all three datasets at 200 proposals, and the rank reward alone on ImageNet16-120. Mutation alone and RE with the same gate are statistically indistinguishable from \rmg{} at every budget; at 200 proposals RE is within 0.11\,pt of \rmg{} on every dataset but uses 99--105 real evaluations against 84--90.
+
+\begin{table}[tbp]
+\caption{Held-out design ablation (seeds 7--909): test accuracy (mean $\pm$ standard deviation) of each variant, all with the label-free gate, and real evaluations at $B$ = 200. $^{\triangledown}$: \rmg{} significantly better (Holm within arm over 12 cells, $p_{\mathrm{Holm}}<0.05$).}\label{t:design}
+\centering\footnotesize
+\input{tables/design}
+\end{table}
+
+\textit{Trie against a flat bandit (A7).} Table~\ref{t:a7} compares the trie with a per-position UCB that either remembers evaluated architectures in a set or does not. With the set, no difference reaches $p<0.05$ (12 cells), so the hierarchy itself adds nothing measurable. Without it, the flat bandit spends 11.7--94.7 evaluations per run on repeats and is worse in three cells before correction and one after (ImageNet16-120, $B=100$).
+
+\begin{table}[tbp]
+\caption{Trie against a flat per-position UCB with and without set-based deduplication: test accuracy (mean $\pm$ standard deviation), mean unique and repeated real evaluations, and paired difference (pt) of the trie with the unadjusted Wilcoxon $p$-value.}\label{t:a7}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\input{tables/a7}
+\end{table}
+
+\textit{Toggle ablations (A1--A6).} Table~\ref{t:toggles} shows that removing the LLM prior (A1), weight inheritance (A3) or rerunning the budget grid (A6) reproduces the headline runs exactly (144 of 144 runs each, same accuracy and same number of evaluations), as expected with $\alpha=0$ and tabular benchmarks; these rows document that the components are inert, not that they were tested for an effect. Removing the gate (A2) uses every proposal and changes the mean by $-$0.43 to $+$0.16\,pt. Table~\ref{t:a5} varies the share of pruned nodes: between 0 and 35\% the mean accuracy moves by less than 0.2\,pt, except a drop of 0.41\,pt on ImageNet16-120 at 35\%, which is consistent with the moderate default of 15\%.
+
+\begin{table}[tbp]
+\caption{Toggle ablations on NAS-Bench-201: mean test accuracy and, in brackets, mean real evaluations.}\label{t:toggles}
+\centering\footnotesize
+\input{tables/toggles}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Pruning share (A5) at $B$ = 100: test accuracy (mean $\pm$ standard deviation) and mean real evaluations.}\label{t:a5}
+\centering\footnotesize
+\input{tables/a5}
+\end{table}
+
+\textit{UCB constant and backup.} Table~\ref{t:ucb} and Figure~\ref{f:ucb} vary $C$ from 0.1 to 2 under both backup rules. None of the 78 comparisons with the default is significant after correction (9 before). Large constants make the descent close to uniform over children (no duplicate proposals for $C\ge\sqrt2$), whereas small constants repeat good branches and lean more on deduplication; the max backup is the more robust rule, particularly on CIFAR-100, where the mean backup loses up to 0.75\,pt.
+
+\begin{table}[tbp]
+\caption{UCB sensitivity: mean test accuracy for each exploration constant $C$ and backup rule at $B$ = 100 and 200, and mean number of proposals redirected because they were duplicates. Bold: default.}\label{t:ucb}
+\centering\footnotesize
+\input{tables/ucb}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS7_ucb.pdf}
+\caption{UCB sensitivity. (a) Test accuracy relative to the default ($C$ = 0.3, max backup) for every $C$, backup rule, dataset and budget. (b) Distribution of the 78 unadjusted $p$-values against the default.}
+\label{f:ucb}
+\end{figure}
+
+\textit{Proxy subsets.} Table~\ref{t:subsets} and Figure~\ref{f:subsets} run the search with every subset of the four proxies as gate. The ranking quality of a subset predicts search accuracy only on ImageNet16-120 (Spearman 0.54, $p$ = 0.04; CIFAR-10 0.02, CIFAR-100 0.15). SVD entropy alone is the only subset that is significantly worse than the four-proxy combination (CIFAR-10 $-$0.45\,pt and CIFAR-100 $-$1.11\,pt; the only 2 of 48 comparisons significant after correction); all other subsets lie within the seed-to-seed spread of each other. In this ablation each subset is combined with weights fitted on the calibration architectures, so it isolates the choice of proxies; the $EST$ subset reaches $\tau$ = 0.66, 0.71 and 0.62, within 0.04 of the best subset on every dataset, and the label-free equal-weight version used in the paper ranks almost as well (Table~\ref{t:calib}).
+
+\begin{table}[tbp]
+\caption{Proxy subsets as gate ($B$ = 100): Kendall $\tau$ of the subset score with validation accuracy, test accuracy (mean $\pm$ standard deviation) and mean real evaluations. Subsets are combined with fitted weights.}\label{t:subsets}
+\centering\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\input{tables/proxy_subsets}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS8_proxy_subsets.pdf}
+\caption{Ranking quality of each proxy subset against the accuracy reached with it as gate (mean $\pm$ standard error; colour and size: number of proxies). The dashed line is the search without a gate.}
+\label{f:subsets}
+\end{figure}
+
+%% =====================================================================
+\section{NAS-Bench-101}\label{s:nb101}
+
+Table~\ref{t:nb101} gives every proposer--gate--budget cell on NAS-Bench-101, Table~\ref{t:nb101tests} the comparisons under the same gate and Table~\ref{t:nb101matched} the comparisons with ungated searches that receive at least as many real evaluations (11 wins, all against random search or the ungated \algname-RM); Figure~\ref{f:nb101} plots them. \algname-RM beats random search in 14 of 16 cells and ties RE in 15, the exception being a loss to RE with the parameter-count gate at 100 proposals. The gates leave 39--55\% of the real evaluations of \algname-RM (for example 162.8 instead of 400 with the label-free gate) without a consistent loss of accuracy, although the gain is smaller than on NAS-Bench-201 because the proxies rank NAS-Bench-101 less well (Table~\ref{t:calib}).
+
+\begin{table}[tbp]
+\caption{NAS-Bench-101 (CIFAR-10): test accuracy (mean $\pm$ standard deviation) and, in brackets, mean real evaluations for each proposer, gate and proposal budget $B$.}\label{t:nb101}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\input{tables/nb101}
+\end{table}
+
+\begin{table}[tbp]
+\caption{NAS-Bench-101: \algname-RM against random search and RE under the same gate (W/T/L over four budgets, mean paired difference in pt).}\label{t:nb101tests}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/nb101_tests}
+\end{table}
+
+\begin{table}[tbp]
+\caption{NAS-Bench-101 with matched evaluations: gated \algname-RM at proposal budget $B$ against ungated random search, RE and \algname-RM given the smallest budget at least as large as the gated run's maximum number of real evaluations (``other $B$''). Mean paired difference in pt with $p_{\mathrm{Holm}}$ in brackets; bold: significant win.}\label{t:nb101matched}
+\centering\footnotesize
+\input{tables/nb101_matched}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS14_nb101.pdf}
+\caption{NAS-Bench-101: test accuracy (mean $\pm$ standard error) against the proposal budget for three proposers under each gate. Numbers give the real evaluations of \algname-RM.}
+\label{f:nb101}
+\end{figure}
+
+%% =====================================================================
+\section{LLM prior}\label{s:llm}
+
+\textit{Prior strength.} Table~\ref{t:alpha} and Figure~\ref{f:alpha}(a,b) sweep $\alpha$. For $\alpha\ge0.2$ the runs are identical to those at $\alpha=0.2$, because the decayed weight $\alpha/\sqrt{t'}$ falls below the floor of 0.02 at the same iteration for all of them. The largest effect is $+$0.85\,pt on CIFAR-100 at 50 proposals, while ImageNet16-120 is negative in 7 of its 8 distinct ($\alpha$, $B$) cells (down to $-$0.63\,pt). Because the runs for $\alpha\ge0.2$ coincide, the 48 comparisons with $\alpha=0$ contain 24 distinct ones; none survives Holm correction (3 have $p<0.05$ before it), so the prior was left off in the headline system.
+
+\begin{table}[tbp]
+\caption{LLM prior strength: mean test accuracy for each $\alpha$ and, in brackets, the paired difference to $\alpha=0$ (pt). No difference is significant after Holm correction.}\label{t:alpha}
+\centering\footnotesize
+\input{tables/alpha}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS10_alpha_prune.pdf}
+\caption{(a), (b) Change in test accuracy relative to $\alpha=0$ for each prior strength at budgets 50 and 100 (circled: $p<0.05$ before correction). The shaded region gives identical runs. (c) Effect of the pruned share (A5) relative to the default of 15\% (mean $\pm$ standard error).}
+\label{f:alpha}
+\end{figure}
+
+\textit{Speed of convergence.} Table~\ref{t:conv} and Figure~\ref{f:conv} measure how quickly each arm approaches the best validation accuracy in the space at $B$ = 100. On CIFAR-10 the LLM prior needs 5.0 real evaluations to come within 1\,pt (15.5 without it), and on CIFAR-100 15.6 (30.8, with one seed never getting there); on ImageNet16-120 it is slower (23.2 against 17.8). The prior with described operations is also fast on CIFAR-10 (7.8), and the size prior without any LLM matches much of the gain on CIFAR-100 (19.7) but not on ImageNet16-120. Final validation accuracies of the four arms are within 0.5\,pt of each other on every dataset.
+
+\begin{table}[tbp]
+\caption{Convergence at $B$ = 100 (means over 12 seeds): best validation accuracy after 10 and 25 real evaluations, final value, and real evaluations needed to come within 2, 1 and 0.5\,pt of the best validation accuracy in the space (seeds that never got there are counted at the end of their run; in brackets: seeds that got there, if fewer than 12).}\label{t:conv}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\input{tables/convergence}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS11_convergence_ecdf.pdf}
+\caption{Share of the 12 seeds that have come within 1\,pt of the best validation accuracy in the space after a given number of real evaluations ($B$ = 100). Curves that end below 1 have seeds that never got there.}
+\label{f:conv}
+\end{figure}
+
+\textit{What the LLM knows.} Tables~\ref{t:probe} and~\ref{t:probetests} and Figure~\ref{f:probe} test whether the prior reflects knowledge of operations or recall of the benchmark. With operation names the LLM ranks the five operations with $\rho$ = 0.50--0.57; with the operations described but not named it does better (0.64--0.70), and with anonymous tokens it falls to 0.14--0.19, which is still above chance. A prior that simply prefers larger operations, with no LLM, scores higher than every LLM variant (0.73--0.76). The LLM therefore encodes mostly general knowledge about operation capacity, not memorised benchmark tables. Table~\ref{t:llmsize} shows that a 7B model ranks worse (0.41) and fails to answer in 3.8\% of calls, whereas the 20B and 120B models are similar in $\rho$ (0.60 and 0.61), although the larger one more often puts the best operation first (0.65 against 0.46).
+
+\begin{table}[tbp]
+\caption{LLM knowledge probe on NAS-Bench-201 (56 prefixes per dataset): mean Spearman $\rho$ between the scores given to the candidate operations and their true ranking, and share of prefixes where the top-scored operation is the best.}\label{t:probe}
+\centering\footnotesize
+\input{tables/probe}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Paired tests of the probe (Wilcoxon over the 56 prefixes, Holm-corrected; difference in Spearman $\rho$).}\label{t:probetests}
+\centering\footnotesize
+\input{tables/probe_tests}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Model size (CIFAR-10, 26 prefixes): mean Spearman $\rho$, top-1 hit rate, share of calls that fell back to uniform scores and operation-name errors per call.}\label{t:llmsize}
+\centering\footnotesize
+\input{tables/llm_size}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS12_llm_probes.pdf}
+\caption{(a) Mean Spearman correlation between LLM scores and the true ranking of operations under four prompt conditions. (b) The same for three model sizes on CIFAR-10.}
+\label{f:probe}
+\end{figure}
+
+%% =====================================================================
+\section{Hardware-aware search}\label{s:hw}
+
+Table~\ref{t:hw} gives hypervolume (relative to random search), inverted generational distance (IGD) and front size for every device and budget, and Figure~\ref{f:hw} the IGD and front-size curves. The hypervolumes of \algname-HW and NSGA-II-style search lie within 0.5\% of random search everywhere (99.89--100.42\%), and all 96 tests are ties after Holm correction (22 have $p<0.05$ before it, mostly small hypervolume gains of \algname-HW): on HW-NAS-Bench the accuracy--latency front is easy to cover, and no difference between the methods survives correction. IGD separates them somewhat more: at 25 proposals \algname-HW is the furthest from the true front on all six devices, and NSGA-II-style search finds the largest fronts in 18 of 24 device--budget cells (Figure~\ref{f:hw}b); at 200 proposals the differences are small, NSGA-II-style search having the lowest IGD on four of the six devices.
+
+\begin{table}[tbp]
+\caption{HW-NAS-Bench (CIFAR-10): hypervolume as \% of random search, IGD to the true front, and mean size of the front found by \algname-HW (12 seeds).}\label{t:hw}
+\centering\footnotesize
+\input{tables/hw}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figs/figS13_hw_igd.pdf}
+\caption{Hardware-aware search on the six HW-NAS-Bench devices. (a) IGD between the found and the true accuracy--latency front (mean $\pm$ standard error). (b) Number of non-dominated architectures found.}
+\label{f:hw}
+\end{figure}
+
+Table~\ref{t:crossdev} compares the true fronts of the devices. Few architectures are shared (Jaccard 0.06--0.40) although latencies are correlated ($\rho$ = 0.51--0.97). Yet a front computed for one device, when evaluated on another, keeps 83--100\% of the hypervolume of that device's true front. Fronts differ in membership far more than in quality, so a search for one device is a reasonable starting point for another, while the exact Pareto set must be searched per device.
+
+\begin{table}[tbp]
+\caption{True Pareto fronts of each device pair (CIFAR-10): front sizes, shared architectures, Jaccard index, Spearman correlation of latency over all architectures, and hypervolume ratio when the front of one device is used on the other.}\label{t:crossdev}
+\centering\footnotesize
+\input{tables/crossdev}
+\end{table}
+
+%% =====================================================================
+\section{Seeds, reproducibility checks and data}\label{s:repro}
+
+\textit{Seeds.} Main seeds (all experiments): 42, 111, 123, 222, 333, 456, 789, 999, 1001, 2024, 31415, 27182. Held-out seeds (design ablation only, never used for a design decision): 7, 13, 77, 101, 202, 303, 404, 505, 606, 707, 808, 909. Proxy calibration draws its 1,500 architectures with seed 0, and the proxy network is initialised with seed 1234. Every run seeds its own random number generators, so results do not depend on the order or the number of parallel workers.
+
+\begin{table}[tbp]
+\caption{Reproducibility checks carried out on the final code.}\label{t:checks}
+\centering\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.42\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+Check & Result\\
+\midrule
+Parallel workers (equal GPU-hours) & 1 and 3 workers give identical results (252 of 252 runs)\\
+Device rerun against the offline replica & identical (Phase 3: 108 of 108 runs; design ablation: 540 of 540)\\
+A1, A3, A6 against the headline runs & identical (144 of 144 runs each; Table~\ref{t:toggles})\\
+Zero-information LLM prior against $\alpha=0$ & identical on 24 of 24 seeds\\
+Repeated real evaluations in \algname{} runs & 0 in every run (Table~\ref{t:dups})\\
+NAS-Bench-201 path after the NB101 refactor & bit-identical (6 of 6 regression runs)\\
+TensorFlow-free NAS-Bench-101 reader & all 423,624 graph hashes reproduced\\
+Shared proxy cache under a file lock & no entry lost with 4 concurrent workers\\
+HW-NAS-Bench architecture alignment & accuracy--latency Spearman $\rho$ = 0.624 after re-indexing\\
+Equal-GPU-hour runs below budget & 5 of 1,128 (proposals exhausted at $k=100$; section~\ref{s:egh})\\
+LLM fallbacks & 0 in LLM-prior runs; 0.37 random replacements per LLM-NAS run\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Data files used for the paper (SHA-256).}\label{t:checksums}
+\centering\scriptsize
+\begin{tabular}{@{}lr>{\ttfamily}l@{}}
+\toprule
+File & Size (bytes) & \normalfont SHA-256\\
+\midrule
+NAS-Bench-201-v1\_1-096897.pth & 5,003,180,601 & 2317a7dc911654322f4f932730a821cf38ecc5b5f1adde0aff26ff6b3f736666\\
+nasbench\_only108.tfrecord & 522,767,376 & 4c39c3936e36a85269881d659e44e61a245babcb72cb374eacacf75d0e5f4fd1\\
+nb201\_cache\_v2.json & 4,894,199 & b6f19d2d0adee7b09d3a9ff098a379695d3c224cdcf5dafeb25f0924afee2694\\
+nb101\_cache.npz & 22,126,761 & 4e0fb9901ff6952fc1d345c6ee1be8f6c7b4406c0f0843bbd255bc14a302d19e\\
+natssss\_cache.json & 12,828,328 & 8cac2574ab56b07dcf9b82461e03d0195a34a0187eb4239b362f940cdd28d18a\\
+HW-NAS-Bench-v1\_0.pickle & 10,782,467 & 57f92c2d7b88814fa337d00f4597c8ca30d507c5a855c18d6fac57e5ad872700\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Software and hardware environment of the runs.}\label{t:env}
+\centering\footnotesize
+\begin{tabular}{@{}ll@{\hspace{2.5em}}ll@{}}
+\toprule
+Item & Version & Item & Version\\
+\midrule
+Python & 3.10.9 & PyTorch / torchvision & 2.5.1 / 0.20.1 (CUDA 12.4)\\
+NumPy & 2.2.6 & SciPy & 1.15.3\\
+pandas & 2.3.3 & Matplotlib & 3.10.9\\
+nas-bench-201 & 2.1 & groq client & 1.5.0\\
+GPU & NVIDIA GeForce RTX 2050, 4\,GB & OS & Windows 11 (build 26300)\\
+\bottomrule
+\end{tabular}
+\tn{The complete pinned package list is \texttt{outputs/final/repro/requirements.lock.txt} in the repository. Tabular look-ups are deterministic; the proxy kernels use cuDNN benchmark mode, so raw proxy scores are cached and shipped with the code to make them identical across machines. LLM answers are cached per prompt and shipped for exact replay.}
+\end{table}
+
+{\sloppy\textit{Run order.} The results are regenerated by building the benchmark caches (\texttt{tools/build\_nb201\_cache.py}, \texttt{tools/build\_nb101\_cache.py}), running the experiments in the order of Table~3 of the main paper (\texttt{experiments/run\_phase0.py} to \texttt{run\_equal\_gpu\_hours.py}), aggregating the statistics (\texttt{run\_phase6\_aggregate.py}) and finally running \texttt{make\_figures.py} and the two supplementary scripts. The PowerShell script \texttt{run\_full\_pipeline.ps1} in the repository performs all steps in sequence.\par}
+
+%% =====================================================================
+\begin{thebibliography}{99}
+\bibitem{kocsis2006} Kocsis L and Szepesv\'{a}ri C 2006 Bandit based Monte-Carlo planning. In: \textit{Proceedings of the European Conference on Machine Learning}, LNCS 4212, pp. 282--293
+\bibitem{coquelin2007} Coquelin P A and Munos R 2007 Bandit algorithms for tree search. In: \textit{Proceedings of the 23rd Conference on Uncertainty in Artificial Intelligence}, pp. 67--74
+\bibitem{bubeck2011} Bubeck S, Munos R, Stoltz G and Szepesv\'{a}ri C 2011 X-armed bandits. \textit{J. Mach. Learn. Res.} 12: 1655--1695
+\end{thebibliography}
+
+\end{document}

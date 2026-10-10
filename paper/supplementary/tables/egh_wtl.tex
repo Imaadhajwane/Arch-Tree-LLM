@@ -1,0 +1,23 @@
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\multirow{2}{*}{Comparator} & \multicolumn{2}{c}{NB201 (9 cells)} & \multicolumn{2}{c}{NB101 (3 cells)} & \multicolumn{2}{c}{NATS-SSS (9 cells)}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & W/T/L & mean $\Delta$ & W/T/L & mean $\Delta$ & W/T/L & mean $\Delta$\\
+\midrule
+ArchTree-RM (no gate) & 2/7/0 & 0.49 & 0/3/0 & 0.11 & 0/9/0 & 0.37\\
+ArchTree-RM + \#params gate & 1/8/0 & 0.14 & 0/3/0 & 0.05 & 0/9/0 & 0.04\\
+ArchTree-RM + cost pen. ($\lambda$=0.25) & 0/9/0 & 0.04 & -- & -- & 0/9/0 & 0.27\\
+ArchTree-RM + cost pen. ($\lambda$=1) & 6/3/0 & 0.99 & 1/2/0 & 0.30 & 9/0/0 & 1.26\\
+RE + gate & 0/9/0 & 0.21 & 0/3/0 & 0.00 & 0/9/0 & 0.01\\
+RE + ZC warm-up & 0/9/0 & $-$0.04 & 0/3/0 & 0.08 & 0/9/0 & $-$0.16\\
+RE & 1/8/0 & 0.53 & 0/3/0 & 0.13 & 0/9/0 & 0.26\\
+LS + gate & 0/9/0 & 0.18 & 0/3/0 & $-$0.06 & 0/9/0 & $-$0.24\\
+LS & 0/9/0 & 0.41 & 0/3/0 & 0.12 & 0/9/0 & $-$0.08\\
+Random + gate & 6/3/0 & 0.75 & -- & -- & 0/9/0 & 0.24\\
+Random & 7/2/0 & 0.99 & 3/0/0 & 0.42 & 0/9/0 & 0.43\\
+Random + cost pen. ($\lambda$=0.25) & 6/3/0 & 0.75 & -- & -- & 0/9/0 & 0.28\\
+Random + cost pen. ($\lambda$=1) & 9/0/0 & 1.51 & -- & -- & 6/3/0 & 1.20\\
+\midrule
+All comparisons & 38/79/0 & & 4/23/0 & & 15/102/0 & \\
+\bottomrule
+\end{tabular}

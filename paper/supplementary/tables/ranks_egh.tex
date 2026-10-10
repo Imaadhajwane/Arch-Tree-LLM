@@ -1,0 +1,20 @@
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & NB201, equal GPU-hours & NB101, equal GPU-hours & NATS-SSS, equal GPU-hours\\
+\midrule
+\textbf{ArchTree-RMG} & \textbf{4.75} & \textbf{4.38} & \textbf{5.99}\\
+RE + ZC warm-up & 4.84 & 5.11 & 5.45\\
+ArchTree-RM + cost pen. ($\lambda$=0.25) & 5.36 & -- & 7.42\\
+ArchTree-RM + \#params gate & 5.47 & 5.08 & 6.15\\
+LS + gate & 5.50 & 3.11 & 4.19\\
+RE + gate & 6.03 & 4.56 & 6.01\\
+LS & 6.91$^{*}$ & 5.03 & 5.55\\
+RE & 8.04$^{*}$ & 5.81 & 7.46\\
+ArchTree-RM (no gate) & 8.16$^{*}$ & 5.88 & 8.74$^{*}$\\
+Random + gate & 9.07$^{*}$ & -- & 7.80\\
+Random + cost pen. ($\lambda$=0.25) & 9.15$^{*}$ & -- & 7.94$^{*}$\\
+ArchTree-RM + cost pen. ($\lambda$=1) & 9.58$^{*}$ & 7.57$^{*}$ & 11.93$^{*}$\\
+Random & 10.20$^{*}$ & 8.49$^{*}$ & 8.66$^{*}$\\
+Random + cost pen. ($\lambda$=1) & 11.94$^{*}$ & -- & 11.74$^{*}$\\
+\bottomrule
+\end{tabular}

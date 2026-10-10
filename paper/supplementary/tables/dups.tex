@@ -1,0 +1,23 @@
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Method} & \multicolumn{2}{c}{$B$ = 25} & \multicolumn{2}{c}{$B$ = 50} & \multicolumn{2}{c}{$B$ = 100} & \multicolumn{2}{c}{$B$ = 200}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+ & \% & max & \% & max & \% & max & \% & max\\
+\midrule
+Random search & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+MCTS-style & 0.2 & 1 & 0.2 & 1 & 0.2 & 1 & 0.3 & 3\\
+ENAS-style & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+LLM-NAS & 6.4 & 5 & 20.3 & 18 & 36.9 & 49 & 55.4 & 133\\
+ZiCo-style & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+RZ-style ZC walk & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+RE & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+RE + ZC warm-up & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+Local search & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+S1 ArchTree-base & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+S2 (S1 + supervised gate) & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+S4 ArchTree-RMG & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+Flat UCB, no dedup (A7) & 60.4 & 14 & 64.4 & 28 & 68.9 & 56 & 74.5 & 109\\
+Flat UCB + set dedup (A7) & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+Trie (A7 arm) & 0.0 & 0 & 0.0 & 0 & 0.0 & 0 & 0.0 & 0\\
+\bottomrule
+\end{tabular}

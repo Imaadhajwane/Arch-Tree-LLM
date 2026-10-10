@@ -1,0 +1,21 @@
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Comparator & NB201, equal GPU-hours & NB101, equal GPU-hours & NATS-SSS, equal GPU-hours\\
+\midrule
+LS + gate & 0.50 [0.42, 0.58] & \textit{0.22 [0.08, 0.36]} & \textit{0.38 [0.29, 0.46]}\\
+RE + ZC warm-up & 0.51 [0.43, 0.59] & 0.58 [0.42, 0.72] & \textit{0.40 [0.32, 0.49]}\\
+ArchTree-RM + cost pen. ($\lambda$=0.25) & 0.53 [0.45, 0.60] & -- & 0.57 [0.49, 0.65]\\
+ArchTree-RM + \#params gate & 0.56 [0.49, 0.64] & 0.58 [0.44, 0.72] & 0.49 [0.41, 0.58]\\
+RE + gate & \textbf{0.60 [0.52, 0.69]} & 0.50 [0.35, 0.65] & 0.51 [0.43, 0.60]\\
+LS & \textbf{0.61 [0.52, 0.69]} & \textbf{0.67 [0.51, 0.81]} & 0.47 [0.38, 0.56]\\
+ArchTree-RM (no gate) & \textbf{0.76 [0.69, 0.83]} & \textbf{0.72 [0.58, 0.86]} & \textbf{0.69 [0.61, 0.76]}\\
+RE & \textbf{0.79 [0.72, 0.86]} & 0.62 [0.49, 0.75] & \textbf{0.62 [0.54, 0.72]}\\
+ArchTree-RM + cost pen. ($\lambda$=1) & \textbf{0.85 [0.79, 0.90]} & \textbf{0.81 [0.67, 0.92]} & \textbf{0.89 [0.84, 0.94]}\\
+Random + cost pen. ($\lambda$=0.25) & \textbf{0.85 [0.79, 0.91]} & -- & \textbf{0.69 [0.60, 0.77]}\\
+Random + gate & \textbf{0.85 [0.79, 0.91]} & -- & \textbf{0.67 [0.58, 0.75]}\\
+Random & \textbf{0.90 [0.84, 0.94]} & \textbf{0.92 [0.81, 1.00]} & \textbf{0.72 [0.64, 0.80]}\\
+Random + cost pen. ($\lambda$=1) & \textbf{0.94 [0.89, 0.97]} & -- & \textbf{0.91 [0.85, 0.95]}\\
+\midrule
+Paired runs & $n$ = 108 & $n$ = 36 & $n$ = 108\\
+\bottomrule
+\end{tabular}

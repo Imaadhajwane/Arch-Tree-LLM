@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,left=25mm,right=25mm,top=22mm,bottom=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{booktabs,array,enumitem,xcolor}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\pagestyle{empty}
+\definecolor{rule}{HTML}{555555}
+\newcommand{\sadhana}{\textit{S\=adhan\=a}}
+
+\begin{document}
+
+\begin{minipage}[t]{0.62\textwidth}
+\textbf{Imaad Hajwane}\\
+Department of Computer Engineering and Technology\\
+School of Computer Science and Engineering\\
+Dr. Vishwanath Karad MIT World Peace University\\
+Pune 411038, Maharashtra, India\\
+E-mail: \href{mailto:iamimaad2kk3@gmail.com}{iamimaad2kk3@gmail.com}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}\raggedleft
+10 October 2026
+\end{minipage}
+
+\vspace{4pt}{\color{rule}\rule{\textwidth}{0.4pt}}
+
+The Editor-in-Chief\\
+\sadhana{} -- Academy Proceedings in Engineering Sciences\\
+Indian Academy of Sciences\\
+Bengaluru, India
+
+\textbf{Subject:} Submission of an original research article for consideration in \sadhana
+
+\vspace{2pt}
+{\small
+\begin{tabular}{@{}>{\bfseries}p{0.24\textwidth}p{0.72\textwidth}@{}}
+\toprule
+Manuscript title & Neural architecture search via trie-based deduplication and zero-cost proxies, with hardware-aware coverage: An empirical study of LLM-guided warm-start\\
+Authors & Imaad Hajwane (corresponding author) and Jayshree Ghorpade-Aher\\
+Article type & Original research article\\
+Subject area & Computer science and engineering -- machine learning\\
+Length & 20 pages in the journal's \LaTeX{} template; 17 figures, 8 tables, 1 algorithm, 1 appendix\\
+Supplementary material & 26 pages: 42 tables and 16 figures\\
+\bottomrule
+\end{tabular}}
+
+Dear Editor,
+
+We are pleased to submit the manuscript named above for consideration as an original research article in \sadhana. It addresses a practical engineering problem in automated machine learning. Neural architecture search (NAS) spends almost all of its compute on training candidate networks, and part of that compute goes to architectures that were already trained or were unlikely to be good.
+
+We study a search loop, ArchTree-RMG, that removes both kinds of waste. A prefix trie ensures that no architecture is trained twice, and a label-free zero-cost gate sends only the most promising 35\% of proposals to real training. The study covers 12,289 seed-paired searches on four public benchmarks (NAS-Bench-201, NAS-Bench-101, NATS-Bench SSS and HW-NAS-Bench). Every method is compared at the same GPU-hour budget rather than the same number of evaluations, which is the fair comparison when methods train networks of different cost.
+
+The main findings are:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=0pt]
+\item The gate removes 59--60\% of real evaluations and 53\% of GPU-hours on NAS-Bench-201 with no significant loss of accuracy. At equal GPU-hours it raises the mean accuracy of all four search methods it was added to.
+\item At equal GPU-hours, ArchTree-RMG has no Holm-significant loss in 261 comparisons against 13 alternatives on three benchmarks. It lies within the Nemenyi critical difference of the best method on each benchmark.
+\item Zero-cost proxies track training cost in cell-based search spaces but not in a width-based space. A closed-form criterion, $r_{PA}r_{PD}-r_{DA}$, estimated from a labelled sample, tells in advance whether penalising cost in the gate can help.
+\item An LLM prior speeds up the start of a search on CIFAR-10/100, and controls speak against simple recall of benchmark tables, but it does not change final accuracy.
+\end{enumerate}
+
+We believe the paper suits the engineering readership of \sadhana. It offers a low-cost method that can be added to existing search algorithms, an evaluation protocol for a fixed compute budget, and a criterion that can be checked before a search is run. We report negative results as clearly as positive ones, including the cases where simpler methods are as good or better.
+
+The supplementary material lists every per-cell result and statistical test, the detailed search loop, the seeds, the reproducibility checks and the data checksums. All benchmarks are public. The code, configurations, seeds and result files are available at \href{https://github.com/Imaadhajwane/Arch-Tree-LLM}{github.com/Imaadhajwane/Arch-Tree-LLM}.
+
+On behalf of both authors, I confirm that:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=0pt]
+\item the manuscript is original, has not been published before and is not under consideration by any other journal;
+\item both authors have read and approved the submitted version and agree to its submission;
+\item the authors declare no competing interests, and no external funding was received;
+\item the work involves no human participants or animals, so ethics approval is not applicable;
+\item the use of AI-assisted tools is disclosed in the Declarations section, in line with the journal's policy.
+\end{itemize}
+
+A list of suggested reviewers is provided with the submission. We would be grateful for your consideration of the manuscript and look forward to hearing from you.
+
+Yours sincerely,
+
+\vspace{4pt}
+\begin{minipage}[t]{0.49\textwidth}\raggedright
+\textbf{Imaad Hajwane}\\
+Corresponding author\\
+M.Tech (Data Science and Algorithms)\\
+Dept. of Computer Engineering and Technology\\
+School of Computer Science and Engineering\\
+Dr. Vishwanath Karad MIT World Peace University\\
+Pune 411038, India\\
+\href{mailto:iamimaad2kk3@gmail.com}{iamimaad2kk3@gmail.com}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}\raggedright
+\textbf{Dr. Jayshree Ghorpade-Aher}\\
+Co-author and research supervisor\\
+Dept. of Computer Engineering and Technology\\
+School of Computer Science and Engineering\\
+Dr. Vishwanath Karad MIT World Peace University\\
+Pune 411038, India\\
+\href{mailto:jayshree.aher@mitwpu.edu.in}{jayshree.aher@mitwpu.edu.in}
+\end{minipage}
+
+\end{document}

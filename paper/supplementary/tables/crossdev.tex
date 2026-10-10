@@ -1,0 +1,21 @@
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Device pair ($a$ -- $b$) & front sizes & shared & Jaccard & $\rho$(latency) & HV ratio $a\to b$ & HV ratio $b\to a$\\
+\midrule
+Edge GPU -- Raspberry Pi 4 & 24 / 48 & 6 & 0.09 & 0.65 & 0.992 & 0.998\\
+Edge GPU -- Edge TPU & 24 / 43 & 4 & 0.06 & 0.70 & 0.991 & 0.989\\
+Edge GPU -- Pixel 3 & 24 / 55 & 5 & 0.07 & 0.63 & 0.988 & 0.997\\
+Edge GPU -- Eyeriss & 24 / 17 & 3 & 0.08 & 0.51 & 0.969 & 0.833\\
+Edge GPU -- FPGA & 24 / 11 & 4 & 0.13 & 0.62 & 0.950 & 0.833\\
+Raspberry Pi 4 -- Edge TPU & 48 / 43 & 9 & 0.11 & 0.59 & 0.996 & 0.995\\
+Raspberry Pi 4 -- Pixel 3 & 48 / 55 & 13 & 0.14 & 0.97 & 0.999 & 0.998\\
+Raspberry Pi 4 -- Eyeriss & 48 / 17 & 7 & 0.12 & 0.68 & 1.000 & 0.994\\
+Raspberry Pi 4 -- FPGA & 48 / 11 & 7 & 0.13 & 0.89 & 1.000 & 0.994\\
+Edge TPU -- Pixel 3 & 43 / 55 & 8 & 0.09 & 0.63 & 0.987 & 0.996\\
+Edge TPU -- Eyeriss & 43 / 17 & 6 & 0.11 & 0.82 & 0.995 & 0.988\\
+Edge TPU -- FPGA & 43 / 11 & 7 & 0.15 & 0.53 & 0.998 & 0.988\\
+Pixel 3 -- Eyeriss & 55 / 17 & 9 & 0.14 & 0.72 & 0.999 & 0.986\\
+Pixel 3 -- FPGA & 55 / 11 & 7 & 0.12 & 0.87 & 0.998 & 0.985\\
+Eyeriss -- FPGA & 17 / 11 & 8 & 0.40 & 0.75 & 1.000 & 0.999\\
+\bottomrule
+\end{tabular}

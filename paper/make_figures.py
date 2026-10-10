@@ -406,7 +406,7 @@ for v_, y_ in zip(yv, yy):
     axs[0].text(v_ - 0.008, y_, f"{v_:.3f}", ha="right", va="center", fontsize=5.8, color=INK)
 axs[0].set_yticks(yy); axs[0].set_yticklabels(lab, fontsize=6.4); axs[0].axvline(0, color=INK, lw=0.8)
 axs[0].set_xlim(-0.5, 0.03); axs[0].set_xticks([-0.4, -0.2, 0])
-axs[0].set_xlabel(r"slope $r_{PA}r_{PD}-r_{DA}$"); plabel(axs[0], "(a) criterion (Eq. 6)")
+axs[0].set_xlabel(r"slope $r_{PA}r_{PD}-r_{DA}$"); plabel(axs[0], "(a) criterion (Eq. 7)")
 axs[0].grid(axis="y", lw=0); axs[0].grid(axis="x", lw=0.4, color=GRID)
 lam = np.linspace(0, 1.5, 121)
 for _, r in gm.iterrows():
@@ -417,13 +417,13 @@ axs[1].axvline(0.25, color=MUTED, lw=0.6, ls=":"); axs[1].axvline(1.0, color=MUT
 axs[1].text(0.27, 0.92, "$\\lambda$ = 0.25", fontsize=5.6, color=MUTED); axs[1].text(1.02, 0.92, "$\\lambda$ = 1", fontsize=5.6, color=MUTED)
 h = [Line2D([], [], color=C["arch"], lw=1.1), Line2D([], [], color=C["re"], lw=1.1, ls="--"), Line2D([], [], color=C["ls"], lw=1.1)]
 axs[1].legend(h, ["NB201 (3 datasets)", "NB101", "NATS-SSS (3 datasets)"], fontsize=5.8, loc="lower left")
-axs[1].set_xlabel(r"cost-penalty weight $\lambda$"); axs[1].set_ylabel(r"$\rho(S_\lambda, A)$ (Eq. 5)"); axs[1].set_ylim(-0.4, 1.0)
+axs[1].set_xlabel(r"cost-penalty weight $\lambda$"); axs[1].set_ylabel(r"$\rho(S_\lambda, A)$ (Eq. 6)"); axs[1].set_ylim(-0.4, 1.0)
 axs[1].grid(True, axis="both"); plabel(axs[1], "(b) admitted quality vs penalty")
 for prop, c, m in [("archtree", C["arch"], "o"), ("random", C["rnd"], "s")]:
     for lam_, fill in [(1.0, True), (0.25, False)]:
         t = gv[(gv.proposer == prop) & (gv["lambda"] == lam_)]
         axs[2].scatter(t.predicted_delta, t.measured_delta, marker=m, s=14, facecolors=c if fill else "none", edgecolors=c, lw=0.8,
-                       label=f"{'ArchTree-RMG' if prop == 'archtree' else 'random'}, $\\lambda$ = {lam_:g}", zorder=3)
+                       label=f"{'ArchTree-RM' if prop == 'archtree' else 'random'} + pen., $\\lambda$ = {lam_:g}", zorder=3)
 lim = [-2.8, 0.6]
 axs[2].fill_between([-1.0, 0], -2.8, 0, color="#eef4fc", lw=0, zorder=0); axs[2].fill_between([0, 0.3], 0, 0.6, color="#eef4fc", lw=0, zorder=0)
 axs[2].plot(lim, lim, color=INK, lw=0.8, ls="--"); axs[2].axhline(0, color="#999", lw=0.6); axs[2].axvline(0, color="#999", lw=0.6)
@@ -451,7 +451,7 @@ for i, (arm, l) in enumerate(armsA):
             axs[0].text(xx, tot + 2, f"{100*dup/tot:.0f}%", ha="center", fontsize=5.6, color=C["cost"])
 axs[0].set_xticks(x); axs[0].set_xticklabels([DSS[d] for d in DS], fontsize=6.8); axs[0].set_ylabel("real evaluations (budget 200)")
 plabel(axs[0], "(a) where the budget goes"); axs[0].set_ylim(0, 250); axs[0].legend(loc="upper left", fontsize=5.6, ncol=2, columnspacing=0.6, handlelength=1.2)
-order = [("v1", "base (raw\nreward)"), ("rank", "rank reward\nonly"), ("mut_only", "mutation\nonly"), ("re", "RE,\nsame gate")]
+order = [("v1", "ArchTree-\nbase"), ("rank", "rank reward\nonly"), ("mut_only", "mutation\nonly"), ("re", "RE,\nsame gate")]
 for i, (arm, l) in enumerate(order):
     v = dp[dp.arm == arm].mean_diff_arm_minus_v2.values
     sig = dp[dp.arm == arm].outcome_vs_v2.values
@@ -560,7 +560,7 @@ for ax, d in zip(axs.flat, dev):
         k = nd_front(a_, l_); found.append(np.c_[a_[k], l_[k]])
     F = np.vstack(found)
     ax.scatter(F[:, 1], F[:, 0], s=9, facecolors="none", edgecolors=C["arch"], lw=0.6, zorder=3, alpha=0.7, label="found (12 seeds, b = 200)")
-    n_true = len(tf); ax.set_ylim(84, 92.2)
+    n_true = int(fv[(fv.hardware == d)].true_front.iloc[0]); ax.set_ylim(84, 92.2)
     hvr = fv[(fv.hardware == d) & (fv.budget == 200)].hv_ratio.mean()
     ax.text(0.97, 0.18 if d == "edgetpu" else 0.05, f"$|F^*|$ = {n_true};  HV/HV$^*$ = {hvr:.3f}", transform=ax.transAxes, ha="right", fontsize=6.0, color=INK, bbox=dict(fc="white", ec="none", pad=1, alpha=0.9))
     plabel(ax, f"({'abcdef'[dev.index(d)]}) {devn[d]}"); ax.grid(True, axis="both")
@@ -608,18 +608,18 @@ nb1 = rd("nb101/results/nb101_summary.csv")
 es = rd("equal_gpu_hours/results/egh_summary.csv")
 fig, axs = plt.subplots(1, 3, figsize=(FULL, 2.3), gridspec_kw=dict(width_ratios=[1.0, 1.25, 1.25]))
 ax = axs[0]
-for prop, lab, c, mk in [("random", "random", C["rnd"], "v"), ("re", "RE", C["re"], "s"), ("archtree", "ArchTree", C["arch"], "o")]:
+for prop, lab, c, mk in [("random", "random", C["rnd"], "v"), ("re", "RE", C["re"], "s"), ("archtree", "ArchTree-RM", C["arch"], "o")]:
     for gate, ls, fill in [("none", ":", False), ("zc_unsup", "-", True)]:
         t = nb1[(nb1.proposer == prop) & (nb1.gate == gate)].sort_values("budget")
         ax.plot(t.train_hours, t.test_mean, color=c, ls=ls, marker=mk, ms=3.2, lw=1.6 if (prop == "archtree" and fill) else 1.0,
-                mfc=c if fill else "white", mec=c, mew=0.6, label=f"{lab}{' + gate' if fill else ''}")
+                mfc=c if fill else "white", mec=c, mew=0.6, label=("ArchTree-RMG" if (prop == "archtree" and fill) else f"{lab}{' + gate' if fill else ''}"))
 ax.set_xscale("log"); ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
 ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 ax.set_xlabel("GPU-hours (log; budgets 50-400)"); ax.set_ylabel("test accuracy (%)"); ax.grid(True, axis="both")
 ax.set_ylim(93.25, 94.35); ax.legend(fontsize=5.4, ncol=2, loc="upper left", columnspacing=0.5, handlelength=1.5); plabel(ax, "(a) NB101, CIFAR-10 (fixed budget)")
 cols = [("nb201", d) for d in DS] + [("nb101", "cifar10")] + [("natssss", d) for d in DS]
 clab = [f"{BL[b].replace('-SSS', '')}\n{DSS[d]}" for b, d in cols]
-props = [("archtree", "ArchTree"), ("re", "RE"), ("ls", "LS"), ("random", "random")]
+props = [("archtree", "ArchTree-RM"), ("re", "RE"), ("ls", "LS"), ("random", "random")]
 D = np.full((4, 7), np.nan); Rr = np.full((4, 7), np.nan)
 for i, (p, _) in enumerate(props):
     for j, (b, d) in enumerate(cols):

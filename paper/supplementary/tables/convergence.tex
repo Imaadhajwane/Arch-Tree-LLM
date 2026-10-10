@@ -1,0 +1,20 @@
+\begin{tabular}{@{}llrrrrrrr@{}}
+\toprule
+Dataset & Arm & best@10 & best@25 & final & evals to 2\,pt & to 1\,pt & to 0.5\,pt & real evals\\
+\midrule
+CIFAR-10 & prior off ($\alpha$=0) & 90.38 & 91.19 & 91.47 & 5.0 & 15.5 & 22.9 & 47.8\\
+ & LLM prior (standard) & 91.03 & 91.47 & 91.55 & 2.0 & 5.0 & 12.5 & 45.0\\
+ & LLM prior (described ops) & 90.74 & 91.37 & 91.53 & 1.0 & 7.8 & 23.3 & 45.8\\
+ & size prior (no LLM) & 90.20 & 91.52 & 91.56 & 1.0 & 16.4 & 16.4 & 37.6\\
+\midrule
+CIFAR-100 & prior off ($\alpha$=0) & 70.21 & 72.10 & 73.10 & 22.0 (11/12) & 30.8 (11/12) & 36.1 (8/12) & 47.1\\
+ & LLM prior (standard) & 70.75 & 73.08 & 73.30 & 13.2 & 15.6 & 27.1 (9/12) & 42.8\\
+ & LLM prior (described ops) & 70.81 & 72.40 & 73.20 & 21.2 & 25.4 & 35.7 (9/12) & 43.6\\
+ & size prior (no LLM) & 70.83 & 73.15 & 73.43 & 17.4 & 19.7 & 20.6 & 41.0\\
+\midrule
+ImageNet16-120 & prior off ($\alpha$=0) & 43.75 & 45.84 & 46.42 & 14.2 & 17.8 & 24.4 (11/12) & 45.4\\
+ & LLM prior (standard) & 43.90 & 45.96 & 46.49 & 14.6 & 23.2 & 32.6 (11/12) & 48.2\\
+ & LLM prior (described ops) & 44.98 & 46.07 & 46.47 & 1.0 & 19.4 & 26.2 & 44.8\\
+ & size prior (no LLM) & 42.80 & 45.73 & 46.08 & 15.4 & 31.2 (8/12) & 34.7 (6/12) & 46.4\\
+\bottomrule
+\end{tabular}

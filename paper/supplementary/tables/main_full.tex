@@ -1,0 +1,47 @@
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Method & $B$ = 25 & $B$ = 50 & $B$ = 100 & $B$ = 200\\
+\midrule
+\multicolumn{5}{@{}l}{\textit{CIFAR-10}}\\
+\quad Random search & 93.45 $\pm$ 0.45 & 93.62 $\pm$ 0.21 & 93.82 $\pm$ 0.30 & 93.92 $\pm$ 0.21\\
+\quad MCTS-style & 93.55 $\pm$ 0.36 & 93.68 $\pm$ 0.27 & 93.89 $\pm$ 0.15 & 93.89 $\pm$ 0.20\\
+\quad ENAS-style & 93.43 $\pm$ 0.71 & 93.68 $\pm$ 0.48 & 93.74 $\pm$ 0.41 & 94.09 $\pm$ 0.26\\
+\quad LLM-NAS & 93.93 $\pm$ 0.21 & 93.99 $\pm$ 0.25 & 94.04 $\pm$ 0.19 & 94.28 $\pm$ 0.08\\
+\quad ZiCo-style & \textbf{93.93 $\pm$ 0.22} & 94.08 $\pm$ 0.20 & 94.17 $\pm$ 0.18 & 94.29 $\pm$ 0.12\\
+\quad RZ-style ZC walk & 93.72 $\pm$ 0.27 & 94.06 $\pm$ 0.21 & \textbf{94.28 $\pm$ 0.11} & 94.33 $\pm$ 0.07\\
+\quad RE & 93.42 $\pm$ 0.41 & 93.94 $\pm$ 0.36 & 94.17 $\pm$ 0.24 & 94.31 $\pm$ 0.13\\
+\quad RE + ZC warm-up & 93.91 $\pm$ 0.33 & \textbf{94.26 $\pm$ 0.15} & 94.22 $\pm$ 0.19 & 94.28 $\pm$ 0.19\\
+\quad Local search & 93.75 $\pm$ 0.43 & 93.97 $\pm$ 0.38 & 94.27 $\pm$ 0.22 & \textbf{94.37 $\pm$ 0.00}\\
+\quad S1 ArchTree-base & 93.64 $\pm$ 0.43 & 93.99 $\pm$ 0.19 & 94.09 $\pm$ 0.24 & 94.11 $\pm$ 0.26\\
+\quad S2 (S1 + supervised gate) & 93.60 $\pm$ 0.44 & 93.98 $\pm$ 0.34 & 94.15 $\pm$ 0.25 & 94.17 $\pm$ 0.22\\
+\quad S4 ArchTree-RMG & 93.60 $\pm$ 0.31 & 94.04 $\pm$ 0.27 & 94.19 $\pm$ 0.26 & 94.28 $\pm$ 0.13\\
+\midrule
+\multicolumn{5}{@{}l}{\textit{CIFAR-100}}\\
+\quad Random search & 70.84 $\pm$ 0.64 & 71.06 $\pm$ 0.78 & 71.54 $\pm$ 0.83 & 71.92 $\pm$ 0.81\\
+\quad MCTS-style & 70.59 $\pm$ 0.98 & 70.97 $\pm$ 0.91 & 71.62 $\pm$ 0.69 & 71.94 $\pm$ 0.87\\
+\quad ENAS-style & 71.02 $\pm$ 1.25 & 71.58 $\pm$ 1.14 & 71.79 $\pm$ 1.15 & 72.59 $\pm$ 0.81\\
+\quad LLM-NAS & 71.36 $\pm$ 0.51 & 71.39 $\pm$ 0.42 & 71.96 $\pm$ 0.28 & 72.14 $\pm$ 0.43\\
+\quad ZiCo-style & 71.93 $\pm$ 0.80 & 72.33 $\pm$ 0.66 & 72.68 $\pm$ 0.58 & 72.97 $\pm$ 0.43\\
+\quad RZ-style ZC walk & 71.39 $\pm$ 0.77 & 72.17 $\pm$ 0.99 & 73.20 $\pm$ 0.35 & 73.39 $\pm$ 0.19\\
+\quad RE & 70.43 $\pm$ 1.22 & 71.61 $\pm$ 1.21 & 72.96 $\pm$ 0.78 & 73.37 $\pm$ 0.21\\
+\quad RE + ZC warm-up & \textbf{72.00 $\pm$ 1.03} & \textbf{72.92 $\pm$ 0.56} & 73.13 $\pm$ 0.50 & 73.36 $\pm$ 0.23\\
+\quad Local search & 71.44 $\pm$ 1.48 & 72.63 $\pm$ 1.09 & \textbf{73.36 $\pm$ 0.42} & \textbf{73.51 $\pm$ 0.00}\\
+\quad S1 ArchTree-base & 71.12 $\pm$ 1.35 & 72.06 $\pm$ 0.93 & 72.50 $\pm$ 0.85 & 73.12 $\pm$ 0.45\\
+\quad S2 (S1 + supervised gate) & 70.98 $\pm$ 1.40 & 71.46 $\pm$ 1.37 & 72.26 $\pm$ 1.06 & 72.45 $\pm$ 0.89\\
+\quad S4 ArchTree-RMG & 71.51 $\pm$ 1.26 & 72.19 $\pm$ 0.91 & 73.02 $\pm$ 0.75 & 73.40 $\pm$ 0.20\\
+\midrule
+\multicolumn{5}{@{}l}{\textit{ImageNet16-120}}\\
+\quad Random search & 44.74 $\pm$ 1.25 & 45.15 $\pm$ 0.73 & 45.49 $\pm$ 0.85 & 45.47 $\pm$ 0.80\\
+\quad MCTS-style & 44.24 $\pm$ 1.03 & 44.66 $\pm$ 0.99 & 45.14 $\pm$ 0.86 & 45.44 $\pm$ 0.65\\
+\quad ENAS-style & 45.26 $\pm$ 1.12 & 45.84 $\pm$ 0.78 & 46.04 $\pm$ 0.44 & 46.16 $\pm$ 0.36\\
+\quad LLM-NAS & 44.77 $\pm$ 0.34 & 45.35 $\pm$ 0.54 & 45.29 $\pm$ 0.30 & 45.37 $\pm$ 0.36\\
+\quad ZiCo-style & 45.37 $\pm$ 1.04 & 46.11 $\pm$ 0.48 & 46.22 $\pm$ 0.42 & 46.28 $\pm$ 0.57\\
+\quad RZ-style ZC walk & 45.53 $\pm$ 0.89 & 46.06 $\pm$ 0.46 & 46.22 $\pm$ 0.45 & 46.32 $\pm$ 0.18\\
+\quad RE & 44.53 $\pm$ 1.35 & 45.67 $\pm$ 1.10 & \textbf{46.51 $\pm$ 0.29} & 46.48 $\pm$ 0.17\\
+\quad RE + ZC warm-up & \textbf{46.11 $\pm$ 0.57} & \textbf{46.31 $\pm$ 0.53} & 46.14 $\pm$ 0.57 & 46.34 $\pm$ 0.36\\
+\quad Local search & 45.23 $\pm$ 0.96 & 46.05 $\pm$ 0.79 & 46.11 $\pm$ 0.65 & \textbf{46.52 $\pm$ 0.29}\\
+\quad S1 ArchTree-base & 44.93 $\pm$ 1.08 & 45.70 $\pm$ 0.58 & 46.11 $\pm$ 0.46 & 46.25 $\pm$ 0.40\\
+\quad S2 (S1 + supervised gate) & 44.90 $\pm$ 1.23 & 45.72 $\pm$ 1.08 & 45.81 $\pm$ 0.93 & 46.39 $\pm$ 0.51\\
+\quad S4 ArchTree-RMG & 45.28 $\pm$ 1.07 & 45.91 $\pm$ 0.51 & 46.45 $\pm$ 0.39 & 46.41 $\pm$ 0.18\\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,22 @@
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Arm} & \multicolumn{3}{c}{CIFAR-10} & \multicolumn{3}{c}{CIFAR-100} & \multicolumn{3}{c}{ImageNet16-120}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & 25 & 50 & 100 & 25 & 50 & 100 & 25 & 50 & 100\\
+\midrule
+ArchTree-RMG & 93.83 & 94.11 & 94.28 & 72.09 & 72.60 & 73.40 & 45.45 & \textbf{46.49} & 46.41\\
+ArchTree-RM (no gate) & 93.64 & 93.79$^{\triangledown}$ & 94.09 & 71.28 & 72.07 & 72.84 & 45.10 & 45.56$^{\triangledown}$ & 45.91\\
+ArchTree-RM + \#params gate & 93.81 & 94.15 & 94.25 & 71.82 & 72.40 & 73.21 & 45.44 & 46.01$^{\triangledown}$ & 46.32\\
+ArchTree-RM + cost pen. ($\lambda$=0.25) & 93.75 & 94.13 & 94.17 & 71.99 & 72.88 & 73.20 & 45.71 & 46.10 & 46.35\\
+ArchTree-RM + cost pen. ($\lambda$=1) & 93.45$^{\triangledown}$ & 93.59$^{\triangledown}$ & 93.67$^{\triangledown}$ & 71.03 & 71.85 & 71.85$^{\triangledown}$ & 44.58 & 44.67$^{\triangledown}$ & 45.05$^{\triangledown}$\\
+RE + gate & 93.67 & 94.16 & 94.35 & 71.43 & 72.71 & 73.28 & 44.97 & 45.79 & 46.39\\
+RE + ZC warm-up & \textbf{94.10} & \textbf{94.20} & 94.24 & \textbf{72.56} & 72.88 & 73.05 & \textbf{45.88} & 45.95 & 46.16\\
+RE & 93.55 & 93.90 & 94.08 & 70.77$^{\triangledown}$ & 71.48 & 72.76 & 45.06 & 46.04 & 46.24\\
+LS + gate & 93.78 & 94.08 & \textbf{94.37} & 71.29 & \textbf{72.90} & \textbf{73.51} & 45.04 & 45.61 & \textbf{46.47}\\
+LS & 93.68 & 93.94 & 94.19 & 70.77 & 72.09 & 73.14 & 45.17 & 45.75 & 46.25\\
+Random + gate & 93.62 & 93.83 & 93.92$^{\triangledown}$ & 71.06$^{\triangledown}$ & 71.56$^{\triangledown}$ & 71.92$^{\triangledown}$ & 45.09 & 45.49$^{\triangledown}$ & 45.45$^{\triangledown}$\\
+Random & 93.45 & 93.62$^{\triangledown}$ & 93.82$^{\triangledown}$ & 70.84$^{\triangledown}$ & 71.06$^{\triangledown}$ & 71.54$^{\triangledown}$ & 44.71 & 45.15$^{\triangledown}$ & 45.53$^{\triangledown}$\\
+Random + cost pen. ($\lambda$=0.25) & 93.60 & 93.83 & 93.95$^{\triangledown}$ & 71.03$^{\triangledown}$ & 71.54$^{\triangledown}$ & 71.92$^{\triangledown}$ & 45.10 & 45.49$^{\triangledown}$ & 45.45$^{\triangledown}$\\
+Random + cost pen. ($\lambda$=1) & 93.26$^{\triangledown}$ & 93.25$^{\triangledown}$ & 93.52$^{\triangledown}$ & 70.25$^{\triangledown}$ & 70.56$^{\triangledown}$ & 71.00$^{\triangledown}$ & 44.05$^{\triangledown}$ & 44.32$^{\triangledown}$ & 44.87$^{\triangledown}$\\
+\bottomrule
+\end{tabular}

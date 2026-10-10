@@ -1,0 +1,22 @@
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Arm} & \multicolumn{3}{c}{CIFAR-10} & \multicolumn{3}{c}{CIFAR-100} & \multicolumn{3}{c}{ImageNet16-120}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & 25 & 50 & 100 & 25 & 50 & 100 & 25 & 50 & 100\\
+\midrule
+ArchTree-RMG & 92.95 & 93.24 & 93.18 & 69.58 & 69.83 & 70.23 & 44.46 & 45.60 & 45.62\\
+ArchTree-RM (no gate) & 92.65 & 92.88 & 93.05 & 69.10 & 69.46 & 69.82 & 44.04 & 44.99 & 45.36\\
+ArchTree-RM + \#params gate & 93.00 & 93.07 & 93.25 & 69.64 & 69.69 & 70.19 & 44.78 & 45.23 & 45.46\\
+ArchTree-RM + cost pen. ($\lambda$=0.25) & 92.85 & 93.17 & 93.15 & 69.33 & 69.83 & 69.86 & 44.26 & 44.61 & 45.18\\
+ArchTree-RM + cost pen. ($\lambda$=1) & 92.55$^{\triangledown}$ & 92.56$^{\triangledown}$ & 92.65$^{\triangledown}$ & 68.63$^{\triangledown}$ & 68.65$^{\triangledown}$ & 68.82$^{\triangledown}$ & 43.28$^{\triangledown}$ & 43.03$^{\triangledown}$ & 43.16$^{\triangledown}$\\
+RE + gate & 93.02 & 93.14 & \textbf{93.36} & 69.48 & 69.76 & \textbf{70.34} & 44.75 & 45.26 & 45.51\\
+RE + ZC warm-up & 93.14 & 93.18 & 93.18 & 69.64 & 69.86 & 70.13 & 45.39 & \textbf{45.87} & 45.69\\
+RE & 92.91 & 93.03 & 93.25 & 69.00 & 69.70 & 69.94 & 44.17 & 44.91 & 45.46\\
+LS + gate & \textbf{93.17} & \textbf{93.29} & 93.32 & \textbf{69.76} & \textbf{70.13} & 70.16 & \textbf{45.41} & 45.84 & \textbf{45.75}\\
+LS & 93.09 & 93.20 & 93.34 & 69.74 & 69.95 & 70.14 & 44.67 & 45.76 & 45.50\\
+Random + gate & 92.97 & 93.10 & 93.10 & 69.26 & 69.40 & 69.69 & 44.90 & 44.81 & 45.26\\
+Random & 92.99 & 92.97 & 93.08 & 69.17 & 69.43 & 69.33 & 44.40 & 44.74 & 44.71\\
+Random + cost pen. ($\lambda$=0.25) & 92.97 & 93.07 & 93.12 & 69.26 & 69.31 & 69.81 & 44.56 & 44.81 & 45.26\\
+Random + cost pen. ($\lambda$=1) & 92.65 & 92.66$^{\triangledown}$ & 92.63$^{\triangledown}$ & 68.66 & 68.71$^{\triangledown}$ & 68.86$^{\triangledown}$ & 43.03 & 43.24$^{\triangledown}$ & 43.41$^{\triangledown}$\\
+\bottomrule
+\end{tabular}

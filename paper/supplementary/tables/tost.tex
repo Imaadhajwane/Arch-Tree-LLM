@@ -1,0 +1,56 @@
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Comparison & Comparator & cells & equiv. at $\pm$0.5 & equiv. at $\pm$0.25 & max $|\Delta|$\\
+\midrule
+NB201, fixed proposal budget & ENAS-style & 12 & 1 & 0 & 1.23\\
+ & LLM-NAS & 12 & 3 & 1 & 1.27\\
+ & Local search & 12 & 5 & 1 & 0.44\\
+ & MCTS-style & 12 & 1 & 0 & 1.47\\
+ & Random search & 12 & 0 & 0 & 1.48\\
+ & RE & 12 & 4 & 2 & 1.08\\
+ & RE + ZC warm-up & 12 & 5 & 1 & 0.83\\
+ & RZ-style ZC walk & 12 & 5 & 3 & 0.25\\
+ & ZiCo-style & 12 & 3 & 1 & 0.43\\
+\midrule
+NB201, equal GPU-hours & ArchTree-RM + cost pen. ($\lambda$=1) & 9 & 0 & 0 & 1.83\\
+ & ArchTree-RM + cost pen. ($\lambda$=0.25) & 9 & 4 & 1 & 0.39\\
+ & ArchTree-RM (no gate) & 9 & 2 & 0 & 0.94\\
+ & ArchTree-RM + \#params gate & 9 & 3 & 1 & 0.48\\
+ & LS & 9 & 1 & 0 & 1.32\\
+ & LS + gate & 9 & 4 & 1 & 0.88\\
+ & Random + cost pen. ($\lambda$=1) & 9 & 0 & 0 & 2.41\\
+ & Random + cost pen. ($\lambda$=0.25) & 9 & 1 & 0 & 1.48\\
+ & Random & 9 & 0 & 0 & 1.86\\
+ & Random + gate & 9 & 0 & 0 & 1.48\\
+ & RE & 9 & 2 & 0 & 1.32\\
+ & RE + gate & 9 & 4 & 2 & 0.71\\
+ & RE + ZC warm-up & 9 & 2 & 1 & 0.54\\
+\midrule
+NB101, fixed proposal budget & Random & 4 & 2 & 0 & 0.41\\
+ & RE & 4 & 4 & 1 & 0.14\\
+\midrule
+NB101, equal GPU-hours & ArchTree-RM + cost pen. ($\lambda$=1) & 3 & 1 & 0 & 0.32\\
+ & ArchTree-RM (no gate) & 3 & 3 & 1 & 0.16\\
+ & ArchTree-RM + \#params gate & 3 & 3 & 0 & 0.15\\
+ & LS & 3 & 2 & 1 & 0.31\\
+ & LS + gate & 3 & 2 & 0 & 0.20\\
+ & Random & 3 & 0 & 0 & 0.47\\
+ & RE & 3 & 3 & 1 & 0.26\\
+ & RE + gate & 3 & 3 & 1 & 0.15\\
+ & RE + ZC warm-up & 3 & 3 & 0 & 0.17\\
+\midrule
+NATS-SSS, equal GPU-hours & ArchTree-RM + cost pen. ($\lambda$=1) & 9 & 0 & 0 & 2.57\\
+ & ArchTree-RM + cost pen. ($\lambda$=0.25) & 9 & 3 & 1 & 0.99\\
+ & ArchTree-RM (no gate) & 9 & 1 & 0 & 0.61\\
+ & ArchTree-RM + \#params gate & 9 & 3 & 0 & 0.37\\
+ & LS & 9 & 2 & 1 & 0.21\\
+ & LS + gate & 9 & 2 & 1 & 0.94\\
+ & Random + cost pen. ($\lambda$=1) & 9 & 0 & 0 & 2.36\\
+ & Random + cost pen. ($\lambda$=0.25) & 9 & 3 & 0 & 0.79\\
+ & Random & 9 & 2 & 0 & 0.91\\
+ & Random + gate & 9 & 3 & 0 & 0.79\\
+ & RE & 9 & 3 & 0 & 0.69\\
+ & RE + gate & 9 & 3 & 0 & 0.34\\
+ & RE + ZC warm-up & 9 & 3 & 2 & 0.93\\
+\bottomrule
+\end{tabular}
