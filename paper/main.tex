@@ -19,7 +19,8 @@
 \renewcommand{\textfraction}{0.1}\renewcommand{\floatpagefraction}{0.8}\renewcommand{\dblfloatpagefraction}{0.8}
 \setlength{\emergencystretch}{1.5em}
 %% list of symbols: same layout as the class, second column allowed to wrap
-\renewenvironment{nomenclature}{\vskip 12pt\noindent{\textbf{Nomenclature}}\\[6pt]\footnotesize\begin{tabular}{@{}p{0.27\columnwidth}p{0.66\columnwidth}@{}}}{\end{tabular}\vskip 12pt}
+\renewenvironment{nomenclature}{\vskip 6pt\noindent{\textbf{Nomenclature}}\par\vskip 4pt\footnotesize\setlength{\parskip}{0.6pt}}{\par\vskip 6pt}
+\newcommand{\nom}[2]{\par\noindent\hangindent=0.29\columnwidth\hangafter=1\makebox[0.29\columnwidth][l]{#1}#2}
 
 \begin{document}
 
@@ -187,7 +188,7 @@ A small penalty improves the quality of what the gate admits only if $r_{DA}<r_{
 Table~\ref{tab:datastats} lists the benchmarks: NAS-Bench-201 \cite{dong2020} (six edges with five operations each), NAS-Bench-101 \cite{ying2019} (cell graphs with up to seven nodes and nine edges), the size space of NATS-Bench \cite{dong2022} (five layer widths from $\{8,16,\dots,64\}$) and HW-NAS-Bench \cite{li2021hw}, which adds the latency of every NAS-Bench-201 cell on six devices (edge GPU and TPU, Raspberry Pi 4, Pixel 3, Eyeriss, FPGA). Datasets are CIFAR-10/100 (C10/C100) \cite{krizhevsky2009} and ImageNet16-120 (IN16) \cite{chrabaszcz2017}. Accuracies and training times are read from tables and nothing is trained during search; a search is charged the recorded training time of each architecture it evaluates. Tabular benchmarks are used deliberately: they make thousands of complete, seed-paired searches affordable, they remove training noise from the comparison of search strategies, and they let every claim be checked against the exhaustive ground truth of the space \cite{ying2019,dong2020,yang2020}. The three spaces were chosen to differ in the property that matters most for a proxy gate. NAS-Bench-201 is a small cell space and the main test bed. NAS-Bench-101 is a much larger cell space with variable graph topology, on which proxies are known to be weaker \cite{krishnakumar2022}, so it tests transfer. The size space of NATS-Bench fixes the cell and varies only channel widths, so accuracy and cost are both driven by network width; it is the natural stress test for the claim that proxies detect cost (section~\ref{sec:cost}).
 
 
-\textit{How the data are kept.} The raw benchmark files (roughly 6.5\,GB in total) are turned once into compact derived caches, the only files the experiments read (Table~\ref{tab:datastore}). Each record is keyed by a canonical code of the architecture (base 5 over the NAS-Bench-201 edges, base 8 over the NATS-Bench widths, the official module hash for NAS-Bench-101) and holds a validation accuracy for search, a test accuracy for reporting and a training time for cost: 200-epoch values averaged over training seeds for NAS-Bench-201, the 90-epoch schedule for NATS-Bench SSS and the mean of three 108-epoch repeats for NAS-Bench-101. The NAS-Bench-101 cache is read from the TFRecord file with a reimplementation of the official graph pruning and hashing, and the build fails unless all 423,624 module hashes are reproduced. HW-NAS-Bench latencies are aligned to NAS-Bench-201 indices, and the exact Pareto front of each device is precomputed. Raw proxy components are stored once per architecture (70,765 entries), so every search re-uses identical proxy values. The benchmark files and main caches are fixed by SHA-256 checksums (Table S41), and every search writes one result row per run.
+\textit{How the data are kept.} The raw benchmark files (roughly 6.5\,GB in total) are turned once into compact derived caches, the only files the experiments read (Table S42). Each record is keyed by a canonical code of the architecture (base 5 over the NAS-Bench-201 edges, base 8 over the NATS-Bench widths, the official module hash for NAS-Bench-101) and holds a validation accuracy for search, a test accuracy for reporting and a training time for cost: 200-epoch values averaged over training seeds for NAS-Bench-201, the 90-epoch schedule for NATS-Bench SSS and the mean of three 108-epoch repeats for NAS-Bench-101. The NAS-Bench-101 cache is read from the TFRecord file with a reimplementation of the official graph pruning and hashing, and the build fails unless all 423,624 module hashes are reproduced. HW-NAS-Bench latencies are aligned to NAS-Bench-201 indices, and the exact Pareto front of each device is precomputed. Raw proxy components are stored once per architecture (70,765 entries), so every search re-uses identical proxy values. The benchmark files and main caches are fixed by SHA-256 checksums (Table S41), and every search writes one result row per run.
 
 
 \begin{figure*}[t]
@@ -217,24 +218,6 @@ NATS-SSS & IN16 & 32,768 & 90 & 37.09 $\pm$ 4.75 & 47.40 & 44.97 & 0.30 [0.24, 0
 \tablenotes{CV: coefficient of variation of training time. $\rho$: Spearman correlation over the whole space. The best test accuracy is not attainable by a validation-based search when validation and test rankings disagree.}
 \end{table*}
 
-\begin{table}[t]
-\caption{Derived data files read by the experiments.}\label{tab:datastore}
-\centering\footnotesize
-\setlength{\tabcolsep}{2pt}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\columnwidth}>{\raggedright\arraybackslash}p{0.2\columnwidth}>{\raggedright\arraybackslash}p{0.38\columnwidth}>{\raggedleft\arraybackslash}p{0.12\columnwidth}@{}}
-\toprule
-File & Key & Fields per architecture & Size\\
-\midrule
-NB201 cache (JSON) & base-5 index & valid, test, train time $\times$ 3 datasets & 4.9\,MB\\
-NB101 cache (NPZ) & module hash & adjacency, ops, \#params, valid/test/time $\times$ 3 repeats & 22\,MB\\
-NATS-SSS cache (JSON) & base-8 code & valid, test, train time $\times$ 3 datasets; \#params, FLOPs & 12.8\,MB\\
-HW table (NPZ) & NB201 index & accuracy, latency on 6 devices & 0.9\,MB\\
-True fronts (JSON) & device & Pareto-optimal (accuracy, latency) pairs & $<$3\,kB\\
-Proxy cache (JSON) & token string & raw $E$, $S$, $T$, size term & 12\,MB\\
-\bottomrule
-\end{tabular}
-\tablenotes{Search uses the validation split; test accuracy is only reported. C10 validation in NB201 is the \texttt{cifar10-valid} split, as prescribed by the benchmark.}
-\end{table}
 
 Figure~\ref{fig:data} and Table~\ref{tab:datastats} describe the spaces as data. Three properties shape the experiments. First, the spaces are top-heavy: the gap between the best architecture and the 99th percentile is only 0.6 points on NAS-Bench-201 CIFAR-10 and NATS-Bench SSS CIFAR-10, so good methods differ by tenths of a point. Second, a long tail of poor architectures exists on NAS-Bench-201 (341 architectures below 20\% on CIFAR-10; exactly the cells disconnected by \texttt{none} operations), which a cheap filter can remove. Third, accuracy and training time are positively correlated in every space ($\rho$ = 0.27--0.65), so a filter that prefers accurate networks will also prefer expensive ones; hence cost is measured in GPU-hours.
 
@@ -399,11 +382,37 @@ Figure~\ref{fig:proxies}(a) shows the Kendall rank correlation $\tau$ \cite{kend
 
 \subsection{Convergence}
 
-Figure~\ref{fig:conv} plots simple regret against real evaluations (all methods: Figure S3). Random search follows its analytic expectation, LLM-NAS starts lowest but flattens as it repeats itself, and S4 falls fastest of the \algname{} stages. At its last real evaluation (at most 88, 98 and 102 on the three datasets) S4 is within 0.04, 0.08 and 0.15 validation points of the best architecture of the space, against 0.41, 1.55 and 1.22 for random search after 200 evaluations and 0.02, 0.17 and 0.15 for RE. In Figure~\ref{fig:conv}(d), \rmg{} gets to within 0.5 points of the optimum in 25, 48 and 31 real evaluations, against 44, 88 and 85 for RE and 31, 69 and 81 for LS, while random search, MCTS-style search and LLM-NAS reach this level only on CIFAR-10, if at all. ZiCo-style search, which pre-screens 1,000 proxy-scored candidates before its first evaluation, gets there sooner on all three datasets, and RE with ZC warm-up on CIFAR-10; these counts are per evaluation, not per GPU-hour.
+Figure~\ref{fig:conv} plots simple regret against real evaluations (all methods: Figure S3). Random search follows its analytic expectation, LLM-NAS starts lowest but flattens as it repeats itself, and S4 falls fastest of the \algname{} stages. At its last real evaluation (at most 88, 98 and 102 on the three datasets) S4 is within 0.04, 0.08 and 0.15 validation points of the best architecture of the space, against 0.41, 1.55 and 1.22 for random search after 200 evaluations and 0.02, 0.17 and 0.15 for RE. In Figure~\ref{fig:conv}(d), \rmg{} gets to within 0.5 points of the optimum in 25, 48 and 31 real evaluations, against 44, 88 and 85 for RE and 31, 69 and 81 for LS, while random search, MCTS-style search and LLM-NAS reach this level only on CIFAR-10, if at all. Only the two methods that pre-screen 1,000 proxy-scored candidates (ZiCo-style, and RE with ZC warm-up on CIFAR-10) get there sooner.
 
 \subsection{Comparison with baselines at a fixed proposal budget}
 
-Table~\ref{tab:main} reports test accuracy at a budget of 200, together with real evaluations and GPU-hours. Baselines evaluate all 200 proposals; \algname{} evaluates about 81--83 of them and uses 44--46\% of the GPU-hours of ungated RE. Figure~\ref{fig:scorecard} puts accuracy, cost, sample efficiency and the statistics on one page. Local search and RE with ZC warm-up are best on accuracy and rank, \rmg{} leads on cost with 41\% of the evaluations and 37--57\% of the GPU-hours of the baselines, and only the proxy-screening methods reach low regret with fewer real evaluations. The 108 paired tests (nine baselines, three datasets, four budgets) break down as follows. With Holm correction within each baseline, \algname{} records 20 wins, 88 ties and no losses; the wins split as random search 7, MCTS-style 6, ENAS-style and LLM-NAS 3 each, ZiCo-style 1. Without correction there are 32 wins and 6 losses, three of them against RE with zero-cost warm-up at small budgets; at budget 25 this method reaches 93.91, 72.00 and 46.11 against 93.60, 71.51 and 45.28 for \rmg, so the gate's warm-up of ten unfiltered proposals is a weakness at very small budgets. Equivalence within $\pm$0.5 points is shown by TOST in 27 of the 108 cells. With Holm correction over all 108 tests jointly, every comparison is a tie. In the Friedman ranking at a fixed proposal budget (10 methods, 144 blocks, CD = 1.13), \algname{} ranks 4.41, behind RE with zero-cost warm-up (3.67) and local search (3.90) yet inside the CD of both, with roughly 40\% of their evaluations.
+Table~\ref{tab:main} reports test accuracy at a budget of 200, together with real evaluations and GPU-hours. Baselines evaluate all 200 proposals; \algname{} evaluates about 81--83 of them and uses 44--46\% of the GPU-hours of ungated RE. In the scorecard (Figure~\ref{fig:scorecard}), local search and RE with ZC warm-up are best on accuracy and rank, \rmg{} leads on cost with 41\% of the evaluations and 37--57\% of the GPU-hours of the baselines, and only the proxy-screening methods reach low regret with fewer real evaluations. The 108 paired tests (nine baselines, three datasets, four budgets) break down as follows. With Holm correction within each baseline, \algname{} records 20 wins, 88 ties and no losses; the wins split as random search 7, MCTS-style 6, ENAS-style and LLM-NAS 3 each, ZiCo-style 1. Without correction there are 32 wins and 6 losses, three of them against RE with zero-cost warm-up at budget 25 (93.91, 72.00, 46.11 against 93.60, 71.51, 45.28), where the ten unfiltered warm-up proposals are a weakness; TOST shows equivalence within $\pm$0.5 points in 27 of the 108 cells. In the Friedman ranking at a fixed proposal budget (10 methods, 144 blocks, CD = 1.13), \algname{} ranks 4.41, behind RE with zero-cost warm-up (3.67) and local search (3.90) yet inside the CD of both, with roughly 40\% of their evaluations. Table~\ref{tab:published} adds published NAS-Bench-201 results for context.
+
+\begin{table}[!t]
+\caption{Published NAS-Bench-201 results (test accuracy, \%, mean $\pm$ s.d. as reported) and \rmg{} at a budget of 200 proposals. Protocols differ, so this is context, not a paired comparison.}\label{tab:published}
+\centering\scriptsize
+\setlength{\tabcolsep}{1.4pt}
+\begin{tabular}{@{}lclccc@{}}
+\toprule
+Method & Type & Budget & CIFAR-10 & CIFAR-100 & IN16-120\\
+\midrule
+Random search \cite{dong2020} & S & 12,000\,s$^a$ & 93.70$\pm$0.36 & 71.04$\pm$1.07 & 44.57$\pm$1.25\\
+REA \cite{dong2020} & S & 12,000\,s$^a$ & 93.92$\pm$0.30 & 71.84$\pm$0.99 & 45.54$\pm$1.03\\
+BOHB \cite{dong2020} & S & 12,000\,s$^a$ & 93.61$\pm$0.52 & 70.85$\pm$1.28 & 44.42$\pm$1.49\\
+DARTS-V2 \cite{dong2020} & W & 35,782\,s & 54.30$\pm$0.00 & 15.61$\pm$0.00 & 16.32$\pm$0.00\\
+GDAS \cite{dong2020} & W & 31,610\,s & 93.61$\pm$0.09 & 70.70$\pm$0.30 & 41.71$\pm$0.98\\
+DrNAS$^b$ \cite{chen2021drnas} & W & -- & 94.36$\pm$0.00 & 73.51$\pm$0.00 & 46.34$\pm$0.00\\
+NASWOT \cite{mellor2021} & T & 306\,s & 92.96$\pm$0.81 & 69.98$\pm$1.22 & 44.44$\pm$2.10\\
+TE-NAS \cite{chen2021tenas} & T & 1,558\,s & 93.9$\pm$0.47 & 71.24$\pm$0.56 & 42.38$\pm$0.46\\
+GENIUS$^b$ \cite{zheng2023genius} & L & 10 arch. & 93.79$\pm$0.09 & 70.91$\pm$0.72 & 44.96$\pm$1.02\\
+\midrule
+\rmg{}$^b$ (ours) & S+T & 81--83 arch. & 94.28$\pm$0.13 & 73.40$\pm$0.20 & 46.41$\pm$0.18\\
+Optimal \cite{dong2020} & -- & -- & 94.37 & 73.51 & 47.31\\
+\bottomrule
+\end{tabular}
+\tablenotes{S: sample-based; W: weight-sharing; T: training-free; L: LLM-based. Budget: GPU search time or architectures trained per run; $^a$simulated. $^b$Searched on each dataset; the others search on CIFAR-10 and transfer.}
+\end{table}
+
 
 \begin{figure*}[t]
 \centering
@@ -592,7 +601,7 @@ Total & 1,404 & 495 & 287 & \\
 \label{fig:stats}
 \end{figure*}
 
-Table~\ref{tab:allstats} collects the 1,404 paired tests of the study. Of the 677 tests in which \rmg{} is compared with another search method (first five rows), 149 are significant wins after Holm correction and one is a loss, so the direction is consistent, although against the strongest arms all corrected results are ties. The three sensitivity families (UCB setting, $\alpha$, proxy subsets; 174 tests) yield two significant results, so no setting has a detectable effect, and all 96 hardware tests are ties. The significant LLM results concern early-search metrics (53), the LLM's own response time (23) and time-rescaled duplicates of evaluation counts (33), never final accuracy. Friedman tests reject equal performance of all arms in every comparison ($p<10^{-7}$; Figure~\ref{fig:ranks}), and \rmg{} has the lowest mean rank on NAS-Bench-201 at equal GPU-hours (4.75 against 4.84; CD 1.91) and within the CD of the best arm elsewhere.
+Table~\ref{tab:allstats} collects the 1,404 paired tests of the study. Of the 677 tests in which \rmg{} is compared with another search method (first five rows), 149 are significant wins after Holm correction and one is a loss, so the direction is consistent, although against the strongest arms all corrected results are ties. The three sensitivity families (UCB setting, $\alpha$, proxy subsets; 174 tests) yield two significant results, so no setting has a detectable effect, and all 96 hardware tests are ties. The significant LLM results all concern early-search speed, never final accuracy. Friedman tests reject equal performance in every comparison ($p<10^{-7}$).
 
 Figure~\ref{fig:stats} adds the per-run view. Against MCTS-style search, random search, ENAS-style search and LLM-NAS, \rmg{} wins 75--85\% of paired runs. Against RE, ZiCo-style and RZ-style search the probability is close to 0.5, and against LS and RE with ZC warm-up it is slightly below (0.43 and 0.41): these two methods win a few more paired runs at a fixed budget, although never significantly after correction and at 2.2--2.3 times the GPU-hours. At equal GPU-hours the intervals lie above 0.5 on NAS-Bench-201 against every random-search arm, the ungated arms and the $\lambda=1$ penalty, whereas LS with the gate is the stronger arm on NAS-Bench-101 (0.22) and NATS-Bench SSS (0.38), and RE with ZC warm-up on NATS-Bench SSS (0.40). Within $\pm$0.5 points TOST confirms it in 20--25\% of the NAS-Bench-201 and NATS-Bench SSS cells and in about three quarters of the NAS-Bench-101 cells, and within $\pm$0.25 points in at most 15\%.
 
@@ -601,7 +610,7 @@ Figure~\ref{fig:stats} adds the per-run view. Against MCTS-style search, random 
 
 Deduplication is cheap and removes up to 75\% wasted evaluations for memoryless proposers, but a hash set provides it as well as a trie does. The label-free gate is the principal source of savings, and at equal GPU-hours it raised the mean accuracy of all four proposers we tried. Its bias towards large networks is real but mostly harmless, because accuracy is itself correlated with size; the criterion of Eq.~(\ref{eq:slope}) turns this observation into a test that can be run on a sample of architectures before committing a search budget. For a practitioner, the recipe is to estimate $r_{PA}$, $r_{PD}$ and $r_{DA}$ on a labelled sample of architectures; if $r_{PA}r_{PD}-r_{DA}<0$, the proxy gate should be used without a cost penalty.
 
-\textit{Threats to validity.} \emph{Internal validity}: all methods share one code base, one data store and the same seeds, and test accuracy is never used for any decision; the \rmg{} design and the pass rate were selected using the main seeds and labelled NAS-Bench-201 data, so NAS-Bench-101 and NATS-Bench SSS are the out-of-sample tests, which is why it was re-tested on 12 held-out seeds. \emph{Construct validity}: GPU-hours are the training times recorded in the benchmark rather than times measured on our hardware, and the proxy network sees CIFAR-10 images for every dataset. \emph{Statistical conclusion validity}: twelve seeds detect differences of some tenths of a point but seldom prove equivalence within $\pm$0.5 points, and many comparisons are corrected for multiplicity, which favours ties; we therefore also report effect sizes, bootstrap probabilities and TOST. \emph{External validity}: all experiments use tabular benchmarks with image classification on small images; NAS-Bench-101 covers one dataset and was run without the LLM prior or hardware data, and HW-NAS-Bench lacks edge-TPU latencies for about 30\% of the cells. Finally, the LLM may have seen NAS-Bench-201 during pre-training; the described-operation control speaks against plain recall but cannot rule out all exposure.
+\textit{Threats to validity.} \emph{Internal validity}: all methods share one code base, one data store and the same seeds, and test accuracy is never used for any decision; the \rmg{} design and the pass rate were selected using the main seeds and labelled NAS-Bench-201 data, so NAS-Bench-101, NATS-Bench SSS and 12 held-out seeds serve as out-of-sample tests. \emph{Construct validity}: GPU-hours are the training times recorded in the benchmark rather than times measured on our hardware, and the proxy network sees CIFAR-10 images for every dataset. \emph{Statistical conclusion validity}: twelve seeds detect differences of some tenths of a point but seldom prove equivalence within $\pm$0.5 points, and many comparisons are corrected for multiplicity, which favours ties; we therefore also report effect sizes, bootstrap probabilities and TOST. \emph{External validity}: all experiments use tabular benchmarks with image classification on small images; NAS-Bench-101 covers one dataset and was run without the LLM prior or hardware data, and HW-NAS-Bench lacks edge-TPU latencies for about 30\% of the cells. Finally, the LLM may have seen NAS-Bench-201 during pre-training; the described-operation control speaks against plain recall but cannot rule out all exposure.
 
 %% =====================================================================
 \section{Conclusions}\label{sec:conclusions}
@@ -610,28 +619,24 @@ We studied a NAS loop that never trains an architecture twice and trains only th
 
 %% =====================================================================
 \begin{nomenclature}
-$\mathcal{A}$ & search space of architectures\\
-$a=(o_1,\dots,o_L)$ & architecture as a token sequence of length $L$\\
-$A(a)$, $T(a)$ & validation and test accuracy (\%)\\
-$\tau(a)$, $\bar\tau$ & training time of $a$; mean training time\\
-$H_k$ & GPU-hour budget, $k\bar\tau$\\
-$N(p)$, $n(c)$ & visit counts of a parent and a child node\\
-$C$ & UCB exploration constant\\
-$r_t$ & rank-normalised reward\\
-$E$, $S$, $T$ & SVD entropy, SynFlow and NASWOT scores\\
-$z(\cdot)$ & standardised score\\
-$P(a)$ & label-free gate score\\
-$q$ & gate pass rate (0.35)\\
-$D$ & predicted cost, $\log(1+\#\text{params})$\\
-$\lambda$ & cost-penalty weight\\
-$r_{XY}$ & normal-score correlation of $X$ and $Y$\\
-$\alpha$, $\alpha_t$ & LLM prior weight and its decayed value\\
-$\tau$, $\rho$ & Kendall and Spearman rank correlations \\
-$S_\lambda$ & cost-penalised gate score\\
-$\eta^2$ & share of accuracy variance explained by a prefix\\
-HV, IGD & hypervolume; inverted generational distance\\
-$|F|$, $|F^{*}|$ & size of found and true Pareto fronts\\
-CD & Nemenyi critical difference\\
+\nom{$\mathcal{A}$}{search space of architectures}
+\nom{$a=(o_1,\dots,o_L)$}{architecture as a token sequence of length $L$}
+\nom{$A(a)$, $T(a)$}{validation and test accuracy (\%)}
+\nom{$\tau(a)$, $\bar\tau$}{training time of $a$; mean training time}
+\nom{$H_k$}{GPU-hour budget, $k\bar\tau$}
+\nom{$C$}{UCB exploration constant}
+\nom{$r_t$}{rank-normalised reward}
+\nom{$E$, $S$, $T$}{SVD entropy, SynFlow and NASWOT scores}
+\nom{$z(\cdot)$}{standardised score}
+\nom{$P(a)$}{label-free gate score}
+\nom{$q$}{gate pass rate (0.35)}
+\nom{$D$}{predicted cost, $\log(1+\#\text{params})$}
+\nom{$\lambda$}{cost-penalty weight}
+\nom{$r_{XY}$}{normal-score correlation of $X$ and $Y$}
+\nom{$\alpha$, $\alpha_t$}{LLM prior weight and its decayed value}
+\nom{$\tau$, $\rho$}{Kendall and Spearman rank correlations}
+\nom{$S_\lambda$}{cost-penalised gate score}
+\nom{$\eta^2$}{share of accuracy variance explained by a prefix}
 \end{nomenclature}
 
 \appendix
@@ -656,14 +661,13 @@ The authors thank the Department of Computer Engineering and Technology, MIT Wor
 \section*{Declarations}
 \textit{Funding.} No external funding was received for this work.\\
 \textit{Competing interests.} The authors declare no competing interests.\\
-\textit{Supplementary material.} Tables S1--S42 and Figures S1--S16 give the per-cell results and tests in detail.\\
+\textit{Supplementary material.} Tables S1--S43 and Figures S1--S16 give the per-cell results and tests in detail.\\
 \textit{Data and code availability.} All benchmarks are public. The code, configuration, seeds, result tables and a reproducibility bundle (environment, package versions and data checksums) are available at \url{https://github.com/Imaadhajwane/Arch-Tree-LLM}.\\
-\textit{Use of AI-assisted tools.} The open-weight language models gpt-oss-20b and gpt-oss-120b \cite{openai2025gptoss} are objects of study in this work (sections~\ref{sec:method} and \ref{sec:llm}). Separately, the authors used Claude (Anthropic, Claude Opus 5.5) for coding assistance on the experiment and plotting scripts, for drafting and language editing of the manuscript, and for cross-checking reported numbers against the result files. All results were obtained by running the experiment code on the public benchmarks; no data or results were generated or altered by an AI tool, and every figure was plotted directly from the result files. The authors reviewed all text and analyses and take full responsibility for the content.
+\textit{Use of AI-assisted tools.} The open-weight language models gpt-oss-20b and gpt-oss-120b \cite{openai2025gptoss} are objects of study in this work (sections~\ref{sec:method} and \ref{sec:llm}). Separately, the authors used Claude (Anthropic, Claude Opus 5.5) for coding assistance on the experiment and plotting scripts, for drafting and language editing of the manuscript, and for cross-checking reported numbers against the result files. No data or results were generated or altered by an AI tool; every figure was plotted directly from the result files. The authors reviewed all text and analyses and take full responsibility for the content.
 
 \balance
 
 \begin{thebibliography}{99}
-
 \bibitem{zoph2017} Zoph B and Le Q V 2017 Neural architecture search with reinforcement learning. In: \textit{Proceedings of the International Conference on Learning Representations (ICLR)}
 
 \bibitem{elsken2019} Elsken T, Metzen J H and Hutter F 2019 Neural architecture search: A survey. \textit{J. Mach. Learn. Res.} 20: 1--21
@@ -710,12 +714,6 @@ The authors thank the Department of Computer Engineering and Technology, MIT Wor
 
 \bibitem{qian2022} Qian G, Zhang X, Li G, Zhao C, Chen Y, Zhang X et al. 2022 When NAS meets trees: An efficient algorithm for neural architecture search. In: \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops}, pp. 2781--2786
 
-\bibitem{kocsis2006} Kocsis L and Szepesv\'{a}ri C 2006 Bandit based Monte-Carlo planning. In: \textit{Proceedings of the European Conference on Machine Learning (ECML)}, pp. 282--293
-
-\bibitem{bubeck2011} Bubeck S, Munos R, Stoltz G and Szepesv\'{a}ri C 2011 X-armed bandits. \textit{J. Mach. Learn. Res.} 12: 1655--1695
-
-\bibitem{munos2011} Munos R 2011 Optimistic optimization of a deterministic function without the knowledge of its smoothness. \textit{Adv. Neural Inf. Process. Syst.} 24: 783--791
-
 \bibitem{lee2019} Lee N, Ajanthan T and Torr P H S 2019 SNIP: Single-shot network pruning based on connection sensitivity. In: \textit{Proceedings of the International Conference on Learning Representations (ICLR)}
 
 \bibitem{li2023zico} Li G, Yang Y, Bhardwaj K and Marculescu R 2023 ZiCo: Zero-shot NAS via inverse coefficient of variation on gradients. In: \textit{Proceedings of the International Conference on Learning Representations (ICLR)}
@@ -725,16 +723,6 @@ The authors thank the Department of Computer Engineering and Technology, MIT Wor
 \bibitem{chen2023evoprompt} Chen A, Dohan D M and So D R 2023 EvoPrompting: Language models for code-level neural architecture search. \textit{Adv. Neural Inf. Process. Syst.} 36
 
 \bibitem{nasir2024llmatic} Nasir M U, Earle S, Cleghorn C, James S and Togelius J 2024 LLMatic: Neural architecture search via large language models and quality diversity optimization. In: \textit{Proceedings of the Genetic and Evolutionary Computation Conference (GECCO)}. https://doi.org/10.1145/3638529.3654017
-
-\bibitem{wilcoxon1945} Wilcoxon F 1945 Individual comparisons by ranking methods. \textit{Biometrics Bull.} 1: 80--83
-
-\bibitem{holm1979} Holm S 1979 A simple sequentially rejective multiple test procedure. \textit{Scand. J. Stat.} 6: 65--70
-
-\bibitem{demsar2006} Dem\v{s}ar J 2006 Statistical comparisons of classifiers over multiple data sets. \textit{J. Mach. Learn. Res.} 7: 1--30
-
-\bibitem{schuirmann1987} Schuirmann D J 1987 A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability. \textit{J. Pharmacokinet. Biopharm.} 15: 657--680
-
-\bibitem{agarwal2021} Agarwal R, Schwarzer M, Castro P S, Courville A and Bellemare M G 2021 Deep reinforcement learning at the edge of the statistical precipice. \textit{Adv. Neural Inf. Process. Syst.} 34: 29304--29320
 
 \bibitem{roy2007} Roy O and Vetterli M 2007 The effective rank: A measure of effective dimensionality. In: \textit{Proceedings of the European Signal Processing Conference (EUSIPCO)}, pp. 606--610
 
@@ -746,7 +734,27 @@ The authors thank the Department of Computer Engineering and Technology, MIT Wor
 
 \bibitem{deb2002} Deb K, Pratap A, Agarwal S and Meyarivan T 2002 A fast and elitist multiobjective genetic algorithm: NSGA-II. \textit{IEEE Trans. Evol. Comput.} 6: 182--197
 
+\bibitem{wilcoxon1945} Wilcoxon F 1945 Individual comparisons by ranking methods. \textit{Biometrics Bull.} 1: 80--83
+
+\bibitem{holm1979} Holm S 1979 A simple sequentially rejective multiple test procedure. \textit{Scand. J. Stat.} 6: 65--70
+
+\bibitem{demsar2006} Dem\v{s}ar J 2006 Statistical comparisons of classifiers over multiple data sets. \textit{J. Mach. Learn. Res.} 7: 1--30
+
+\bibitem{schuirmann1987} Schuirmann D J 1987 A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability. \textit{J. Pharmacokinet. Biopharm.} 15: 657--680
+
+\bibitem{agarwal2021} Agarwal R, Schwarzer M, Castro P S, Courville A and Bellemare M G 2021 Deep reinforcement learning at the edge of the statistical precipice. \textit{Adv. Neural Inf. Process. Syst.} 34: 29304--29320
+
 \bibitem{kendall1938} Kendall M G 1938 A new measure of rank correlation. \textit{Biometrika} 30: 81--93
+
+\bibitem{chen2021drnas} Chen X, Wang R, Cheng M, Tang X and Hsieh C J 2021 DrNAS: Dirichlet neural architecture search. In: \textit{Proceedings of the International Conference on Learning Representations (ICLR)}
+
+\bibitem{chen2021tenas} Chen W, Gong X and Wang Z 2021 Neural architecture search on ImageNet in four GPU hours: A theoretically inspired perspective. In: \textit{Proceedings of the International Conference on Learning Representations (ICLR)}
+
+\bibitem{kocsis2006} Kocsis L and Szepesv\'{a}ri C 2006 Bandit based Monte-Carlo planning. In: \textit{Proceedings of the European Conference on Machine Learning (ECML)}, pp. 282--293
+
+\bibitem{bubeck2011} Bubeck S, Munos R, Stoltz G and Szepesv\'{a}ri C 2011 X-armed bandits. \textit{J. Mach. Learn. Res.} 12: 1655--1695
+
+\bibitem{munos2011} Munos R 2011 Optimistic optimization of a deterministic function without the knowledge of its smoothness. \textit{Adv. Neural Inf. Process. Syst.} 24: 783--791
 
 \bibitem{zitzler1999} Zitzler E and Thiele L 1999 Multiobjective evolutionary algorithms: A comparative case study and the strength Pareto approach. \textit{IEEE Trans. Evol. Comput.} 3: 257--271
 

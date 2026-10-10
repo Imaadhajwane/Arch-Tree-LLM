@@ -51,7 +51,7 @@ Sciences*, Springer / Indian Academy of Sciences; under review).
 | File | Contents |
 |---|---|
 | [`paper/main.pdf`](paper/main.pdf) | manuscript: 20 pages, 17 figures, 8 tables, 1 algorithm |
-| [`paper/supplementary/supp.pdf`](paper/supplementary/supp.pdf) | supplementary material: 26 pages, 42 tables (S1–S42), 16 figures (S1–S16) |
+| [`paper/supplementary/supp.pdf`](paper/supplementary/supp.pdf) | supplementary material: 26 pages, 43 tables (S1–S43), 16 figures (S1–S16) |
 | [`paper/main.tex`](paper/main.tex), [`paper/supplementary/supp.tex`](paper/supplementary/supp.tex) | LaTeX sources (journal class `sadhana.cls` included) |
 | [`paper/make_figures.py`](paper/make_figures.py) | draws every manuscript figure from the result CSVs |
 | [`paper/supplementary/make_supp_tables.py`](paper/supplementary/make_supp_tables.py), [`make_supp_figures.py`](paper/supplementary/make_supp_figures.py) | write every supplementary table and figure from the result CSVs |
